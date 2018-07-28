@@ -1,0 +1,49 @@
+---
+title: 404 - page not found
+layout: default
+description: "404 - page not found"
+permalink: /404.html
+---
+
+<style type="text/css" media="screen">
+
+  .container h3 {
+    margin: 20px 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+  #post-list {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  #post-list h1 {
+    margin: 10px 0;
+  }
+
+  #post-list a {
+    font-weight: normal;
+  }
+}
+</style>
+
+<div class="container">
+
+  <h1 id="main-header">404</h1>
+
+  <h3>page not found :(</h3>
+
+  <p>If this was my fault (like a bad link) I'd appreciate a <a href="{{ "/" }}contact">heads up</a>.</p>
+
+  <div class="flexcontainer">
+    <img src="/assets/images/Don_Quixote_by_Picasso.jpg" alt="Don Quixote by Picasso">
+
+    <ul id="post-list"
+      <p><strong>Check out recent posts:</strong></p>
+      {% for post in site.posts limit:5 %}
+        <h1><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

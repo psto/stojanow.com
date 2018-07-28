@@ -1,0 +1,8 @@
+<ul id="post-list">
+  {% for tweetstorm in site.categories.tweetstorms %}
+  <li>
+    <h1><a href="{{ "/" | relative_url  }}{{ tweetstorm.url | remove_first: '/' }}">{{ tweetstorm.title }}</a></h1>
+    <p>{{ tweetstorm.content | strip_html | truncatewords:45}} <a href="{{ tweetstorm.url }}">Continue Reading »</a></p><br>
+  </li>
+  {% endfor %}
+</ul>

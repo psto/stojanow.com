@@ -1,0 +1,47 @@
+name: Piotr Stojanow
+description: "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site."
+
+aboutPage: true
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+paginate: 5
+domain_name: 'stojanow.com'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: true
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://stojanow.com'
+author:
+  name: 'Piotr Stojanow'
+twitter:
+  username: piotrstojanow
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
