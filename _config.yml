@@ -13,9 +13,9 @@ plugins:
   - jekyll-sitemap
 paginate: 5
 domain_name: 'stojanow.com'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-97630657-2'
 disqus: true
-disqus_shortname: 'your-disqus-shortname'
+disqus_shortname: 'stojanow'
 
 # Details for the RSS feed generator
 url:            'http://stojanow.com'
