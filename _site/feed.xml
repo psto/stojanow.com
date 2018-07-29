@@ -7,16 +7,16 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>A Draft Post</title>
+        <title>Our brains are hardware that run on culture - software</title>
         
         
-          <description>&lt;p&gt;When in doubt, tenuki.&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/tweetstorms_images/brain_on_culture.jpeg&quot; alt=&quot;Brain on Culture&quot; /&gt;&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sun, 29 Jul 2018 08:30:41 +0200</pubDate>
-        <link>http://localhost:4000/2018/a-draft-post/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/a-draft-post/</guid>
+        <pubDate>Mon, 25 Jun 2018 08:41:43 +0200</pubDate>
+        <link>http://localhost:4000/2018/culture-is-software/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/culture-is-software/</guid>
       </item>
     
   </channel>
