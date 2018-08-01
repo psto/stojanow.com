@@ -193,11 +193,11 @@ nav.main-nav a.cta {
 	/* header */
 
 .header {
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	max-width: 800px;
-	background: rgba(255,255,255,.90);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  background: rgba(255,255,255,.90);
   position: fixed;
   z-index: 100;
 }
@@ -210,17 +210,17 @@ nav.main-nav a.cta {
 }
 
 .header li {
-	list-style: none;
+  list-style: none;
 }
 
 .header li a {
   color: #cc3535;
   display: block;
   padding: 10px 10px;
-	background: none;
+  background: none;
   font-size: 1em;
   text-decoration: none;
-	position: relative;
+  position: relative;
 }
 
 .header li:not(:last-child) a:before {
@@ -252,7 +252,7 @@ nav.main-nav a.cta {
   border-radius: 4px;
   display: inline-block;
   padding: 10px 10px;
-	margin: 10px 0px;
+  margin: 10px 0px;
   text-align: center;
   font-weight: bold;
   border: 0;
@@ -266,7 +266,7 @@ nav.main-nav a.cta {
   display: block;
   float: left;
   padding: 10px 0px;
-	margin: 0 0 0 10px;
+  margin: 0 0 0 10px;
   width: 33px;
 }
 
