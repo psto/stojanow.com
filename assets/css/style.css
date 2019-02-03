@@ -391,7 +391,7 @@ nav.main-nav a.cta {
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 700px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -932,7 +932,7 @@ Subscription form
 .simple-subscription-form {
   font-size: 112.5%;
   border: 1px solid #ccc;
-  text-align:center
+  text-align:center;
   background: #fff;
   color: #000;
   padding: 2rem;
