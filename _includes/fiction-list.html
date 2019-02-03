@@ -1,0 +1,15 @@
+<ul id="post-list">
+  {% for story in site.categories.fiction %}
+  <li>
+    <article class="post">
+        <header>
+            <h1><a href="{{ "/" | relative_url  }}{{ story.url | remove_first: '/' }}">{{ story.title }}</a></h1>
+            <h3 class="headline">{{ story.date | date:"%B %-d, %Y" }}</h3>
+        </header>
+        <section id="post-body">
+            {{story.content}}
+        </section>
+    </article>
+  </li>
+  {% endfor %}
+</ul>

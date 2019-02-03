@@ -56,7 +56,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 html, body { height: 100%; }
 
 body {
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font:18px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -109,7 +109,7 @@ small a {
 }
 
 .profile h2 {
-	font-size: 20px;
+  font-size: 20px;
   font-weight: 300;
   color: #aaa;
   margin-top: 10px;
@@ -385,13 +385,13 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 60px 40px 15px 40px;
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 700px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -547,29 +547,28 @@ hr {
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
-pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
-	padding:20px;
-	background-color:#fdfdfd;
-	/*font-size:14px;*/
-	overflow:auto;
-	border-radius: 3px;
-	background: #272b2d;
-  font-family: 'Source Code Pro',Menlo,monospace;
-  font-size: 13px;
-  line-height: 1.5em;
-  font-weight: 500;
-	color: #d0d4d7;
+pre {
+    font-family:Menlo, Monaco, Courier;
+    white-space:pre-wrap;
+    /*border: 1px solid #ddd;*/
+    padding:20px;
+    background-color:#fdfdfd;
+    overflow:auto;
+    border-radius: 3px;
+    background: #272b2d;
+    font-family: 'Source Code Pro',Menlo,monospace;
+    font-size: 13px;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: #d0d4d7;
 }
 
 table {
-	width: 100%;
-	margin: 40px 0;
-	border-collapse: collapse;
-	font-size: 13px;
-	line-height: 1.5em;
+    width: 100%;
+    margin: 40px 0;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 1.5em;
 }
 
 th,td {
@@ -642,7 +641,8 @@ Post List
 #post-list a {
 	color: #cc3535;
 	display: block;
-	font: bold 20px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 30px/1.2 "Helvetica Neue",helvetica,Arial,sans-serif;
+    margin-bottom: 15px;
 }
 
 #post-list li p a {
@@ -932,7 +932,7 @@ Subscription form
 .simple-subscription-form {
   font-size: 112.5%;
   border: 1px solid #ccc;
-  text-align:center
+  text-align:center;
   background: #fff;
   color: #000;
   padding: 2rem;

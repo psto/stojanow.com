@@ -19,6 +19,7 @@ disqus_shortname: 'stojanow'
 pagination:
   enabled: true
   per_page: 5
+  sort_reverse: true
 
 # Details for the RSS feed generator
 url:    'http://stojanow.com'
