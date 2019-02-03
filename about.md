@@ -12,7 +12,7 @@ profile: false
 
     <p><i>"All you have to do is write one true sentence. Write the truest sentence that you know. So finally I would write one true sentence, and then go on from there."</i> — Ernest Hemingway</p>
 
-    <p>All my attempts to distill what I know to one true sentence at a time.</p>
+    <p>All my attempts to distill what I know to one true sentence at a time. I also keep a <a href="https://wiki.stojanow.com">wiki</a> of things I know.</p>
 
     <p>A taste of subjects I write about:</p>
 
