@@ -432,7 +432,10 @@ a:hover {
   filter: brightness(125%);
 }
 
-ul 	{ margin:0; padding:0; }
+ul {
+  margin: 0 20px;
+  padding: 0;
+}
 /* li	{ list-style-type:disc; } */
 
 /* Line Height */
