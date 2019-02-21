@@ -12,7 +12,7 @@ cover: /assets/images/books_images/the-antidote-oliver-burkeman.jpg
 toc: true
 ---
 
-## 1. On Trying Too Hard to Be Happy
+## On Trying Too Hard to Be Happy
 
 **The effort to try to feel happy is often precisely the thing that makes us miserable**. And that it is our constant efforts to eliminate the negative – insecurity, uncertainty, failure, or sadness – that is what causes us to feel so insecure, anxious, uncertain, or unhappy.
 
@@ -20,7 +20,7 @@ Instead, they argued that it pointed to an alternative approach, a ‘**negative
 
 The '**law of reversed effort’**, or the ‘**backwards law**’ (Alan Watts): the notion that in all sorts of contexts, from our personal lives to politics, all this trying to make everything right is a big part of what’s wrong.
 
-## 2. What Would Seneca Do?
+## What Would Seneca Do?
 The Stoic Art of Confronting the Worst-Case Scenario
 
 The results are striking: **spending time and energy thinking about how well things could go, it has emerged, actually reduces most people’s motivation to achieve them**.
@@ -69,7 +69,7 @@ Explaining the difference between a terrible outcome and a merely undesirable on
 
 Ellis insisted, that the strategy of *focusing on the worst-case scenario* – and distinguishing between very bad and completely terrible events – really comes into its own. *It turns infinite fears into finite ones*.
 
-## 3. The Storm Before the Calm
+## The Storm Before the Calm
 A Buddhist Guide to Not Thinking Positively
 
 Meditation has little to do with achieving any specific desired state of mind, no matter whether blissful or calm. At Buddhism’s core, instead, is an often misunderstood notion that is starkly opposed to most contemporary assumptions about how to be happy, and that places it squarely on the ‘**negative path**’ **to happiness: non-attachment**.
@@ -95,7 +95,7 @@ No approach to psychology better expresses the pragmatic benefits of non-attachm
 
 *Once we learn to accept our feelings, we find that we can take action without changing our feeling-states*. We can feel the fear, and do it anyway.
 
-## 4. Goal Crazy
+## Goal Crazy
 When Trying to Control the Future Doesn’t Work
 
 **Faced with the anxiety of not knowing what the future holds, we invest ever more fiercely in our preferred vision of that future – not because it will help us achieve it, but because it helps rid us of feelings of uncertainty in the present**.
@@ -121,7 +121,7 @@ One foundation of effectuation is the ‘**bird in hand**’ **principle**: ‘*
 
 A second is the ‘**principle of affordable loss**’: don’t be guided by thoughts of how wonderful the rewards might be if you were spectacularly successful at any given next step. Instead – and there are distinct echoes, here, of the Stoic **focus on the worst-case scenario** – *ask how big the loss would be if you failed. So long as it would be tolerable, that’s all you need to know. Take that next step, and see what happens*.
 
-## 5. Who’s There?
+## Who’s There?
 How to Get Over Your Self
 
 Modern neuroscience has provided strong support for the suspicion that the self is not the ‘thing’ that we imagine it to be – that there is, in the words of the neuropsychologist Paul Broks, no ‘centre in the brain where things do all come together’.
@@ -138,7 +138,7 @@ Instead of seeking ways to solve your problems in the future, it can be illumina
 
 Our sanity depends on maintaining a coherent sense of self, and on setting healthy boundaries between ourselves and others – and neither Alan Watts nor Eckhart Tolle wishes to imperil your sanity. Instead, the conclusion to which both their thinking leads is that *the self is best thought of as some kind of a fiction, albeit an extremely useful one – and that realising this, instead of doing everything we can to deny it, might be the route to fulfilment*.
 
-## 6. The Safety Catch
+## The Safety Catch
 The Hidden Benefits of Insecurity
 
 ‘Security is both a feeling and a reality,’ as Schneier puts it, ‘and they’re not the same.’
@@ -153,7 +153,7 @@ there might be something more fundamentally problematic about the goal of securi
 
 **Alan Watts**: To understand that there is no security is far more than to agree with the theory that all things change, more even than to observe the transitoriness of life. The notion of security is based on the feeling that there is something within us which is permanent, something which endures through all the days and changes of life. We are struggling to make sure of the permanence, continuity, and safety of this enduring core, this centre and soul of our being, which we call ‘I’. For this we know to be the real man – the thinker of our thoughts; the feeler of our feelings, the knower of our knowledge. **We do not actually understand that there is no security until we realise that this ‘I’ does not exist**.
 
-## 7. The Museum of Failure
+## The Museum of Failure
 The Case for Embracing Your Errors
 
 Failure is everywhere. It’s just that most of the time we would rather avoid confronting that fact.
@@ -180,7 +180,7 @@ If you’re the kind of person who struggles mightily to *avoid the experience o
 
 Happily, Dweck’s studies indicate that we are not saddled for life with one mindset rather than another. Some people manage to alter their outlook simply by being introduced to the ‘fixed’ versus ‘incremental’ distinction. Alternatively, it’s worth trying to recall it when failure strikes: next time you flunk an exam, or mishandle a social situation, consider that it is only happening because you’re pushing at the limits of your present abilities – and therefore, over the long run, improving them
 
-## 8. Memento Mori
+## Memento Mori
 Death as a Way of Life
 
 **Ernest Becker**, The Denial of Death. The lack of serious thought we give to mortality, for Becker, is no accident or oversight: it is precisely because death is so terrifying and significant, he argues, that we don’t think about it. ‘The idea of death, the fear of it, haunts the human animal like nothing else,’. *But the consequence is that we dedicate our lives to suppressing that fear, erecting vast psychological fortifications so that we can avoid confronting it*. Indeed, an enormous proportion of all human activity, in Becker’s view, is ‘designed largely to avoid the fatality of death, to overcome it by denying in some way that it is the final destiny of man’.
