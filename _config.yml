@@ -12,6 +12,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-toc
 domain_name: 'stojanow.com'
 google_analytics: 'UA-97630657-2'
 disqus: true

@@ -10,7 +10,7 @@ archive: true
         <h3 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h3>
     </header>
     <section id="post-body">
-        {{content}}
+        {{ content | toc }}
     </section>
 </article>
 
