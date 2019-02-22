@@ -40,4 +40,7 @@
 <url>
 <loc>http://localhost:4000/tweetstorms/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
 </urlset>
