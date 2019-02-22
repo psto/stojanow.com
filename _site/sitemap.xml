@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2018/culture-is-software/</loc>
+<loc>http://localhost:4000/culture-is-software/</loc>
 <lastmod>2018-06-25T08:41:43+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/the-justice-accountant/</loc>
+<loc>http://localhost:4000/the-justice-accountant/</loc>
 <lastmod>2019-02-03T16:23:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/the-antidote/</loc>
+<loc>http://localhost:4000/the-antidote/</loc>
 <lastmod>2019-02-13T19:39:10+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/a-technique-for-producing-ideas/</loc>
+<loc>http://localhost:4000/a-technique-for-producing-ideas/</loc>
 <lastmod>2019-02-21T14:10:29+01:00</lastmod>
 </url>
 <url>

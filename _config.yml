@@ -30,7 +30,7 @@ author:
 twitter:
   username: piotrstojanow
 
-permalink:       /:year/:title/
+permalink:       /:title/
 
 defaults:
     -
