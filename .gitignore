@@ -1,4 +1,4 @@
-_site
-_drafts
-.sass-cache
+_site/
+_drafts/
+.sass-cache/
 .jekyll-metadata

@@ -216,6 +216,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
+    rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -247,8 +248,16 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
+  jekyll-feed
   jekyll-paginate-v2
+  jekyll-seo-tag
+  jekyll-sitemap
   jekyll-toc
+  rake (~> 12)
+
+RUBY VERSION
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
