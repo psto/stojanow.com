@@ -17,12 +17,11 @@ archive: true
 {% include author-footer.html %}
 {% include subscription-form.html %}
 
-<!-- Disqus comments -->
+<!-- Disqus -->
 {% if site.disqus %}
-    <div class="archive readmore">
-        <h3>Comments</h3>
-        {% include disqus.html %}
-    </div>
+<div class="comments">
+  {% include show-disqus.html %}
+</div>
 {% endif %}
 
 <!--
