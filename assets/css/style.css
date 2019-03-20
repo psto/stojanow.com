@@ -288,7 +288,7 @@ small a {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 330px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -313,14 +313,14 @@ small a {
     height: 55px;
   }
 
-	#main-header {
+  #main-header {
     font-size: 55pt;
     text-align: center;
     font-weight: 400;
     letter-spacing: 0px;
     font-weight: bold;
     color: #222;
-	}
+  }
 
   .header li {
     float: left;
