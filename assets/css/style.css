@@ -122,24 +122,24 @@ small a {
 }
 
 #twi-profile {
-	background: #4fafed;
-	color: #fff;
+  background: #4fafed;
+  color: #fff;
   padding: 1px 2px;
   border-radius: 4px;
 }
 
 #twi-profile:hover {
-	background: #cc3535;
-	color: #fff;
+  background: #cc3535;
+  color: #fff;
   padding: 1px 2px;
   border-radius: 4px;
 }
 
 .profile #hi {
-	background-color: #cc3535;
-	color: #fff;
-	padding-left: 5px;
-	padding-right: 5px;
+  background-color: #cc3535;
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #main-header {
@@ -308,7 +308,7 @@ small a {
   top: 0;
 }
 
-@media (min-width: 660px) {
+@media (min-width: 790px) {
   .header {
     height: 55px;
   }
