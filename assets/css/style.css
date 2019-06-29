@@ -668,8 +668,11 @@ p.small {
 }
 
 blockquote {
-  padding-left: 15px;
-  border-left: 3px solid #eee;
+  border-left: 4px solid #ddd;
+  font-style: italic;
+  line-height: 24px;
+  margin: 0 2em;
+  padding: 0 1em;
 }
 
 hr {

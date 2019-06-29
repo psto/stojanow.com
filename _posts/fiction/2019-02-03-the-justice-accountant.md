@@ -4,7 +4,7 @@ title:  "The Justice Accountant"
 date:   2019-02-03 17:23:00 +0200
 description: "The Justice Accountant micro fiction"
 category: fiction
-tags: fiction micro-fiction
+tags: posts fiction micro-fiction
 image: assets/images/fiction_images/the-triumph-of-the-guillotine-in-hell.jpg
 ---
 
