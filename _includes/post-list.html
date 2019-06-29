@@ -1,11 +1,17 @@
-<ul id="post-list">
-    {% for post in paginator.posts %}
-        <li>
-            <h1><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
-            <p>{{ post.content | strip_html | truncatewords:45}} <a href="{{ post.url }}">Continue Reading »</a></p><br>
-        </li>
-    {% endfor %}
-</ul>
+{% for post in paginator.posts %}
+  <article class="post">
+    <header>
+      <a href="{{ post.url }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+      <h2 class="author">{{ site.author.name }}</p>
+      <h3 class="headline">{{ post.date | date:"%B %-d, %Y" }}</h3>
+    </header>
+    <section id="post-body">
+        {{ post.content | toc }}
+    </section>
+  </article>
+{% endfor %}
 
 {% if paginator.previous_page or paginator.next_page %}
     {% include pagination.html %}
