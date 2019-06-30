@@ -1174,23 +1174,12 @@ Subscription form
 
 .footnote {
   font-size: 0.7em;
+  color: #cc3535;
   vertical-align: super;
-  list-style-type: decimal;
-  padding-top: 60px;
-  margin-top: -60px;
 }
-
-/* Hack for navigation bar not covering footnotes */
 
 .footnotes li {
-  padding-top: 60px;
-  margin-top: -60px;
-}
-
-/* Spacing 2 */
-
-.footnotes p {
-  margin: 0.5em;
+  font-size: 80%;
 }
 
 /* header for static pages */
