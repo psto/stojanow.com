@@ -6,9 +6,10 @@ description: "Asking for forgivness is viable strategy. It levels the playing fi
 category: posts
 tags: posts culture
 image: assets/images/posts_images/lot-and-his-daughters-master-of-the-prodigal-son.jpg
+imageAlt: "Lot And His Daughters by Meester van de Verloren Zoon"
 ---
 
-<img src="{{ "/" | relative_url }}{{ page.image }}" alt="Lot And His Daughters by Meester van de Verloren Zoon">
+[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
 
 Scott Alexander in his latest sequence on [cultural evolution](https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/) speculates that "[STIs played a role in the cultural evolution of taboos against promiscuity and homosexuality](https://slatestarcodex.com/2019/06/19/are-sexual-purity-taboos-a-response-to-stis/)". I doubt this claim.
 

@@ -6,9 +6,10 @@ description: "The Justice Accountant micro fiction"
 category: fiction
 tags: posts fiction micro-fiction
 image: assets/images/fiction_images/the-triumph-of-the-guillotine-in-hell.jpg
+imageAlt: "Guillotine in Hell painting"
 ---
 
-[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="Guillotine in Hell painting">]({{ site.baseurl }}{% post_url /fiction/2019-02-03-the-justice-accountant %})
+[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
 
 The Justice Accountant twitched when the last of the executions were coming to an end.
 

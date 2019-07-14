@@ -524,8 +524,9 @@ a,
   color: #000000;
 }
 
-p a {
+a {
   color: #cc3535;
+  text-decoration: underline;
 }
 
 /*Transitions*/
@@ -541,6 +542,7 @@ a,
 
 a:hover {
   filter: brightness(125%);
+  color: #ff7f00;
 }
 
 ul,
@@ -602,6 +604,14 @@ i {
   font: 3em/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 0px;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  color: black;
 }
 
 .post h2 {
@@ -1154,12 +1164,12 @@ Subscription form
 /* comments */
 
 #load-comments-button {
-  color: white;
-  background-color: #008cba;
-  border: 1px solid #008cba;
-  border-radius: 4px;
+  color: #cc3535;
+  background-color: #fff;
+  border: 1px solid #cc3535;
+  border-radius: 12px;
   padding: 8px 15px;
-  font-size: 1em;
+  font-size: 1.1em;
   cursor: pointer;
   display: inline-block;
   width: 100%;
@@ -1167,7 +1177,9 @@ Subscription form
 }
 
 #load-comments-button:hover {
-  filter: brightness(125%);
+  filter: brightness(105%);
+  color: #ff7f00;
+  border: 1px solid #ff7f00;
 }
 
 /* footnotes */

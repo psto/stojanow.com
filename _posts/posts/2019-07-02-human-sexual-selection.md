@@ -6,9 +6,10 @@ description: ""
 category: posts
 tags: posts evolution
 image: assets/images/posts_images/rene_magritte-the_lovers_II.jpg
+imageAlt: "The Lovers II by Rene Magritte"
 ---
 
-<img src="{{ "/" | relative_url }}{{ page.image }}" alt="The Lovers II by Rene Magritte">
+[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
 
 Tanner Greer posted recently [Against Human Sexual Selection](https://scholars-stage.blogspot.com/2019/05/against-human-sexual-selection.html) on his insightful [blog](https://scholars-stage.blogspot.com/). In it he takes issue with evolutionary psychology for explaing "female mate preferences and male phenotypes (...) through the frame of sexual selection".
 

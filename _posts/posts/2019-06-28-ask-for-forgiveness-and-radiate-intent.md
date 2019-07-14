@@ -6,9 +6,10 @@ description: "Asking for forgivness is viable strategy. It levels the playing fi
 category: posts
 tags: posts advice strategy intent forgiveness
 image: assets/images/posts_images/Return_of_the_Prodigal_Son.jpg
+imageAlt: "Rembrandt's Return of the Prodigal Son"
 ---
 
-<img src="{{ "/" | relative_url }}{{ page.image }}" alt="Rembrandt's Return of the Prodigal Son">
+[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
 
 [Elizabeth Ayer in her great post takes issue](https://medium.com/@ElizAyer/dont-ask-forgiveness-radiate-intent-d36fd22393a3) with the common [advice attributed to Grace Hopper](https://quoteinvestigator.com/2018/06/19/forgive/): “It’s better to beg forgiveness than ask permission”.
 
