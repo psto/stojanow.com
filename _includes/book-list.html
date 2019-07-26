@@ -2,7 +2,7 @@
   {% for book in site.categories.books %}
   <li>
       <a href="{{ book.url }}"><img src="{{ book.cover }}" class="book-cover" alt="{{ book.title }} cover"></a>
-      <h1><a href="{{ "/" | relative_url  }}{{ book.url | remove_first: '/' }}">{{ book.title }}</a></h1>
+      <h1 class="post-title"><a href="{{ "/" | relative_url  }}{{ book.url | remove_first: '/' }}">{{ book.title }}</a></h1>
       <small>Date read: {{ book.date-read }}.</small>
       <p>{{ book.summary }}</p>
       <p><a href="{{ book.url }}">Read my notes</a> or check out <a href="{{ book.amazon }}">Amazon</a> for details and reviews.</p>
