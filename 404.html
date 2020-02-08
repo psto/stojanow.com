@@ -1,5 +1,5 @@
 ---
-title: 404 - page not found
+title: 404 - oops :-(
 layout: default
 description: "404 - page not found"
 permalink: /404.html
@@ -8,39 +8,41 @@ permalink: /404.html
 <style type="text/css" media="screen">
 
   #post-list {
-    margin-top: 20px;
     text-align: left;
-  }
-
-  #post-list h1 {
-    margin: 10px 0;
+    margin-top: 0px;
   }
 
   #post-list a {
+    font-size: 1em;
     font-weight: normal;
-    font-size: 20px;
+    text-decoration: none;
   }
 
-  #main-header {
-    margin-bottom: 0.5em;
+  .flexcontainer p {
+    margin: 0 0 1.25em 0;
   }
 
 </style>
 
+{% include container.html %}
+
 <div class="container">
+  <article class="post">
+    <section id="post-body">
+      <p>If this was my fault (like a bad link) I'd appreciate a <a href="{{ "/" }}contact">heads up</a>.</p>
 
-  <h1 id="main-header">404: oops :(</h1>
+      <div class="flexcontainer">
+        <img src="/assets/images/Don_Quixote_by_Picasso.jpg" alt="Don Quixote by Picasso">
 
-  <p>If this was my fault (like a bad link) I'd appreciate a <a href="{{ "/" }}contact">heads up</a>.</p>
-
-  <div class="flexcontainer">
-    <img src="/assets/images/Don_Quixote_by_Picasso.jpg" alt="Don Quixote by Picasso">
-
-    <ul id="post-list"
-      <p><strong>Check out recent posts:</strong></p>
-      {% for post in site.posts limit:5 %}
-        <h1><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
-      {% endfor %}
-    </ul>
-  </div>
+        <div>
+          <p><strong>Check out some recent posts:</strong></p>
+          <ul id="post-list">
+            {% for post in site.posts limit:5 %}
+            <li><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
 </div>
