@@ -8,6 +8,6 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
-  gem "jekyll-paginate-v2", "~> 2.0"
+  gem "jekyll-paginate-v2"
   gem "jekyll-toc"
 end
