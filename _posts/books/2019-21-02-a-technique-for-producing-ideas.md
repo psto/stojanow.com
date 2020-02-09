@@ -8,7 +8,7 @@ category: books
 tags: books notes psychology marketing creativity
 date-read: 2015-04-24
 amazon: https://smile.amazon.com/Technique-Producing-Ideas-James-Young/dp/198781746X
-cover: /assets/images/books_images/a-technique-for-producing-ideas-james-webb-young.jpg
+cover: /assets/images/books_images/a-technique-for-producing-ideas-james-webb-young.png
 toc: true
 ---
 

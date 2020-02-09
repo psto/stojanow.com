@@ -8,7 +8,7 @@ category: books
 tags: books notes management  
 date-read: 2014-09-28
 amazon: https://smile.amazon.com/Managing-Oneself-Harvard-Business-Classics/dp/142212312X
-cover: /assets/images/books_images/managing-oneself-peter-drucker.jpg
+cover: /assets/images/books_images/managing-oneself-peter-drucker.png
 toc: true
 ---
 

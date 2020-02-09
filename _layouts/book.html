@@ -4,12 +4,10 @@ archive: false
 ---
 
 <article class="post">
-    <header>
-        <h1>{{ page.title }}</h1>
-    </header>
     <section id="post-body">
         <div id="book-info">
           <a href="{{ page.amazon }}"><img src="{{ page.cover }}" class="book-cover" alt="{{ page.title }} cover"></a>
+          <h3>{{ page.title }}</h3>
           <small>
             Date read: {{ page.date-read }}.<br>
             Check out <a href="{{ page.amazon }}">Amazon</a> for more details and reviews.

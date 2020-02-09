@@ -8,7 +8,7 @@ category: books
 tags: books notes business
 date-read: 2014-10-02
 amazon: https://smile.amazon.com/How-Will-Measure-Your-Life/dp/0062102419
-cover: /assets/images/books_images/how-will-you-measure-your-life.jpg
+cover: /assets/images/books_images/how-will-you-measure-your-life.png
 toc: true
 ---
 

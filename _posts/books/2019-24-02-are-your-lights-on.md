@@ -8,7 +8,7 @@ category: books
 tags: books notes problem-solving
 date-read: 2015-11-17
 amazon: https://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161
-cover: /assets/images/books_images/are-your-lights-on.jpg
+cover: /assets/images/books_images/are-your-lights-on.png
 toc: true
 ---
 

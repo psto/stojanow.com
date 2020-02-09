@@ -8,7 +8,7 @@ category: books
 tags: books notes philosophy
 date-read: 2019-06-14
 amazon: https://smile.amazon.com/Direct-Truth-Uncompromising-non-prescriptive-questions/dp/1724334417
-cover: /assets/images/books_images/direct-truth-kapil-gupta.jpg
+cover: /assets/images/books_images/direct-truth-kapil-gupta.png
 toc: true
 ---
 

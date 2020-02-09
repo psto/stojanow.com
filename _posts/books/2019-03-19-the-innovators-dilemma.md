@@ -8,7 +8,7 @@ category: books
 tags: books notes business entreprenurship
 date-read: 2014-03-09
 amazon: https://smile.amazon.com/Innovators-Dilemma-Revolutionary-Change-Business/dp/0062060244
-cover: /assets/images/books_images/the-innovators-dilemma.jpg
+cover: /assets/images/books_images/the-innovators-dilemma.png
 toc: true
 ---
 

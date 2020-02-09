@@ -8,7 +8,7 @@ category: books
 tags: books notes business entreprenurship
 date-read: 2014-02-19
 amazon: https://smile.amazon.com/80-Approach-Dan-Sullivan/dp/1897239297
-cover: /assets/images/books_images/the-80-approach-dan-sullivan.jpg
+cover: /assets/images/books_images/the-80-approach-dan-sullivan.png
 toc: true
 ---
 

@@ -8,7 +8,7 @@ category: books
 tags: books notes business entreprenurship
 date-read: 2015-06-02
 amazon: https://smile.amazon.com/Built-Sell-Creating-Business-Without/dp/1591845823
-cover: /assets/images/books_images/built-to-sell-john-warrillow.jpg
+cover: /assets/images/books_images/built-to-sell-john-warrillow.png
 toc: true
 ---
 
