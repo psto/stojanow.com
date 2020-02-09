@@ -5,11 +5,11 @@ date:   2019-07-13 17:59:40 +0200
 description: "The Aging Currency micro fiction"
 category: fiction
 tags: posts fiction micro-fiction
-image: assets/images/fiction_images/me_machine.jpg
+image: me_machine
 imageAlt: "Me Machine by Daniel Miller"
 ---
 
-[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
+{% include picture.html img=page.image ext="jpg" alt=page.imageAlt link=page.url %}
 
 The older Emchines were eager to start the ritual.
 

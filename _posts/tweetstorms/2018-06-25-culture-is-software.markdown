@@ -5,11 +5,11 @@ date:   2018-06-25 08:41:43 +0200
 description: "Brains are hardware and run on culture, software. Culture transmits information and upgrades us.  With the improvement of technology, upgrades became more frequent. Culture is no longer a standard release, but a rolling release."
 category: tweetstorms
 tags: tweetstorm posts culture technology memes biology
-image: assets/images/tweetstorms_images/historic_growth.jpg
+image: historic_growth
 imageAlt: "Historic Growth by Alesha Sivartha"
 ---
 
-[<img src="{{ "/" | relative_url  }}{{ page.image }}" alt="{{ page.imageAlt }}">]({{ page.url }})
+{% include picture.html img=page.image ext="jpg" alt=page.imageAlt link=page.url %}
 
 Our brains (hardware) run culture (software)[^1].
 
