@@ -1,0 +1,12 @@
+{% assign img = include.img %}
+{% assign link = include.link %}
+
+<picture>
+    <source type="image/webp" srcset="/assets/images/posts/{{ page.slug }}/{{ img }}.webp" >
+    <source type="image/{{ include.ext }}" srcset="/assets/images/posts/{{ page.slug }}/{{ img }}.{{ include.ext }}" >
+    {% if link %}
+      <a href="{{ link }}"><img src="/assets/images/posts/{{ page.slug }}/{{ img }}.{{ include.ext }}" alt="{{ include.alt }}" /></a>
+    {% else %}
+      <img src="/assets/images/posts/{{ page.slug }}/{{ img }}.{{ include.ext }}" alt="{{ include.alt }}" />
+    {% endif %}
+</picture>
