@@ -155,7 +155,7 @@ table {
   font-weight: normal;
   speak: none;
   display: inline-block;
-  text-decoration: inherit;
+  /* text-decoration: inherit; */
   text-align: center;
   font-variant: normal;
   text-transform: none;
@@ -255,6 +255,7 @@ small a {
 .profile #avatar {
   display: inline-block;
   width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -921,6 +922,7 @@ Post List
   color: #d4d4d4;
   display: inline-block;
   vertical-align: middle;
+  text-decoration: none;
 }
 
 #sharing a:hover {

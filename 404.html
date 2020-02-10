@@ -37,8 +37,8 @@ permalink: /404.html
         <div>
           <p><strong>Check out some recent posts:</strong></p>
           <ul id="post-list">
-            {% for post in site.posts limit:5 %}
-            <li><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
+            {% for post in site.tags.posts limit:5 %}
+              <li><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
             {% endfor %}
           </ul>
         </div>
