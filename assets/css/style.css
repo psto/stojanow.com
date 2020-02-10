@@ -145,6 +145,7 @@ table {
     url("../fonts/icons.svg#icons") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 
 [class^="icon-"]:before,
@@ -218,7 +219,6 @@ body {
 
 h1 {
   font-size: 30px;
-  letter-spacing: -1px;
   color: #222;
   font-weight: bold;
 }
@@ -518,6 +518,16 @@ small a {
 
 /* Typography */
 /*Accent color*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
 a,
 #title,
 #post-list a:hover,
@@ -564,7 +574,6 @@ p {
 b,
 strong {
   font-weight: bold;
-  color: #1e2025;
 }
 em,
 i {
@@ -604,7 +613,6 @@ i {
 
 .post h1 {
   margin-bottom: 20px;
-  color: #222;
   font: 3em/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 0px;
@@ -620,7 +628,6 @@ i {
 
 .post h2 {
   font: bold 2em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
 }
 
 .post h2.author {
@@ -636,36 +643,22 @@ i {
   font-size: 0.8em;
 }
 
-#post-list h2 {
-  font: normal 17px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #aaa;
-  max-width: 400px;
-  margin-top: 2px;
-}
-
-h3,
-h4,
-h5 {
-  color: #333;
-}
-
 h3 {
   font-size: 1.5em;
   font-weight: bold;
 }
 h4 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 h5 {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
 }
 
 h6 {
   font-size: 13px;
   font-weight: bold;
-  color: #666;
   margin-bottom: 6px;
 }
 
@@ -784,6 +777,11 @@ Post List
   margin-top: 80px;
 }
 
+#post-list,
+#archive-list ul {
+  margin: 0 0;
+}
+
 #post-list li,
 #archive-list li {
   list-style-type: none;
@@ -798,10 +796,15 @@ Post List
   border-top: 1px solid #eee;
 }
 
+#post-list h2 {
+  color: #aaa;
+  max-width: 400px;
+  margin-top: 2px;
+}
+
 #post-list a {
-  color: #cc3535;
   display: block;
-  font: bold 30px/1.2 "Helvetica Neue", helvetica, Arial, sans-serif;
+  line-height: 1.2em;
   margin-bottom: 15px;
 }
 
