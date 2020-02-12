@@ -1,5 +1,6 @@
 name: Piotr Stojanow
-title: Piotr Stojanow
+# uncomment for custom home page title or it's the above name
+# title:
 description: "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site."
 
 aboutPage: true
