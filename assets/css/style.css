@@ -260,9 +260,6 @@ small a {
   margin-bottom: 20px;
 }
 
-.profile h1 {
-}
-
 .profile h2 {
   font-size: 20px;
   font-weight: 300;
@@ -388,6 +385,16 @@ small a {
 
 .header .logo:hover {
   filter: brightness(125%);
+}
+
+/* hide/show nav on scroll animation */
+
+nav {
+  transition: transform 0.5s;
+}
+
+nav.scrollUp {
+  transform: translateY(-80px)
 }
 
 /* menu */
