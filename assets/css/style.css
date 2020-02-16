@@ -550,18 +550,6 @@ a {
   text-decoration: underline;
 }
 
-/*Transitions*/
-
-/* a, */
-/* #post-nav a, */
-/* #post-list a { */
-/*   -webkit-transition: all 0.4s ease; */
-/*   -moz-transition: all 0.4s ease; */
-/*   -ms-transition: all 0.4s ease; */
-/*   -o-transition: all 0.4s ease; */
-/*   transition: all 0.4s ease; */
-/* } */
-
 a:hover {
   filter: brightness(125%);
   color: #ff7f00;
@@ -965,46 +953,6 @@ Post List
   float: right;
 }
 
-/* Archive */
-
-/*
-h1.archive {
-	margin-bottom: 0px;
-}
-
-h2.month {
-	width: 100%;
-	font: bold 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;
-	text-transform: uppercase;
-	margin-top: 40px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #eee;
-}
-
-#archive-list li:last-child {
-	margin-bottom: 0;
-}
-
-#archive-list a {
-	display: block;
-	font: bold 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #333;
-}
-
-#archive-list .dates {
-	float: right;
-	position: relative;
-	top: 1px;
-	font: 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
-}
-
-#archive-list li a:hover,#archive-list li:hover .dates {
-	color: #5694f1;
-}
- */
-
 #post-meta img.avatar {
   height: 36px;
   width: 36px;
@@ -1257,23 +1205,3 @@ Subscription form
 .section-nav a {
   color: #cc3535;
 }
-
-/* related posts */
-
-/*
-.relatedPosts {
-  box-shadow: inset 0 1px 0 #eee;
-  padding-top: 15px;
-  margin:0 auto;
-}
-
-.rel {
-  width: 170px;
-  display: inline-block;
-  padding: 5px;
-}
-
-.rel:hover {
-  filter: brightness(100%);
-}
-*/
