@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Our brains are hardware that run on culture - software"
-date:   2018-06-25 08:41:43 +0200
+title: "Our brains are hardware that run on culture - software"
+date: 2018-06-25 08:41:43 +0200
 description: "Brains are hardware and run on culture, software. Culture transmits information and upgrades us.  With the improvement of technology, upgrades became more frequent. Culture is no longer a standard release, but a rolling release."
-category: tweetstorms
+category: posts
 tags: tweetstorm posts culture technology memes biology
 image: historic_growth
 imageAlt: "Historic Growth by Alesha Sivartha"
@@ -26,6 +26,6 @@ We moved from standard releases of culture (versions like 1.0 etc.) to a rolling
 
 (link to [tweetstorm](https://twitter.com/piotrstojanow/status/1011499621938618368))
 
-***
+---
 
 [^1]: Hat tip to [Bret Weinstein](https://twitter.com/BretWeinstein).
