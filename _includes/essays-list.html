@@ -1,0 +1,12 @@
+{% for post in site.categories.posts %}
+  <article class="post">
+      <header>
+          <h1 class="post-title"><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
+          <h2 class="author">{{ site.author.name }}</p>
+          <h3 class="headline">{{ post.date | date:"%B %-d, %Y" }}</h3>
+      </header>
+      <section id="post-body">
+          {{post.content}}
+      </section>
+  </article>
+{% endfor %}
