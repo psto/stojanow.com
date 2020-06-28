@@ -200,6 +200,7 @@ pre {
 
 .post p {
   margin: 1.25em 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Base */
@@ -670,14 +671,6 @@ p.small {
   color: #ccc;
 }
 
-blockquote {
-  border-left: 4px solid #ddd;
-  font-style: italic;
-  line-height: 24px;
-  margin: 0 2em;
-  padding: 0 1em;
-}
-
 hr {
   display: block;
   border: none;
@@ -693,7 +686,6 @@ span.code {
 }
 
 pre {
-  font-family: Menlo, Monaco, Courier;
   white-space: pre-wrap;
   padding: 20px;
   background-color: #fdfdfd;
@@ -755,6 +747,48 @@ img {
   width: 100%;
   max-width: 100%;
 }
+
+/* blockquote */
+
+blockquote {
+  border-left: 3px solid #cc3535;
+  color: #1a1a1a;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  line-height: 1.7em;
+  margin: 1.1em -4em;
+  padding: 1em 2em;
+  transition: .2s border ease-in-out;
+  z-index: 0;
+}
+
+@media (max-width: 780px) {
+  blockquote {
+    border-top: 2px solid #cc3535;
+    border-bottom: 2px solid #cc3535;
+    border-left: none;
+    margin: 1.5em 0;
+    padding: 1.5em 1em;
+  }
+
+  blockquote:before {
+    left: 50%;
+    top: 0;
+    height: 4px;
+    margin-top: -3px;
+    margin-left: -1em;
+    width: 2em;
+  }
+
+  blockquote:after {
+    font-size: 0.75em;
+    left: 50%;
+    top: 0;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+}
+
 
 /* Made with Cactus Badge */
 #badge {
@@ -1087,7 +1121,7 @@ Subscription form
   text-align: center;
   background: #fff;
   color: #000;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 4;
   text-align: center;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
@@ -1108,6 +1142,14 @@ Subscription form
   border-radius: 4;
 }
 
+.input-group-field:focus {
+  border: 1px solid #e8e8e8;
+}
+
+.simple-subscription-form p {
+  margin-bottom: 0.5em;
+}
+
 .simple-subscription-form .button {
   border-radius: 4px;
   color: #fff;
@@ -1115,7 +1157,6 @@ Subscription form
   display: inline-block;
   height: 40px;
   line-height: 42px;
-  margin: 0 5px 0 0;
   padding: 0 22px;
   text-decoration: none;
   text-transform: uppercase;
