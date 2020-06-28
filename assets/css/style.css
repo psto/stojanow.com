@@ -1117,7 +1117,6 @@ Subscription form
 =========================================== */
 
 .simple-subscription-form {
-  font-size: 112.5%;
   border: 1px solid #ccc;
   text-align: center;
   background: #fff;
@@ -1130,7 +1129,7 @@ Subscription form
 }
 
 .simple-subscription-form input.button {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 .input-group-field {
@@ -1159,14 +1158,13 @@ Subscription form
   height: 40px;
   line-height: 42px;
   padding: 0 22px;
+  text-transform: capitalize;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  font-style: normal;
-  font-size: 14px;
+  font-size: 1em;
   cursor: pointer;
-  border: 0;
+  border: none;
 }
 
 .simple-subscription-form .button:hover {
