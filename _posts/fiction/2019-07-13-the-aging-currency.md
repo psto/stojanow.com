@@ -4,7 +4,7 @@ title:  "The Aging Currency"
 date:   2019-07-13 17:59:40 +0200
 description: "The Aging Currency micro fiction"
 category: fiction
-tags: posts fiction micro-fiction
+tags: fiction posts micro-fiction
 image: me_machine
 imageAlt: "Me Machine by Daniel Miller"
 ---
