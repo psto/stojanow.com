@@ -21,71 +21,71 @@ What are the crucial steps in your most valued activity? Describe them and name 
 
 You must transform your business from a service company to a **product business** with a **standard, scalable and repeatable process**. Refer to the people that buy from as customers (like a product company) not clients (service company).
 
-### 1. Don't Generalize, Specialize!
+### Don't Generalize, Specialize!
 
 Focus on doing 1 thing well and hire specialists in that area = better quality and standing out
 
-### 2. Don't rely on 1 client.
+### Don't rely on 1 client.
 
 Have a diverse group of clients (max 10% revenue each).
 
 Earn-out (getting money upfront, hitting performance goals and staying 3 years more) is not a good way to sell your business.
 
-### 3. Owning a process makes it easier to pitch and puts you in control.
+### Owning a process makes it easier to pitch and puts you in control.
 
 Be clear about what you are selling and potential customer will be more likely to buy your product.
 
-### 4. Don't become synonymous with your company.
+### Don't become synonymous with your company.
 
 If buyers aren't confident that your business can run without you in charge, they won't make their best offer.
 
-### 5. Avoid the cash side.
+### Avoid the cash side.
 
 Once you've standardized your service charge upfront or use progress filing to use a positive cash flow cycle.
 
 Create an instructional manual for each step of your process and give it to your team. Make it simple and detailed, so that even your grandmother could understand it.
 
-### 6. Don't be afraid to say no to projects.
+### Don't be afraid to say no to projects.
 
 Prove that you are committed to specialization by during down work that falls outside of your area of expertize. The more people you say no to, the more referrals you will get to people that need your services.
 
 The buyer wants to know: How big can your business become? Do you have a replicable sales formula?
 
-### 7. Take some time to figure out how many pipeline prospects would likely lead to sales.
+### Take some time to figure out how many pipeline prospects would likely lead to sales.
 
-### 8. Two sales reps are always better than one.
+### Two sales reps are always better than one.
 
 Provides competition and proves to the buyer that you have a sales model, not just a really good salesman.
 
-### 9. Hire people who are good at selling products not services.
+### Hire people who are good at selling products not services.
 
 These people will be better at figuring out how your product will meet clients needs rather than customize your offering to fit what your clients want.
 
 How much you want to sell your business for? What is the amount of money you need?
 
-### 10. Ignore your profit and loss statement the year you make the switch to a standardized offering.
+### Ignore your profit and loss statement the year you make the switch to a standardized offering.
 
 As long as your cash flow remains strong, you will be back the in the black in no time.
 
-### 11. You need at least two years of financial statements reflecting your use of the standardized offering model before selling your company.
+###  You need at least two years of financial statements reflecting your use of the standardized offering model before selling your company.
 
-### 12. Build a management team and offer them a long-term incentive plan that rewards their personal performance and loyalty.
+### Build a management team and offer them a long-term incentive plan that rewards their personal performance and loyalty.
 
-### 13. Find an advisor for whom you will be neither the largest nor the smallest client.
+### Find an advisor for whom you will be neither the largest nor the smallest client.
 
 Make sure they know your industry.
 
-### 14. Avoid an advisor who offers to broker a discussion between a single client.
+### Avoid an advisor who offers to broker a discussion between a single client.
 
 You are to ensure there is competition for your business and avoid being used as a pawn for your advisor to satisfy their biggest client.
 
-### 15. Think Big.
+### Think Big.
 
 Write a 3-year business plan, what's possible for your business. Remember the company that acquires you will have more resources to accelerate your growth.
 
 Imagine what is possible. Think like Starbucks. Take off your conservative business owner plan.
 
-### 16. To be a sellable, product-oriented business you need to use the language of one.
+### To be a sellable, product-oriented business you need to use the language of one.
 
 Appearances matter a lot when selling a business.
 
@@ -95,7 +95,7 @@ Appearances matter a lot when selling a business.
 | Business        | Firm        |
 | Contract        | Engagement  |
 
-### 17. Don't issue stock options for key employees after an acquisition instead use a simple cash bonus that offers them rewards after you sell your company.
+### Don't issue stock options for key employees after an acquisition instead use a simple cash bonus that offers them rewards after you sell your company.
 
 Pay it in two instalments only for those who stay so that your staff stays on through the transmission.
 

@@ -1241,7 +1241,7 @@ Subscription form
 /* toc plugin */
 .section-nav {
   background: #f9f9f9 none repeat scroll 0 0;
-  list-style: upper-roman;
+  list-style: arabic;
   margin: 5px 0;
   padding: 10px 40px;
   border: 1px solid #e8e8e8;

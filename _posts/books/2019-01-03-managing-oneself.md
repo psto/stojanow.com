@@ -29,28 +29,28 @@ The only way to discover your strength is through feedback analysis. Whenever yo
 
 Implications for action that follow from feedback analysis:
  
-### 1 Concentrate on your strengths. 
+### Concentrate on your strengths. 
 
 Put yourself where your strengths can produce results.
  
-### 2 Work on improving your strengths.
+### Work on improving your strengths.
 
 Analysis will quickly show the gaps in your knowledge.
 
-### 3 Discover where you intellectual arrogance is causing disabling ignorance and overcome it.
+### Discover where you intellectual arrogance is causing disabling ignorance and overcome it.
 - Being bright is not a substitute for knowledge.
 - Overcome unproductive habits.
 - Be cooperative and have manners.
 - Waste as little effort as possible on improving areas of low competence (it takes far more energy and work to advance from incompetence to mediocrity than from first grade performance to excellence). Focus your energy, resources and time to make yourself (or others) a star performer.
  
-### 4. How do I perform? It' a crucial question.
+### How do I perform? It' a crucial question.
 - Too many people work in ways that are not their own, which mostly guarantees non-performance.
 - Ones strength and performance is unique. It is a matter of personality, which is unlikely to be completely changed.
  
-### 5. Am I a reader or a listener?
+### Am I a reader or a listener?
 - How do you acquire information more effectively?
  
-### 6. How do I learn?
+### How do I learn?
 - There is no one way to learn (schools act otherwise).
 - You may learn by writing, taking notes, by doing, by hearing yourself talk etc.
 - most people know the best way to learn but few act on this knowledge.
@@ -63,19 +63,19 @@ Analysis will quickly show the gaps in your knowledge.
 
 Do not try to change yourself (you most likely won't succeed). Instead, work hard on the way you perform and try not to take on work you cannot do or you do poorly.
  
-### 7. What are my values?
+### What are my values?
 - What kind person do I want to see in the mirror in the morning?
 - What are the values of your company?
 - Are the above compatible? They must be close enough to coexist.
  
-### 8. Where do I belong?
+### Where do I belong?
 - By your mid twenties you should know the answer to these questions: what are my strengths, how do I perform and what are my values? 
 - Only then are they able to decide where they belong or where they don't belong (what kind of work/companies/assignments suits or doesn't suits them).
   - Example: "Yes, I will do that, but this is the way I should be doing it, this is the way it should be structured, this how the relationship should be, these are the kinds of result you should expect from me and in this time frame, because this is who I am."
 - Successful careers are not planned. They develop when people are prepared for opportunities, because they know their strengths, values and they method of work.
 - Knowing where one belongs can transform a normal, hard working person into an outstanding performer.
 
-### 9. What should I contribute?
+### What should I contribute?
 - In the past people were told what to contribute (by the work itself or a master).
 - You must address 3 elements:
   1. What does the situation require?
@@ -88,7 +88,7 @@ Do not try to change yourself (you most likely won't succeed). Instead, work har
 
 From this a course of action will appear: what to do, where/how to start, what goals/deadlines to set?
  
-### 10. Responsibility for relationships.
+### Responsibility for relationships.
 - Managing yourself requires you to take responsibility for relationships:
   1. Accept that other people are individuals like you yourself are. You must know their strengths, values and ways of performing.
     * Example: When you have a new boss, don't work the same way how your old boss expected you to. Find out what is expected and adapt. This is a secret to managing the boss.
@@ -96,7 +96,7 @@ From this a course of action will appear: what to do, where/how to start, what g
     * Personality conflicts arise from people not knowing what others are doing, how they do their work, what contribution are they concentrating on and what results do they expect. The reason? They have not asked.
 - Organisation are no longer build on force but on TRUST. People don't have to like one another but they must understand one another.
  
-### 11. The second half of your life.
+### The second half of your life.
 - Today knowledge workers are not finished after 40 years of work, they are merely born. They may face another 10-25 years of work due to rising life expectancy.
 - Managing oneself leads one to starting a second carrier:
      - Use the same skills but start in a different industry.
@@ -105,7 +105,7 @@ From this a course of action will appear: what to do, where/how to start, what g
 - You must begin long before you are 40.
 - Another reason for a second career: a major setback in a life or work (being passed for a promotion, personal tragedies).
 
-### 12. Conclusion
+### Conclusion
 
 Managing oneself demands that each knowledge worker think and act like a CEO.
 

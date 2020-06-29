@@ -200,7 +200,7 @@ Steve Jobs commencement speech: ‘Remembering that you are going to die is the 
 ## Epilogue: Negative Capability
 More loosely defined, *‘negative capability’ is really just another term for living in accordance with the ‘backwards law’* - and it might be a good label to describe the chief talent I kept discovering among the people I encountered in the course of researching this book. *What they all shared was this same turn of mind, which I came to visualise as a sort of graceful mental dance step: a willingness to adopt an oblique stance towards one’s own inner life; to pause and take a step back; to turn to face what others might flee from; and to realise that the shortest apparent route to a positive mood is rarely a sure path to a more profound kind of happiness*.
 
-### Oliver's daily rituals:
+### Oliver's daily rituals
 - ‘**Stoic pause**’ - which is all that it takes to remember that it’s my judgment about a situation or person that is the cause of my distress, not the situation itself.
 - Even five or ten minutes’ **vipassana meditation**.
 - Eckhart Tolle’s deceptively simple-sounding question - **‘Do you have a problem right now**?’ - is a marvellous antidote to low-level stress.
