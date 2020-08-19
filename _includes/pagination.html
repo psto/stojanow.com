@@ -2,11 +2,11 @@
   {% if paginator.previous_page %}
   <span class="prev">
     {% if paginator.previous_page == 1 %}
-    <a href="{{ "/" | relative_url  }}" title="Previous Page">
+    <a href="{{ "/" | relative_url  }}" title="Previous Page" class="button">
       ← Newer Posts
     </a>
     {% else %}
-    <a href="{{ "/" | relative_url  }}page{{ paginator.previous_page }}/">
+    <a href="{{ "/" | relative_url  }}page{{ paginator.previous_page }}/" class="button">
       ← Newer Posts
     </a>
     {% endif %}
@@ -15,7 +15,7 @@
   <!-- <span class="page-number ">{{ paginator.page }} of {{ paginator.total_pages }}</span> -->
   {% if paginator.next_page %}
   <span class="next">
-    <a href="{{ "/" | relative_url  }}page{{ paginator.next_page }}/">
+    <a href="{{ "/" | relative_url  }}page{{ paginator.next_page }}/" class="button">
       Older Posts →
     </a>
   </span>
