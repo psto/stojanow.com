@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: stojanow.com
+Token: 12b2a482c6edb0a82a08552a14b459fb41dcee7a447e2f43239ccf94fd1da6ba

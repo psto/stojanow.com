@@ -14,10 +14,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-toc
-domain_name: 'stojanow.com'
-google_analytics: 'UA-97630657-2'
+domain_name: "stojanow.com"
+google_analytics: "UA-97630657-2"
 disqus: true
-disqus_shortname: 'stojanow'
+disqus_shortname: "stojanow"
 
 pagination:
   enabled: true
@@ -25,33 +25,30 @@ pagination:
   sort_reverse: true
 
 # Details for the RSS feed generator
-url:    'http://stojanow.com'
+url: "http://stojanow.com"
 author:
-  name: 'Piotr Stojanow'
+  name: "Piotr Stojanow"
 twitter:
   username: piotrstojanow
 
-permalink:       /:title/
+permalink: /:title/
 
 defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
+  - scope:
+      path: "" # empty string for all files
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: "" # empty string for all files
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
 
 exclude:
   - Gemfile
@@ -59,3 +56,5 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
+
+include: [".well-known"]
