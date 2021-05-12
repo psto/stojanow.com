@@ -198,9 +198,11 @@ pre {
   margin: 0.5em 0;
 }
 
-.post p, ul, ol {
+.post p,
+ul,
+ol {
   margin: 1.25em 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Base */
@@ -396,7 +398,7 @@ nav {
 }
 
 nav.scrollUp {
-  transform: translateY(-80px)
+  transform: translateY(-80px);
 }
 
 /* menu */
@@ -559,8 +561,8 @@ a:hover {
 
 ul,
 ol {
-  margin: 0 20px;
-  padding: 0;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 /* Line Height */
@@ -759,7 +761,7 @@ blockquote {
   line-height: 1.7em;
   margin: 1.1em -4em;
   padding: 1em 2em;
-  transition: .2s border ease-in-out;
+  transition: 0.2s border ease-in-out;
   z-index: 0;
 }
 
@@ -790,7 +792,6 @@ blockquote {
   }
 }
 
-
 /* Made with Cactus Badge */
 #badge {
   position: absolute;
@@ -803,18 +804,15 @@ blockquote {
 /*=========================================
 Post List
 =========================================== */
-#post-list,
-#archive-list {
+#post-list {
   margin-top: 80px;
 }
 
-#post-list,
-#archive-list ul {
+#post-list ul {
   margin: 0 0;
 }
 
-#post-list li,
-#archive-list li {
+#post-list li {
   list-style-type: none;
 }
 
@@ -867,27 +865,6 @@ Post List
   display: inline-block;
   top: 0px;
   left: 0px;
-}
-
-#archive-link {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: bold;
-  border-radius: 4px;
-  padding: 3px 10px 6px;
-  box-shadow: 0 0 0 1px hsla(207, 83%, 80%, 1);
-}
-
-#archive-link:hover {
-  background: #5694f1;
-  color: #fff;
-  box-shadow: 0 0 0 1px #5694f1;
-}
-
-#archive-link span {
-  position: relative;
-  top: 0;
-  font-size: 17px;
 }
 
 /* Post Page */
@@ -999,26 +976,10 @@ Post List
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
-#post-list.archive.readmore h3 {
-  font: 400 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 30px;
-}
-
-#post-list.archive.readmore a {
-  font: 400 16px/1.6 "Helvetica Neue", helvetica, Arial, sans-serif;
-  color: #5694f1;
-}
-
-#post-list.archive.readmore a:hover {
-  opacity: 0.8;
-}
-
-#post-list.archive.readmore .dates {
-  font: 300 16px/1.6 "Helvetica Neue", helvetica, Arial, sans-serif;
-}
 #sharing a.facebook {
   background: #4361b3;
 }
+
 #sharing a.twi {
   background: #4fafed;
 }
@@ -1074,8 +1035,7 @@ Pagination Button
     margin-top: 60px;
   }
 
-  #post-list,
-  #archive-list {
+  #post-list {
     margin-top: 0;
   }
   #post-meta {
