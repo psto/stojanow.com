@@ -205,6 +205,10 @@ ol {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+.post ::marker {
+  color: #cc3535;
+}
+
 /* Base */
 html,
 body {
