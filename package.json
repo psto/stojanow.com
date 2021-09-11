@@ -1,0 +1,25 @@
+{
+  "name": "stojanow.com",
+  "version": "1.0.0",
+  "description": "Piotr Stojanow's personal site. All my essays, tweetstorms, book notes and blog in one place.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psto/stojanow.com.git"
+  },
+  "author": "psto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psto/stojanow.com/issues"
+  },
+  "homepage": "https://github.com/psto/stojanow.com#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.15"
+  }
+}
