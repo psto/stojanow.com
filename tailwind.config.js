@@ -2,10 +2,16 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'brand-red': '#cc3535'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      brightness: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
