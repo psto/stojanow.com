@@ -4,3 +4,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.footnote {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.footnotes li {
+  font-size: 80%;
+}

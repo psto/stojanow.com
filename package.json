@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/psto/stojanow.com#readme",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",

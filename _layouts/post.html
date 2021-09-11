@@ -2,23 +2,34 @@
 layout: default
 ---
 
-<article class="post">
-    <header>
-        <h1>{{ page.title }}</h1>
-        <h2 class="author">{{ site.author.name }}</p>
-        <h3 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h3>
-    </header>
-    <section id="post-body">
-        {{ content | toc }}
-    </section>
+<article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose lg:prose-lg md:pt-0">
+
+  <h1 class="mx-auto mb-4 text-center p-name lg:mb-8">
+    {{ page.title }}
+  </h1>
+
+  <div class="flex justify-center mb-2">
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="block mr-2 text-sm text-center text-gray-400 post-date">
+      {{ page.date | date: '%B %-d, %Y' }}
+    </time>
+  </div>
+
+  <div class="flex justify-center space-x-8 sm:space-x-12">
+    <div class="flex items-center space-x-2">
+      <img src="/assets/images/avatar.png" alt="Piotr Stojanow of Stojanow.com" class="w-10 h-10 my-0 rounded-full lg:my-0">
+      <dl class="text-sm font-medium leading-5 text-gray-700 whitespace-nowrap">
+        <dt class="sr-only">Name</dt>
+        <dd><a href="{{ "/" }}" class="text-gray-700 no-underline hover:text-primary-600" rel="author">{{ site.author.name }}</a></dd>
+        <dt class="sr-only">Twitter</dt>
+        <dd><a href="https://twitter.com/@{{ site.twitter.username }}" class="no-underline text-primary-600 hover:text-primary-700">@{{ site.twitter.username }}</a></dd>
+      </dl>
+    </div>
+  </div>
+
+  <hr />
+
+  {{ content | toc }}
+
+  {% include subscription-form.html %}
+
 </article>
-
-{% include author-footer.html %}
-{% include subscription-form.html %}
-
-<!-- Disqus -->
-{% if site.disqus %}
-<div class="comments">
-  {% include show-disqus.html %}
-</div>
-{% endif %}

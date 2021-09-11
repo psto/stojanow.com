@@ -19,19 +19,21 @@
 
   {% seo %}
 </head>
-<body>
+<body class="flex flex-col">
+  <div class="pt-4 md:pt-8">
+    {% include navigation.html %}
 
-  {% include navigation.html %}
+    {% if page.profile %}
+        {% include profile.html %}
+    {% endif %}
 
-  {% if page.profile %}
-      {% include profile.html %}
-  {% endif %}
+    <section>
+      {{ content }}
+    </section>
 
-  <section id="wrapper" class="{% if page.profile %}home{% endif %}">
-    {{ content }}
-  </section>
+    {% include footer.html %}
+  </div>
 
-  {% include footer.html %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="{{ "/" | relative_url  }}assets/js/main.js"></script>
