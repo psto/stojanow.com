@@ -2,21 +2,28 @@
 layout: default
 ---
 
-<article class="post">
-    <section id="post-body">
-        <div id="book-info">
-          <a href="{{ page.amazon }}"><img src="{{ page.cover }}" class="book-cover" alt="{{ page.title }} cover"></a>
-          <h3>{{ page.title }}</h3>
+<article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose lg:prose-lg md:pt-0">
+    <section>
+        <div class="flex py-2 content">
+          <a href="{{ page.amazon }}"><img src="{{ page.cover }}" class="max-w-md mr-4" alt="{{ page.title }} cover"></a>
+          <div class="px-2 item-body ">
+            <h2 class="mx-auto mb-4 text-center p-name lg:mb-8">
+              {{ page.title }}
+            </h2>
+          </div>
+        </div>
+        <div>
           <small>
             Date read: {{ page.date-read }}.<br>
             Check out <a href="{{ page.amazon }}">Amazon</a> for more details and reviews.
           </small>
           <p>{{ page.summary }}</p>
-          <hr>
         </div>
-        {{content | toc}}
+        <hr>
     </section>
+
+  {{content | toc}}
+
+  {% include subscription-form.html %}
 </article>
 
-{% include author-footer.html %}
-{% include subscription-form.html %}
