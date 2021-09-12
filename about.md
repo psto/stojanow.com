@@ -7,9 +7,7 @@ profile: false
 
 {% include container.html %}
 
-<article class="post">
-  <section id="post-body">
-
+<div class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose lg:prose-lg md:pt-0">
     <p><i>"All you have to do is write one true sentence. Write the truest sentence that you know. So finally I would write one true sentence, and then go on from there."</i> — Ernest Hemingway</p>
 
     <p>All my attempts to distill what I know to one true sentence at a time. I also keep a <a href="https://wiki.stojanow.com">wiki</a> of things I know.</p>
@@ -40,5 +38,5 @@ profile: false
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <p><a href="{{ "/" }}contact">Email me</a> or say hi on <a href="http://twitter.com/piotrstojanow" id="twi-profile" target="_blank"><span class="icon-twi"></span> twitter</a>!</p>
-  </section>
+
 </article>
