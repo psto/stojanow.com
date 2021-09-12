@@ -7,9 +7,15 @@ profile: false
 
 {% include container.html %}
 
-<div class="container">
-  <p>A place to practice my <a href="https://en.wikipedia.org/wiki/Flash_fiction">flash fiction</a> and <a href="https://en.wikipedia.org/wiki/Micro-SFP">micro-SFP</a> writing.</p>
-  <hr>
+<div class="max-w-2xl px-4 mx-auto prose lg:prose-lg md:pt-0">
+  <p>
+    A place to practice my
+    <a href="https://en.wikipedia.org/wiki/Flash_fiction">flash fiction</a> and
+    <a href="https://en.wikipedia.org/wiki/Micro-SFP">micro-SFP</a> writing.
+  </p>
+  <hr />
 </div>
 
-{% include fiction-list.html %}
+<div class="max-w-4xl mx-auto prose x-4 lg:prose-lg md:pt-0">
+  {% include fiction-list.html %}
+</div>
