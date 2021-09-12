@@ -8,7 +8,7 @@ category: books
 tags: books notes business entreprenurship
 date-read: 2014-02-19
 amazon: https://smile.amazon.com/80-Approach-Dan-Sullivan/dp/1897239297
-cover: /assets/images/books_images/the-80-approach-dan-sullivan.png
+cover: /assets/images/books_images/the-80-approach-dan-sullivan.jpg
 toc: true
 ---
 
@@ -63,6 +63,7 @@ Perfectionists never take ownership of what happens to them.
 Regardless of whether we’re procrastinating or trying to be more prepared, little or no learning takes place until we actually start. Something powerful happens to the mind and emotions when we’re engaged in producing a practical result.
 
 **Why procrastination is always doubly bad for us**:
+
 1. It robs us of personal confidence during the period before we become engaged with the project.
 2. When we actually do engage with the project, we feel a sense of personal loss and guilt about the valuable time and energy that was wasted by procrastinating.
 
@@ -80,7 +81,6 @@ The perfectionist is fixated on achieving 100%, but no one else expects, require
 
 **The Advantage 2**: Because modern life is based on teamwork and utilizes the different abilities of many people, striving for 80% instead of 100% leads to a much faster and superior overall result in 80% of situations.
 
-
 ### Advantage 3: Recognizing which 80% of a project each person should handle
 
 > Doing only the 80% where I have a Unique Ability.
@@ -91,19 +91,18 @@ Many other people’s Unique Ability and “80% contributions” are required fo
 
 **The Advantage 3**: Success occurs extraordinarily quickly when all members of a team focus only on their individual Unique Ability, and then focus their Unique Ability on their own “80% contributions” that guarantee the best overall teamwork and results
 
-
 ### Advantage 4: The power of getting the first 80% done as quickly as possible.
 
 **Immediate increase of confidence and teamwork**.
 
 Anyone who applies this rule on a daily basis until it’s a habit will immediately notice a dramatic change in two areas of experience.
+
 1. The elimination of procrastination by doing the first 80% as quickly as possible will provide a burst of personal confidence.
 2. Out of this higher personal confidence—and with an actual achievement in hand—it will be easy to attract the teamwork of anyone else who would like to self-improve.
 
 But everything depends on one person taking the lead. By eliminating your own procrastination, you enable others to do the same.
 
 **The Advantage 4**: In any situation, you can immediately increase your own personal confidence and teamwork with others by getting the first 80% of any project done as quickly as possible.
-
 
 ### Advantage 5: Why focusing on 80% produces bigger and better results than striving for 100%.
 
@@ -119,7 +118,6 @@ In addition, you’ll become over-demanding with the people working with you, an
 
 **The Advantage 6**: Every contribution that you make to a team effort, do it as quickly as possible, so the next steps can be delegated to others as quickly and effectively as possible.
 
-
 ### Advantage 7: How eliminating procrastination saves time, improves talent, and transforms emotions
 
 **The Advantage 7**: By eliminating procrastination, especially in teamwork, we help others save time, improve their talents, and transform negative emotions.
@@ -130,27 +128,38 @@ The great thinkers and doers were “80% people.”
 
 **The Advantage 8**: By adopting The 80% Approach in all daily situations, over a lifetime, you will enjoyably and profitably outperform all the perfectionists you encounter in private and public life
 
-
 ### The Self-Managing Future
 
 Tips for getting started right now:
 
 1. Always be clear and confident about why any new project or initiative is important to you before taking action.
-  * Unless it’s exciting and motivating to you, don’t get involved.
+
+- Unless it’s exciting and motivating to you, don’t get involved.
+
 2. Focus on just getting three important 80% actions done on any given day, and consider anything more than this a bonus
-  * Never make a long list of things to do.
-  * hold yourself accountable for reasonable progress, and achieve it.
-  * Then celebrate your movement forward and repeat the same process tomorrow.
+
+- Never make a long list of things to do.
+- hold yourself accountable for reasonable progress, and achieve it.
+- Then celebrate your movement forward and repeat the same process tomorrow.
+
 3. Do everything well enough, but as quickly as possible, so that someone else can quickly take your projects and initiatives further
-  * The biggest purpose of The 80% Approach is to surround yourself with teamwork as quickly as possible
+
+- The biggest purpose of The 80% Approach is to surround yourself with teamwork as quickly as possible
+
 4. Never have a meeting with others until someone in the group has already completed a first 80% initiative that others can contribute to
 5. If it’s your project, think things through on your own, make maximum possible decisions, and start taking immediate actions before any kind of meeting.
-  * Don’t waste other people’s time unless you have some committed progress and achievement to show them.
-  * Never ask other people to supply you with motivation and commitment that you don’t already have yourself.
+
+- Don’t waste other people’s time unless you have some committed progress and achievement to show them.
+- Never ask other people to supply you with motivation and commitment that you don’t already have yourself.
+
 6. If you are stuck on any project, ask yourself why you’re still doing it.
-  - If you don’t have an answer, take the project off your list.
+
+- If you don’t have an answer, take the project off your list.
+
 7. If you’re stuck on a project and are still committed to it, identify the fastest and easiest action that will get it moving again.
-  - Here’s a prediction: Every situation in your life where you feel stuck is the result of your wanting to achieve a 100% result.
+
+- Here’s a prediction: Every situation in your life where you feel stuck is the result of your wanting to achieve a 100% result.
+
 8. On a continual daily basis, surround yourself with more and more people who enjoy and are good at operating according to The 80% Approach.
 
 The 80% Approach only requires a revolution of one person deciding to use it in daily life. Then the revolution will spread to others.

@@ -8,12 +8,13 @@ category: books
 tags: books notes business entreprenurship
 date-read: 2015-06-02
 amazon: https://smile.amazon.com/Built-Sell-Creating-Business-Without/dp/1591845823
-cover: /assets/images/books_images/built-to-sell-john-warrillow.png
+cover: /assets/images/books_images/built-to-sell-john-warrillow.jpg
 toc: true
 ---
 
 The Paradox that successful entrepreneurs manage:
-> "*You should always run a company as if it will last forever, and yet you should also strive constantly to maximize its value, building in the qualities that allow it to be sold at any moment for the highest price buyers are paying for a business like yours*."
+
+> "_You should always run a company as if it will last forever, and yet you should also strive constantly to maximize its value, building in the qualities that allow it to be sold at any moment for the highest price buyers are paying for a business like yours_."
 
 How would you describe your business to someone at a cocktail party?
 
@@ -67,7 +68,7 @@ How much you want to sell your business for? What is the amount of money you nee
 
 As long as your cash flow remains strong, you will be back the in the black in no time.
 
-###  You need at least two years of financial statements reflecting your use of the standardized offering model before selling your company.
+### You need at least two years of financial statements reflecting your use of the standardized offering model before selling your company.
 
 ### Build a management team and offer them a long-term incentive plan that rewards their personal performance and loyalty.
 
@@ -90,7 +91,7 @@ Imagine what is possible. Think like Starbucks. Take off your conservative busin
 Appearances matter a lot when selling a business.
 
 | Use these words | Avoid these |
-|-----------------|-------------|
+| --------------- | ----------- |
 | Customer        | Client      |
 | Business        | Firm        |
 | Contract        | Engagement  |
@@ -104,9 +105,9 @@ Pay it in two instalments only for those who stay so that your staff stays on th
 #### Step 1: Isolate a product or business with a potential to scale.
 
 Try combining 1 or 2 products to create an ideal offering. 3 criteria for choosing a product:
-  I. Teachable to employees or can be delivered through technology
-  II. Valuable to your customers
-  III. Repeatable (the most important criteria)
+I. Teachable to employees or can be delivered through technology
+II. Valuable to your customers
+III. Repeatable (the most important criteria)
 
 Document your process for delivering your product.
 
@@ -141,9 +142,10 @@ You need to prove that you have a management team that can run the company after
 Avoid options because they complicate the selling process.
 
 Create a long term incentive plan for your managers.
-* Each year take an amount equivalent to their annual bonus and put it aside in the long-term incentive account for each manager you want to keep.
-* Allow the manager to withdraw the 1/3 of the amount each year during a 3 year period, that way the manager will have to walk away from a decent amount of money if they want to leave.
-* Also have a 1-time special bonus when the business is sold.
+
+- Each year take an amount equivalent to their annual bonus and put it aside in the long-term incentive account for each manager you want to keep.
+- Allow the manager to withdraw the 1/3 of the amount each year during a 3 year period, that way the manager will have to walk away from a decent amount of money if they want to leave.
+- Also have a 1-time special bonus when the business is sold.
 
 #### Step 6: Find a broker.
 

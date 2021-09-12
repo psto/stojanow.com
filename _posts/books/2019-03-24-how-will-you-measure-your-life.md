@@ -8,7 +8,7 @@ category: books
 tags: books notes business
 date-read: 2014-10-02
 amazon: https://smile.amazon.com/How-Will-Measure-Your-Life/dp/0062102419
-cover: /assets/images/books_images/how-will-you-measure-your-life.png
+cover: /assets/images/books_images/how-will-you-measure-your-life.jpg
 toc: true
 ---
 
@@ -26,7 +26,7 @@ Solving the challenges in your life requires a deep understanding of what causes
 
 ### Finding Happiness in Your Career
 
-> *A **strategy** is what you want to achieve and how you will get there.*
+> _A **strategy** is what you want to achieve and how you will get there._
 
 In the business world, this is the result of multiple influences: what a company’s priorities are, how a company responds to opportunities and threats along the way, and how a company allocates its precious resources. These things all continuously combine, to create and evolve a strategy.
 
@@ -40,7 +40,7 @@ The final element is **execution**. The only way a strategy can get implemented 
 
 It’s impossible to have a meaningful conversation about happiness without understanding what makes each of us tick.
 
-> *When we find ourselves stuck in unhappy careers—and even unhappy lives—it is often the result of a fundamental misunderstanding of what really motivates us.*
+> _When we find ourselves stuck in unhappy careers—and even unhappy lives—it is often the result of a fundamental misunderstanding of what really motivates us._
 
 One of the best ways to probe whether you can trust the advice that a theory is offering you is to **look for anomalies**—something that the theory cannot explain.
 
@@ -52,7 +52,7 @@ Satisfaction and dissatisfaction are separate, independent measures. This means,
 
 On one side of the equation, there are the elements of work that, if not done right, will cause us to be dissatisfied. These are called **hygiene factors**. Hygiene factors are things like status, compensation, job security, work conditions, company policies, and supervisory practices. Bad hygiene causes dissatisfaction. You have to address and fix bad hygiene to ensure that you are not dissatisfied in your work. Interestingly, Herzberg asserts that compensation is a hygiene factor, not a motivator.
 
-> *This is an important insight from Herzberg’s research: if you instantly improve the hygiene factors of your job, you’re not going to suddenly love it. At best, you just won’t hate it anymore. The opposite of job dissatisfaction isn’t job satisfaction, but rather an absence of job dissatisfaction.*
+> _This is an important insight from Herzberg’s research: if you instantly improve the hygiene factors of your job, you’re not going to suddenly love it. At best, you just won’t hate it anymore. The opposite of job dissatisfaction isn’t job satisfaction, but rather an absence of job dissatisfaction._
 
 So, what are the things that will truly, deeply satisfy us, the factors that will cause us to love our jobs? These are what Herzberg’s research calls **motivators**. Motivation factors include challenging work, recognition, responsibility, and personal growth. Feelings that you are making a meaningful contribution to work arise from intrinsic conditions of the work itself. Motivation is much less about external prodding or stimulation, and much more about what’s inside of you, and inside of your work.
 
@@ -62,14 +62,15 @@ I concluded, if you want to help other people, be a manager. If done well, manag
 
 The second realization I had is that the pursuit of money can, at best, mitigate the frustrations in your career—yet the siren song of riches has confused and confounded some of the best in our society.
 
-> *In order to really **find happiness**, you need to continue looking for opportunities that you believe are meaningful, in which you will be able to learn new things, to succeed, and be given more and more responsibility to shoulder.*
+> _In order to really **find happiness**, you need to continue looking for opportunities that you believe are meaningful, in which you will be able to learn new things, to succeed, and be given more and more responsibility to shoulder._
 
 The theory of motivation suggests you need to ask yourself a different set of questions than most of us are used to asking.
-* Is this work meaningful to me?
-* Is this job going to give me a chance to develop?
-* Am I going to learn new things?
-* Will I have an opportunity for recognition and achievement?
-* Am I going to be given responsibility?
+
+- Is this work meaningful to me?
+- Is this job going to give me a chance to develop?
+- Am I going to learn new things?
+- Will I have an opportunity for recognition and achievement?
+- Am I going to be given responsibility?
 
 These are the things that will truly motivate you. Once you get this right, the more measurable aspects of your job will fade in importance.
 
@@ -81,7 +82,7 @@ As Professor Henry Mintzberg taught, options for your strategy spring from two v
 
 The second source of options is **unanticipated**—usually a cocktail of problems and opportunities that emerges while you are trying to implement the deliberate plan or strategy that you have decided upon.
 
-> *The unanticipated problems and opportunities then essentially fight the deliberate strategy for the attention, capital, and hearts of the management and employees.*
+> _The unanticipated problems and opportunities then essentially fight the deliberate strategy for the attention, capital, and hearts of the management and employees._
 
 The company has to decide whether to stick with the original plan, modify it, or even replace it altogether with one of the alternatives that arises. The decision sometimes is an explicit decision; often, however, a modified strategy coalesces from myriad day-to-day decisions to pursue unanticipated opportunities and resolve unanticipated problems. When strategy forms in this way, it is known as **emergent strategy**.
 
@@ -89,13 +90,13 @@ When the company’s leaders made a clear decision to pursue the new direction, 
 
 In other words, strategy is not a discrete analytical event—something decided, say, in a meeting of top managers based on the best numbers and analysis available at the time. Rather, it is a **continuous, diverse, and unruly process**.
 
-> *Understanding this—that strategy is made up of these two disparate elements, and that your circumstances dictate which approach is best—will better enable you to sort through the choices that your career will constantly present.*
+> _Understanding this—that strategy is made up of these two disparate elements, and that your circumstances dictate which approach is best—will better enable you to sort through the choices that your career will constantly present._
 
 But if you haven’t reached the point of finding a career that does this for you, then, like a new company finding its way, you need to be emergent. This is another way of saying that if you are in these circumstances, **experiment in life**.
 
-> *As you learn from each experience, adjust. Then iterate quickly. Keep going through this process until your strategy begins to click.*
+> _As you learn from each experience, adjust. Then iterate quickly. Keep going through this process until your strategy begins to click._
 
-There’s a tool that can help you test whether your deliberate strategy or a new emergent one will be a fruitful approach. It forces you to articulate what assumptions need to be proved true in order for the strategy to succeed. The academics who created this process, Ian MacMillan and Rita McGrath, called it “*discovery-driven planning*,” but it might be easier to think about it as a “**What has to prove true for this to work?**”
+There’s a tool that can help you test whether your deliberate strategy or a new emergent one will be a fruitful approach. It forces you to articulate what assumptions need to be proved true in order for the strategy to succeed. The academics who created this process, Ian MacMillan and Rita McGrath, called it “_discovery-driven planning_,” but it might be easier to think about it as a “**What has to prove true for this to work?**”
 
 Ask the project teams to compile a list of all the assumptions that have been made in those initial projections. Then ask them: “Which of these assumptions need to prove true in order for us to realistically expect that these numbers will materialize?”
 
@@ -108,9 +109,10 @@ Once the company understands whether the initial important assumptions are likel
 Before you take a job, carefully list what things others are going to need to do or to deliver in order for you to successfully achieve what you hope to do. Ask yourself: “What are the assumptions that have to prove true in order for me to be able to succeed in this assignment?” List them. Are they within your control?
 
 Equally important, ask yourself what assumptions have to prove true for you to be happy in the choice you are contemplating.
-* Are you basing your position on extrinsic or intrinsic motivators?
-* Why do you think this is going to be something you enjoy doing?
-* What evidence do you have?
+
+- Are you basing your position on extrinsic or intrinsic motivators?
+- Why do you think this is going to be something you enjoy doing?
+- What evidence do you have?
 
 Every time you consider a career move, keep thinking about the most important assumptions that have to prove true, and how you can swiftly and inexpensively test if they are valid.
 
@@ -140,7 +142,7 @@ Your career priorities—the motivators that will make you happy at work—are s
 
 Similarly, the way you balance your plans with unanticipated opportunities, and allocate your resources—your time and energy—does not stop when you walk out the door of your office. You’re making decisions about these every moment of your life.
 
-> *You have to make sure that your own measures of success are aligned with your most important concern. And you have to make sure that you’re thinking about all these in the right time frame—overcome the natural tendency to focus on the short term at the expense of the long term.*
+> _You have to make sure that your own measures of success are aligned with your most important concern. And you have to make sure that you’re thinking about all these in the right time frame—overcome the natural tendency to focus on the short term at the expense of the long term._
 
 I’ve had to force myself to stay aligned with what matters most to me by setting hard stops, barriers, and boundaries in my life.
 
@@ -158,7 +160,7 @@ Professor Amar Bhide showed in his Origin and Evolution of New Business that 93 
 
 In other words, successful companies don’t succeed because they have the right strategy at the beginning; but rather, because they have money left over after the original strategy fails, so that they can pivot and try another approach. Most of those that fail, in contrast, spend all their money on their original strategy—which is usually wrong.
 
-> *When the winning strategy is not yet clear in the initial stages of a new business, good money from investors needs to be patient for growth but impatient for profit.*
+> _When the winning strategy is not yet clear in the initial stages of a new business, good money from investors needs to be patient for growth but impatient for profit._
 
 It demands that a new company figures out a viable strategy as fast as and with as little investment as possible—so that the entrepreneurs don’t spend a lot of money in pursuit of the wrong strategy.
 
@@ -176,7 +178,7 @@ If you defer investing your time and energy until you see that you need to, chan
 
 Many products fail because companies develop them from the wrong perspective. Companies focus too much on what they want to sell their customers, rather than what those customers really need.
 
-> *What’s missing is empathy: a deep understanding of what problems customers are trying to solve. The same is true in our relationships: we go into them thinking about what we want rather than what is important to the other person. Changing your perspective is a powerful way to deepen your relationships*.
+> _What’s missing is empathy: a deep understanding of what problems customers are trying to solve. The same is true in our relationships: we go into them thinking about what we want rather than what is important to the other person. Changing your perspective is a powerful way to deepen your relationships_.
 
 IKEA is structured around a job that customers periodically need to get done. A job? Through my research on innovation for the past two decades, my colleagues and I have developed a theory about this approach to marketing and product development, which we call “the job to be done.” The insight behind this way of thinking is that what causes us to buy a product or service is that we actually hire products to do jobs for us.
 
@@ -184,15 +186,15 @@ IKEA is structured around a job that customers periodically need to get done. A 
 
 Understanding the job requires the critical ingredients of intuition and empathy. You have to be able to put yourself not just in her shoes, but her chair—and indeed, her life. More important, the jobs that your spouse is trying to do are often very different from the jobs that you think she should want to do.
 
-> *We project what we want and assume that it’s also what our spouse wants*.
+> _We project what we want and assume that it’s also what our spouse wants_.
 
 A husband may be convinced that he is the selfless one, and also convinced that his wife is being self-centered because she doesn’t even notice everything he is giving her—and vice versa. This is exactly the interaction between the customers and the marketers of so many companies, too.
 
-> *Given that sacrifice deepens our commitment, it’s important to ensure that what we sacrifice for is worthy of that commitment*.
+> _Given that sacrifice deepens our commitment, it’s important to ensure that what we sacrifice for is worthy of that commitment_.
 
 It’s natural to want the people you love to be happy. What can often be difficult is understanding what your role is in that.
 
-> *Thinking about your relationships from the perspective of the job to be done is the best way to understand what’s important to the people who mean the most to you. It allows you to develop true empathy.*
+> _Thinking about your relationships from the perspective of the job to be done is the best way to understand what’s important to the people who mean the most to you. It allows you to develop true empathy._
 
 But you have to go beyond understanding what job your spouse needs you to do. **You have to do that job**. You’ll have to devote your time and energy to the effort, be willing to suppress your own priorities and desires, and focus on doing what is required to make the other person happy.
 
@@ -244,7 +246,7 @@ It would be a mistake, however, to neglect the courses your children need to equ
 
 One of the most powerful tools to enable us to close the gap between the family we want and the family we get is culture. We need to understand how it works and be prepared to put in the hard yards to influence how it is shaped.
 
-> *Culture is a way of working together toward common goals that have been followed so frequently and so successfully that people don’t even think about trying to do things another way. If a culture has formed, people will autonomously do what they need to do to be successful.*
+> _Culture is a way of working together toward common goals that have been followed so frequently and so successfully that people don’t even think about trying to do things another way. If a culture has formed, people will autonomously do what they need to do to be successful._
 
 Those instincts aren’t formed overnight. Rather, they are the result of shared learning—of employees working together to solve problems and figuring out what works.
 
@@ -256,7 +258,7 @@ Schein’s articulation of how culture is created allows executives to create a 
 
 The more often they solve the problem successfully, the more instinctive it becomes to do it in the way that they designed. **Culture in any organization is formed through repetition**. That of doing things becomes the group’s culture.
 
-> *The parallels between a business and a family should be clear. Just like a manager who wants to count on employees using the right priorities to solve problems, parents want to set those priorities, too, so that family members will solve problems and confront dilemmas instinctively, whether or not the parents are there guiding or observing.*
+> _The parallels between a business and a family should be clear. Just like a manager who wants to count on employees using the right priorities to solve problems, parents want to set those priorities, too, so that family members will solve problems and confront dilemmas instinctively, whether or not the parents are there guiding or observing._
 
 A culture can be built consciously or evolve inadvertently. If you want your family to have a culture with a clear set of priorities for everyone to follow, then those priorities need to be proactively designed into the culture—which can be built through the steps noted above. It needs to be shaped the way that you want it to be in your family, and you have to think about this early on.
 
@@ -264,7 +266,7 @@ Make no mistake: a culture happens, whether you want it to or not. The only ques
 
 ### Just This Once…
 
-> *Most of us will face a series of small, everyday decisions that rarely seem like they have high stakes attached. But over time, they can play out far more dramatically*.
+> _Most of us will face a series of small, everyday decisions that rarely seem like they have high stakes attached. But over time, they can play out far more dramatically_.
 
 It happens exactly the same way in companies. No company deliberately sets out to let itself be overtaken by its competitors.
 
@@ -282,7 +284,7 @@ That is the peril of marginal thinking, of doing something just this once, of on
 
 In our minds, we can justify these small choices. None of those things, when they first happen, feels like a life-changing decision.
 
-> *The marginal costs are almost always low. But each of those decisions can roll up into a much bigger picture, turning you into the kind of person you never wanted to be.*
+> _The marginal costs are almost always low. But each of those decisions can roll up into a much bigger picture, turning you into the kind of person you never wanted to be._
 
 The first step down that path is taken with a small decision. You justify all the small decisions that lead up to the big one and then you get to the big one and it doesn’t seem so enormous anymore. You don’t realize the road you are on until you look up and see you’ve arrived at a destination you would have once considered unthinkable.
 
@@ -310,7 +312,7 @@ But if an organization has a clear and compelling purpose, its impact and legacy
 
 These three parts—likeness, commitment, and metrics—comprise a company’s purpose. Companies that aspire to positive impact must never leave their purpose to chance.
 
-> *The type of person you want to become—what the purpose of your life is—is too important to leave to chance. It needs to be **deliberately conceived, chosen, and manageda**. The opportunities and challenges in your life that allow you to become that person will, by their very nature, be emergent.*
+> _The type of person you want to become—what the purpose of your life is—is too important to leave to chance. It needs to be **deliberately conceived, chosen, and manageda**. The opportunities and challenges in your life that allow you to become that person will, by their very nature, be emergent._
 
 Finally, please remember that **this is a process**, not an event. It took me years to fully understand my own purpose. But the journey has been worthwhile.
 

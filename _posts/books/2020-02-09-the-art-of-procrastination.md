@@ -8,7 +8,7 @@ category: books
 tags: books notes productivity
 date-read: 2019-02-19
 amazon: https://smile.amazon.com/Art-Procrastination-Effective-Lollygagging-Postponing/dp/0761171673
-cover: /assets/images/books_images/the-art-of-procrastination.png
+cover: /assets/images/books_images/the-art-of-procrastination.jpg
 toc: true
 ---
 
@@ -81,7 +81,6 @@ When not in the mood, get in the rhythm by listening to music.
 
 Keep easily accessible playlists for starting or doing chores.
 
-
 ## The Computer and the Procrastinator
 
 Perry describes all the ways that organizing email didn't work for him. But procrastinators have an advantage because people don't expect a reply right away.
@@ -118,6 +117,6 @@ My advice is: Don’t confuse structured procrastination with providing proof to
 
 Rationality is a wonderful gift, but for most of us it’s no more than a thin veneer on top of our bundle of disparate desires, or perhaps it’s just an additional desire, comparatively weak, that competes with the rest of them. For some the wish to be rational has become such a strong, dominant desire that it guides a great proportion of their action.
 
-But the life of a structured procrastinator has much to recommend it. The great economist and political philosopher Friedrich Hayek used to emphasize that in the life of society, spontaneous organization is usually more productive than central planning. He had in mind developments such as human language and the market system. These were the results of human action but not the results of some human or committee of humans deliberately designing them. Like all great political philosophers, Hayek probably pushed his insight too far; if he didn’t, his disciples surely do. But still it’s an insight. 
+But the life of a structured procrastinator has much to recommend it. The great economist and political philosopher Friedrich Hayek used to emphasize that in the life of society, spontaneous organization is usually more productive than central planning. He had in mind developments such as human language and the market system. These were the results of human action but not the results of some human or committee of humans deliberately designing them. Like all great political philosophers, Hayek probably pushed his insight too far; if he didn’t, his disciples surely do. But still it’s an insight.
 
 A similar one holds for individuals. You may often be wrong about what the best way to spend your time is. Wasting your time daydreaming about an impractical radio show may in the end prove more valuable than finishing whatever articles, reviews, and memoranda—all doomed to be largely unread—you could have been working on. The structured procrastinator may not be the world’s most effective human being, but by letting her ideas and energies wander spontaneously, she may accomplish all sorts of things that she would have missed out on by adhering to a more structured regimen. Pat yourself on the back for what you do get done. Use to-do lists, alarm clocks, and other ways of booby-trapping your environment. Form collaborations that will prevent you from never accomplishing anything. Above all, enjoy life.
