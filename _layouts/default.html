@@ -20,8 +20,10 @@
   {% seo %}
 </head>
 <body class="flex flex-col">
+
+  {% include navigation.html %}
+
   <div class="pt-4 md:pt-8">
-    {% include navigation.html %}
 
     {% if page.profile %}
         {% include profile.html %}

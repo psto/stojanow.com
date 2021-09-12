@@ -1,13 +1,160 @@
-<nav class="header">
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <a href="{{ "/" }}" class="logo" alt="logo"><img src="/assets/images/logo.svg"></a>
-    <ul class="menu">
-      <li><a href="{{ "/" }}about">about</a></li>
-      <li><a href="{{ "/" }}essays">essays</a></li>
-      <li><a href="{{ "/" }}notes">notes</a></li>
-      <li><a href="{{ "/" }}fiction">fiction</a></li>
-      <li><a href="https://wiki.stojanow.com">wiki</a></li>
-      <li><a class="cta" href="{{ "/" | relative_url  }}subscribe">subscribe</a></li>
-    </ul>
+<nav class="relative flex items-center justify-between px-4 py-4 bg-white">
+  <a href="{{ "/" }}">
+    <img src="/assets/images/logo.svg" class="w-28 filter hover:brightness-125">
+  </a>
+  <div class="lg:hidden">
+    <button class="flex items-center p-3 text-brand-red navbar-burger">
+      <svg
+        class="block w-4 h-4 fill-current"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Mobile menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </button>
+  </div>
+  <ul
+    class="absolute hidden transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
+  >
+    <li>
+      <a class="text-brand-red hover:underline" href="{{ "/" }}about">about</a>
+    </li>
+    <li>
+      <a class="text-brand-red hover:underline" href="{{ "/" }}essays">essays</a>
+    </li>
+    <li>
+      <a class="text-brand-red hover:underline" href="{{ "/" }}notes">notes</a>
+    </li>
+    <li>
+      <a class="text-brand-red hover:underline" href="{{ "/" }}fiction">fiction</a>
+    </li>
+    <li>
+      <a class="text-brand-red hover:underline" href="https://wiki.stojanow.com">wiki</a>
+    </li>
+  </ul>
+  <a
+    class="hidden px-6 py-2 text-sm font-bold text-white transition duration-200 bg-brand-red lg:inline-block filter hover:brightness-125 rounded-xl"
+    href="{{ "/" | relative_url  }}subscribe"
+    >Subscribe</a
+  >
 </nav>
+<div class="relative z-50 hidden navbar-menu">
+  <div class="fixed inset-0 bg-gray-800 opacity-25 navbar-backdrop"></div>
+  <nav
+    class="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r "
+  >
+    <div class="flex items-center mb-8">
+      <a href="{{ "/" }}" class="mr-auto">
+        <img src="/assets/images/logo.svg" class="w-28 filter hover:brightness-125">
+      </a>
+      <button class="navbar-close">
+        <svg
+          class="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-500"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div>
+      <ul>
+        <li class="mb-1">
+          <a
+            class="block p-4 font-semibold rounded text-brand-red hover:underline"
+            href="{{ "/" }}about"
+            >about</a
+          >
+        </li>
+        <li class="mb-1">
+          <a
+            class="block p-4 font-semibold rounded text-brand-red hover:underline"
+            href="{{ "/" }}essays"
+            >essays</a
+          >
+        </li>
+        <li class="mb-1">
+          <a
+            class="block p-4 font-semibold rounded text-brand-red hover:underline"
+            href="{{ "/" }}notes"
+            >notes</a
+          >
+        </li>
+        <li class="mb-1">
+          <a
+            class="block p-4 font-semibold rounded text-brand-red hover:underline"
+            href="{{ "/" }}fiction"
+            >fiction</a
+          >
+        </li>
+        <li class="mb-1">
+          <a
+            class="block p-4 font-semibold rounded text-brand-red hover:underline"
+            href="https://wiki.stojanow.com"
+            >wiki</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="mt-auto">
+      <div class="pt-6">
+        <a
+          class="block px-4 py-3 mb-2 font-semibold leading-loose text-center text-white bg-brand-red filter hover:brightness-125 rounded-xl"
+          href="{{ "/" | relative_url  }}subscribe"
+          >Subscribe</a
+        >
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  // Burger menus
+  document.addEventListener("DOMContentLoaded", function () {
+    // open
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    // close
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
