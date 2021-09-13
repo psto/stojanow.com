@@ -39,7 +39,7 @@ pagination:
 
         <a href="{{ post.url }}" class="group">
           <h3
-            class="mt-4 text-xl font-semibold leading-7 text-brand-red group-hover:underline"
+            class="mt-4 text-xl font-semibold leading-7 text-brand-red filter hover:brightness-125"
           >
             {{ post.title }}
           </h3>
@@ -63,3 +63,5 @@ pagination:
     </div>
   </div>
 </div>
+
+{% include subscription-form.html %}

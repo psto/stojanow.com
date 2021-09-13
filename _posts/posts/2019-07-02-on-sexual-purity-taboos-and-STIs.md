@@ -2,7 +2,7 @@
 layout: post
 title: "On Sexual Purity Taboos and STIs"
 date: 2019-07-02 14:16:37 +0200
-description: "Asking for forgivness is viable strategy. It levels the playing field and guarantees that the 'offender' has skin in the game."
+description: "Doubting the claim that STIs played a role in the cultural evolution of taboos against promiscuity."
 category: posts
 tags: posts culture
 image: lot-and-his-daughters-master-of-the-prodigal-son
@@ -46,6 +46,7 @@ If purity taboos were established before the discovery of the relation between s
 > besides being young, virgins have at least two advantages with respect to fitness: They are unlikely to be carrying sexually transmitted diseases, and they are unlikely to be carrying other men’s children[^9]
 
 We could equally argue that purity taboos are a way to:
+
 - prevent false paternity (Scott agrees with this)
 - secure a legitimate wife, heir for financial and political reasons[^10]
 - restrict women’s sexual access by powerful men to just themselves[^11]
@@ -96,48 +97,27 @@ The above relation is echoed in Christie Davies's conclusion of [Sexual Taboos a
 
 I cannot but agree with Scott that the evidence that STIs played a role in the cultural evolution of taboos against promiscuity and homosexuality are circumstantial. As of now, there is no evidence that serious STIs predate sexual purity taboos (apart from maybe gonorrhea)[^22]. I remain unconvinced especially since there are competing explanations that are yet to be falsified.
 
-***
+---
 
 [^1]: Jacob Neusner, Journal of the American Academy of Religion, Vol. 43, No. 1 (Mar., 1975), pp. 15-26, p. 22
-
 [^2]: Ibid., p. 24
-
 [^3]: Betzig, L. (1995). Medieval Monogamy. Journal of Family History, 20(2), 181–216, p. 181
-
 [^4]: Willcox, R R. “Venereal disease in the Bible.” The British journal of venereal diseases vol. 25,1 (1949): pp. 28-33
-
 [^5]: [Exodus 22:16-17 NIV](https://www.biblica.com/bible/?osis=niv:Exodus.22:16%E2%80%9322:17)
-
 [^6]: [1 Corinthians 6:13 NIV](https://www.biblica.com/bible/?osis=niv:1_Corinthians.6:13%E2%80%936:13)
-
 [^7]: [1 Corinthians 6:18 NIV](https://www.biblica.com/bible/?osis=niv:1_Corinthians.6:18%E2%80%936:18)
-
 [^8]: [1 Corinthians 6:9 NIV](https://www.biblica.com/bible/?osis=niv:1_Corinthians.6:9–6:9)
-
 [^9]: Betzig, L. (1995). Medieval Monogamy. Journal of Family History, 20(2), 181–216, p. 192
-
 [^10]: [Sex, succession, and stratification in the first six civilizations](https://psycnet.apa.org/record/1993-97448-003): How powerful men reproduced, passed power on to their sons, and used power to defend their wealth, women, and children by Laura Betzig
-
 [^11]: Betzig, L. (1995). Medieval Monogamy. Journal of Family History, 20(2), 181–216, p. 183
-
 [^12]: [Betzig, L. (2005). Politics as Sex: The Old Testament Case. Evolutionary Psychology](https://journals.sagepub.com/doi/full/10.1177/147470490500300122)
-
 [^13]: Betzig, L. (1995). Medieval Monogamy. Journal of Family History, 20(2), 181–216, p. 192
-
 [^14]: Michael Brinkschröde, "Christian Homophobia: Four Central Discourses," in Combatting Homophobia, p. 166
-
 [^15]: Haggerty, George E. (2000). Gay histories and cultures: an encyclopedia. Taylor & Francis, pp. 470-471
-
 [^16]: [Origins of syphilis and management in the immunocompetent patient: Facts and controversies](https://www.sciencedirect.com/science/article/pii/S0738081X10000350?via%3Dihub) by David Farhi and NicolasDupin
-
 [^17]: [Matthew 5:31-32 NIV](https://www.biblegateway.com/passage/?search=Matthew+5%3A31–32&version=NIV)
-
 [^18]: Anna Clark, Desire: A history of European Sexuality, p. 74-75
-
 [^19]: G. Legman "The Guilt of the Templars" (New York: Basic Books, 1966): 11
-
 [^20]: Ralls, Karen (2007). Knights Templar Encyclopedia. Career Press. p. 28
-
 [^21]: Christie Davies, Sexual Taboos and Social Boundaries, American Journal of Sociology, Vol. 87, No. 5 (Mar., 1982), pp. 1032-1063, pp. 1060-1061
-
 [^22]: Gerd Gross, Stephen K. Tyring (2011), Sexually Transmitted Infections and Sexually Transmitted Diseases, pp. 3-4
