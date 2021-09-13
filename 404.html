@@ -5,44 +5,23 @@ description: "404 - page not found"
 permalink: /404.html
 ---
 
-<style type="text/css" media="screen">
-
-  #post-list {
-    text-align: left;
-    margin-top: 0px;
-  }
-
-  #post-list a {
-    font-size: 1em;
-    font-weight: normal;
-    text-decoration: none;
-  }
-
-  .flexcontainer p {
-    margin: 0 0 1.25em 0;
-  }
-
-</style>
-
 {% include container.html %}
 
-<div class="container">
-  <article class="post">
-    <section id="post-body">
-      <p>If this was my fault (like a bad link) I'd appreciate a <a href="{{ "/" }}contact">heads up</a>.</p>
+<div class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose lg:prose-lg md:pt-0">
+  <section>
+    <p class="text-center">If this was my fault (like a bad link) I'd appreciate a <a href="{{ "/" }}contact">heads up</a>.</p>
 
-      <div class="flexcontainer">
-        <img src="/assets/images/Don_Quixote_by_Picasso.svg" alt="Don Quixote by Picasso">
+    <div class="items-center md:flex">
+      <img src="/assets/images/Don_Quixote_by_Picasso.svg" alt="Don Quixote by Picasso">
 
-        <div>
-          <p><strong>Check out some recent posts:</strong></p>
-          <ul id="post-list">
-            {% for post in site.tags.posts limit:5 %}
-              <li><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+      <div class="sm:w-full sm:inline-block sm:mx-auto">
+        <p><strong>Check out some recent posts:</strong></p>
+        <ul>
+          {% for post in site.tags.posts limit:5 %}
+            <li><a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
-    </section>
-  </article>
+    </div>
+  </section>
 </div>
