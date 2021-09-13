@@ -57,5 +57,10 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
+  - node_modules
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - .gitignore
 
 include: [".well-known"]

@@ -1,8 +1,9 @@
 language: ruby
 rvm:
-- 2.6.1
+  - 2.6.1
 install:
-- bundle install
+  - bundle install
+  - npm install
 deploy:
   provider: pages
   skip_cleanup: true

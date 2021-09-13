@@ -1,5 +1,6 @@
 module.exports = {
   important: "html", // Override typography plugin with more specific selectors.
+  mode: "jit",
   purge: [
     "./_includes/**/*.html",
     "./_layouts/**/*.html",
