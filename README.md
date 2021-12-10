@@ -1,11 +1,10 @@
-# STOJANOW.COM
+# Stojanow.com
 
-Piotr Stojanow's personal site. All the essays, tweetstorms, book notes and blog in one place.
+My personal site. All the essays, tweetstorms, book notes and blog in one place.
 
 ## Copyright & License
 
-All text on this site is licensed under a [Creative Com­mons At­tri­bu­tion-NonCom­mer­cial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/">).
+I made the site with [Nuxt.js](https://nuxtjs.org) and [Tailwinds CSS](https://tailwindcss.com/). The code is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) so feel free to copy and adjust it to your own needs 🚀
 
-Build on [Jekyll](https://jekyllrb.com). The theme is based on Cactus Theme by [Cactus Authors](https://github.com/koenbok/Cactus/blob/master/AUTHORS) (released under the MIT License), ported by [Nick Balestra](https://github.com/nickbalestra/kactus).
+All text on the site is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/">).
 
-Customized and redesigned with Tailwind CSS by [Piotr Stojanow](https://github.com/psto).

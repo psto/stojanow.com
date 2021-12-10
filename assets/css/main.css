@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global page transition */
+.layout-enter-active,
+.layout-leave-active,
+.page-enter-active,
+.page-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+.layout-enter,
+.layout-leave-active,
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.nuxt-link-exact-active {
+  font-weight: bold;
+}
+
+/* smaller footnotes  */
+.footnotes li {
+  font-size: 80%;
+  vertical-align: super;
+}
