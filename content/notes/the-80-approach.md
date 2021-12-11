@@ -4,7 +4,7 @@ title: 'The 80% Approach by Dan Sullivan'
 date: 2019-03-13 13:53:45 +0200
 description: 'Eliminate the paralysis of perfectionism and procrastination by acting fast and aiming for the first 80%. Good enough now is superior to perfect in indefinite future. Have a bias towards making things good enough. Your team will follow and productivity will rise.'
 category: books
-tags: books notes business entreprenurship
+tags: books notes business entrepreneurship
 date-read: 2014-02-19
 amazon: https://smile.amazon.com/80-Approach-Dan-Sullivan/dp/1897239297
 image: /images/book-covers/the-80-approach-dan-sullivan.jpg
