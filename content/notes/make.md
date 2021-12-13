@@ -5,7 +5,7 @@ date: 2021-12-12 13:49:46 +0200
 description: "Shipping is a muscle that you develop by solving your problems. Your constraints force you to build faster and leaner. That gives you advantages over teams ruled by groupthink and VC money. Make your growth organic and monetize ASAP. Scale by automating whatever you can."
 category: books
 tags: books notes business entrepreneurship
-date-read: 2021-07-12
+dateRead: 2021-07-12
 amazon: https://makebook.io/
 image: /images/book-covers/make-pieter-levels.jpg
 ---

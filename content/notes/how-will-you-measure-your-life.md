@@ -5,7 +5,7 @@ date: 2019-03-24 19:38:43 +0200
 description: "Deals with the question: how can we find satisfaction in life? Avoid the trap of marginal thinking. The best time to invest in relationships is when we don't think it's necessary. We project what we want and assume that others want the same thing. To improve any relationship ask 'what job does X need me to do the most?' and then do it."
 category: books
 tags: books notes business
-date-read: 2014-10-02
+dateRead: 2014-10-02
 amazon: https://smile.amazon.com/How-Will-Measure-Your-Life/dp/0062102419
 image: /images/book-covers/how-will-you-measure-your-life.jpg
 ---

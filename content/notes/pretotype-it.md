@@ -5,7 +5,7 @@ date: 2021-11-12 20:46:31 +0200
 description: 'A technique for validating your ideas before building them with the minimum investment of time, money and effort. Avoid premature perfectionism and the desire to add more features. Confront your ideas with reality as soon as possible by getting them in front of people.'
 category: books
 tags: books notes business entrepreneurship
-date-read: 2021-07-12
+dateRead: 2021-07-12
 amazon: https://smile.amazon.com/Pretotype-building-Right-before-build-ebook/dp/B007JLHL78
 image: /images/book-covers/pretotype-it.jpg
 ---

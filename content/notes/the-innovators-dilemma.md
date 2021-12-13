@@ -5,7 +5,7 @@ date: 2019-03-19 12:47:45 +0200
 description: 'How cash cows incentives companies to ignore disruptive technologies at their own peril. Discovering new markets also involves failure. Optimize plans for learning and discovery rather than execution.'
 category: books
 tags: books notes business entrepreneurship
-date-read: 2014-03-09
+dateRead: 2014-03-09
 amazon: https://smile.amazon.com/Innovators-Dilemma-Revolutionary-Change-Business/dp/0062060244
 image: /images/book-covers/the-innovators-dilemma.jpg
 ---

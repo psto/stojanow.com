@@ -5,7 +5,7 @@ date: 2019-07-25 11:05:58 +0200
 description: 'The mind is drowning in desire and we fear anything that threatens how we feel. So we grasp for hacks, fixes and gurus. Yet, there are no prescriptions in life. There are no quick self-fixes. There is no self. The only path is knowing yourself and see the truth at every step.'
 category: books
 tags: books notes philosophy
-date-read: 2019-07-25 11:05:58 +0200
+dateRead: 2019-07-25 11:05:58 +0200
 amazon: https://smile.amazon.com/Direct-Truth-Uncompromising-non-prescriptive-questions/dp/1724334417
 image: /images/book-covers/direct-truth-kapil-gupta.jpg
 ---

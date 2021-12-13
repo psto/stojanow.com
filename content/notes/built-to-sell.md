@@ -5,7 +5,7 @@ date: 2019-03-04 22:54:26 +0200
 description: 'A crash course in building a sellable business from the ground up. The business equivalent of the principle of starting with an end in mind. Think in systems, have a process, specialize and say no to projects outside your area of expertise.'
 category: books
 tags: books notes business entrepreneurship
-date-read: 2015-06-02
+dateRead: 2015-06-02
 amazon: https://smile.amazon.com/Built-Sell-Creating-Business-Without/dp/1591845823
 image: /images/book-covers/built-to-sell-john-warrillow.jpg
 ---

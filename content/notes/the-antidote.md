@@ -5,7 +5,7 @@ date: 2019-02-13 20:39:10 +0200
 description: "Lovely exploration of happiness by embracing 'the negative path' of achieving it (through failure, pessimism, insecurity and uncertainty - the very things we try to avoid). Burkeman presents a unique collage of inversive ways of looking at life (and death)."
 category: books
 tags: books notes psychology
-date-read: 2015-09-30
+dateRead: 2015-09-30
 amazon: https://smile.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015
 image: /images/book-covers/the-antidote-oliver-burkeman.jpg
 ---

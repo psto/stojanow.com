@@ -5,7 +5,7 @@ date: 2019-03-01 19:12:37 +0200
 description: "Know yourself and develop your own metric driven approach to managing yourself. Put yourself in situations where your strengths can produce results. Don't try to change others. Recognize their strengths and help them promote their strengths."
 category: books
 tags: books notes management
-date-read: 2014-09-28
+dateRead: 2014-09-28
 amazon: https://smile.amazon.com/Managing-Oneself-Harvard-Business-Classics/dp/142212312X
 image: /images/book-covers/managing-oneself-peter-drucker.jpg
 ---

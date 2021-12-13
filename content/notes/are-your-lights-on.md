@@ -5,7 +5,7 @@ date: 2019-02-24 21:39:10 +0200
 description: "A problem is a difference between things as desired and things as perceived. It's not enough to solve it logically. We have to put it into a social context. Don't solve problems for people who don't want them solved, don't know they have a problem, they can easily solve them themselves or don't have a sense of humour."
 category: books
 tags: books notes problem-solving
-date-read: 2015-11-17
+dateRead: 2015-11-17
 amazon: https://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161
 image: /images/book-covers/are-your-lights-on.jpg
 ---
