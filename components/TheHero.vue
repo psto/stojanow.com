@@ -50,7 +50,10 @@
           <div class="mb-4 flex items-center justify-center">
             <NuxtImg
               src="/images/avatar.png"
+              alt="Piotr avatar"
               class="rounded-full"
+              width="80"
+              height="80"
             />
           </div>
           <div

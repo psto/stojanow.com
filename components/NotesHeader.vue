@@ -20,10 +20,10 @@
       <small>
         Date read:
         <time
-          :datetime="note.date"
+          :datetime="note.dateRead"
           class="italic"
         >
-          {{ note.date | formatDate }}
+          {{ note.dateRead | formatDate }}
         </time>
         <br>
         Check out <a :href="note.amazon">Amazon</a> for more details and

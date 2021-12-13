@@ -11,6 +11,7 @@
   >
     <iframe
       src="https://stojanow.substack.com/embed"
+      title="Newsletter Subscription Form"
       width="100%"
       height="300"
       class="filter dark:text-white hover:brightness-125"

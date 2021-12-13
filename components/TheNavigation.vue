@@ -12,7 +12,10 @@
     >
       <div class="flex items-center justify-between">
         <div>
-          <NuxtLink to="/">
+          <NuxtLink
+            to="/" 
+            aria-label="stojanow.com logo"
+          >
             <TheLogo />
           </NuxtLink>
         </div>

@@ -40,14 +40,14 @@
         >🔔 subscribe</a>
       </div>
       <div
-        class="block p-2 m-0 text-sm leading-normal text-center text-gray-400"
+        class="block p-2 m-0 text-sm leading-normal text-center text-gray-600"
       >
         All text licensed under the Creative Commons Attribution-NonCommercial
         4.0 International License (<NuxtLink
           to="/copyright"
           class="text-brand-red filter hover:brightness-125"
         >
-          more
+          copyright
         </NuxtLink>)
       </div>
     </div>

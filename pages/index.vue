@@ -101,8 +101,6 @@
         </div>
       </div>
     </div>
-
-    <SubscriptionForm />
   </div>
 </template>
 
