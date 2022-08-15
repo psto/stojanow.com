@@ -1,43 +1,24 @@
 {
-  "name": "stojanow.com",
-  "version": "1.0.0",
+  "name": "@example/blog",
+  "version": "0.0.1",
   "private": true,
-  "homepage": "https://github.com/psto/stojanow.com/",
-  "license" : "GPL-3.0-only",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
-  },
-  "dependencies": {
-    "@nuxt/content": "^1.14.0",
-    "@nuxtjs/feed": "^2.0.0",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/robots": "^2.5.0",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.21.1",
-    "nuxt": "^2.15.8"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/eslint-parser": "^7.17.0",
-    "@nuxt/image": "0.6.0",
-    "@nuxtjs/color-mode": "^2.1.1",
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^4.2.1",
-    "@tailwindcss/typography": "^0.4.1",
-    "autoprefixer": "^10.3.4",
-    "eslint": "^7.29.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^7.12.1",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.15"
+    "@astrojs/mdx": "^0.9.0",
+    "@astrojs/rss": "^1.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "astro": "^1.0.5"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
   }
 }
