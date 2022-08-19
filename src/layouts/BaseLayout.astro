@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import TheNavigation from '../components/TheNavigation.vue';
+import TheFooter from '../components/TheFooter.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props as Props;
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <TheNavigation client:load />
+
+    <div class="min-h-screen flex flex-col bg-white dark:bg-dark">
+      <div class="pt-4 md:pt-8">
+        <slot />
+      </div>
+    </div>
+
+    <TheFooter />
+  </body>
+</html>
