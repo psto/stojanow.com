@@ -1,0 +1,45 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import PostHeader from '~/components/PostHeader.astro';
+import { getSlugFromPathname } from '~/utils';
+import { Post } from '~/types';
+import { MarkdownInstance } from 'astro';
+
+export async function getStaticPaths() {
+  const posts = (await Astro.glob('../../content/fiction/*.md')) as MarkdownInstance<Post>[];
+
+  return posts.map(
+    ({ Content, file, frontmatter: { date, title, description, image, imageAlt } }) => {
+      const slug = getSlugFromPathname(file);
+
+      return {
+        params: { slug },
+        props: { Content, date, title, description, image, imageAlt },
+      };
+    },
+  );
+}
+
+const { Content, date, title, description, image, imageAlt } = Astro.props;
+const { slug } = Astro.params;
+
+const seoProps = {
+  description,
+  slug,
+  title,
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div class="mx-auto">
+      <article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0">
+        <PostHeader date={date} title={title} />
+
+        <img src={image} alt={imageAlt} class="rounded" />
+
+        <Content class="prose dark:prose-dark" />
+      </article>
+    </div>
+  </div>
+</BaseLayout>
