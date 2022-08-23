@@ -1,0 +1,52 @@
+---
+import { formatDate } from '~/utils';
+
+export interface Props {
+  note: {
+    title: string;
+    description: string;
+    date: string;
+    dateRead: string;
+    amazon: string;
+    image: string;
+  };
+}
+
+const {
+  note: { title, description, dateRead, amazon, image },
+} = Astro.props as Props;
+---
+
+<header>
+  <div class="flex py-2 content">
+    <div class="flex-1">
+      <a href={amazon}>
+        <img
+          src={`${image}`}
+          width="350"
+          height="450"
+          alt={`${title} cover`}
+          class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
+        />
+      </a>
+    </div>
+    <div class="flex-1 px-2 item-body">
+      <h2 class="mb-4 text-center md:text-4xl p-name lg:mb-8">
+        {title}
+      </h2>
+    </div>
+  </div>
+  <div>
+    <small>
+      Date read:
+      <time datetime={dateRead} class="italic">
+        {formatDate(dateRead)}
+      </time>
+      <br />
+      Check out <a href={amazon}>Amazon</a> for more details and reviews.
+    </small>
+    <p>{description}</p>
+  </div>
+
+  <hr />
+</header>
