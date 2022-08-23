@@ -1,0 +1,55 @@
+---
+import AppTitle from '~/components/AppTitle.astro';
+import { formatDate } from '~/utils/index';
+import site from '~/config/site';
+
+const { twitterUsername } = site;
+
+export interface Props {
+  date?: string;
+  title: string;
+}
+
+const { date, title } = Astro.props as Props;
+---
+
+<header>
+  <div class="lg:prose-lg">
+    <AppTitle>{title}</AppTitle>
+  </div>
+
+  <div class="flex justify-center">
+    <time datetime={date} class="block text-sm italic text-center text-gray-400">
+      {formatDate(date)}
+    </time>
+  </div>
+
+  <div class="flex justify-center">
+    <div class="flex items-center space-x-2">
+      <img
+        src="/images/avatar.png"
+        alt="Piotr Stojanow avatar"
+        width="50"
+        height="50"
+        class="w-10 h-10 mx-auto rounded-full"
+      />
+
+      <dl class="text-sm font-medium text-gray-700 whitespace-nowrap">
+        <dt class="sr-only">Name</dt>
+        <dd>
+          <a href="/" class="text-gray-700 dark:text-gray-300 no-underline"> Piotr Stojanow</a>
+        </dd>
+        <dt class="sr-only">Twitter</dt>
+        <dd>
+          <a
+            href={`https://twitter.com/${twitterUsername}`}
+            class="no-underline text-primary-600 hover:text-primary-700"
+            >@piotrstojanow
+          </a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <hr />
+</header>
