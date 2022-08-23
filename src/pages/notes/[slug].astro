@@ -1,0 +1,45 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getSlugFromPathname } from '~/utils';
+import { Note } from '~/types';
+import { MarkdownInstance } from 'astro';
+import NotesHeader from '~/components/NotesHeader.astro';
+
+export async function getStaticPaths() {
+  const posts = (await Astro.glob('../../content/notes/*.md')) as MarkdownInstance<Note>[];
+
+  return posts.map(
+    ({ Content, file, frontmatter: { title, description, date, dateRead, amazon, image } }) => {
+      const slug = getSlugFromPathname(file);
+
+      return {
+        params: { slug },
+        props: { Content, title, description, date, dateRead, image, amazon },
+      };
+    },
+  );
+}
+
+const { Content, title, description, date, dateRead, image, imageAlt, amazon } = Astro.props;
+const { slug } = Astro.params;
+
+const note = { title, description, date, dateRead, image, imageAlt, amazon };
+
+const seoProps = {
+  description,
+  slug,
+  title,
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div class="mx-auto">
+      <article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0">
+        <NotesHeader note={note} />
+
+        <Content class="prose dark:prose-dark" />
+      </article>
+    </div>
+  </div>
+</BaseLayout>
