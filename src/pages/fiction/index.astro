@@ -1,0 +1,52 @@
+---
+import AppTitle from '../../components/AppTitle.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostsCard from '../../components/PostsCard.astro';
+import { getSlugFromPathname } from '../../utils/index';
+import { Post } from 'src/types';
+import { MarkdownInstance } from 'astro';
+
+const rawPosts = (await Astro.glob('../../content/fiction/*.md')) as MarkdownInstance<Post>[];
+const sortedRawPosts = rawPosts.sort(
+  ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
+    new Date(dateB).valueOf() - new Date(dateA).valueOf(),
+);
+
+const posts = sortedRawPosts.map(
+  ({ frontmatter: { date, title, description, image, imageAlt }, file }) => {
+    const slug = getSlugFromPathname(file);
+    return { date, title, description, image, imageAlt, slug };
+  },
+);
+
+const seoProps = {
+  description: "Piotr Stojanow's flash fiction and microfiction",
+  slug: 'fiction',
+  title: 'Fiction',
+  plum: true,
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+      <AppTitle>{seoProps.title}</AppTitle>
+      <hr />
+    </div>
+    <div class="relative mx-auto max-w-7xl">
+      <div
+        class="grid max-w-lg gap-5 mx-auto mt-12 md:grid-cols-2 md:max-w-none lg:grid-cols-3 lg:max-w-none"
+      >
+        {
+          posts.map((post) => (
+            <div class="flex flex-col overflow-hidden transition-all duration-500 transform rounded-lg shadow-lg dark:bg-dark-light hover:scale-105 hover:shadow-2xl">
+              <a href={`/fiction/${post.slug}`}>
+                <PostsCard post={post} />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>
