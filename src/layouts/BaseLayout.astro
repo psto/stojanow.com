@@ -1,30 +1,32 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import TheNavigation from '../components/TheNavigation.vue';
-import TheFooter from '../components/TheFooter.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+// import '../styles/global.css';
+import BaseHead from '~/components/BaseHead.astro';
+import TheNavigation from '~/components/TheNavigation.vue';
+import TheFooter from '~/components/TheFooter.astro';
+import Plum from '~/components/Plum.vue';
+import site from '~/config/site';
 
-export interface Props {
-  title?: string;
-  description?: string;
-}
-
-const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props as Props;
+const { description, slug, title, plum } = Astro.props;
+const { siteLanguage: lang } = site;
 ---
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-  <body>
-    <TheNavigation client:load />
 
-    <div class="min-h-screen flex flex-col bg-white dark:bg-dark">
+<html {lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
+    <title>{title}</title>
+  </head>
+  <BaseHead {description} {slug} {title} />
+  <body class="bg-white dark:bg-dark">
+    {plum && <Plum client:idle />}
+    <TheNavigation client:load />
+    <div class="min-h-screen flex flex-col">
       <div class="pt-4 md:pt-8">
         <slot />
       </div>
     </div>
-
     <TheFooter />
   </body>
 </html>
