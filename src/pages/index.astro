@@ -1,58 +1,67 @@
 ---
-import TheFooter from '../components/TheFooter.astro';
+import AppButton from '~/components/AppButton.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import TheHero from '~/components/TheHero.astro';
+import RecentPosts from '~/components/RecentPosts.vue';
+import { getSlugFromPathname } from '~/utils';
+import { Post } from '~/types';
+import { MarkdownInstance } from 'astro';
+import IcBaselineArrowRightAlt from '~icons/ic/baseline-arrow-right-alt';
+
+const rawPosts = (await Astro.glob('../content/essays/*.md')) as MarkdownInstance<Post>[];
+const sortedRawPosts = rawPosts.sort(
+  ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
+    new Date(dateB).valueOf() - new Date(dateA).valueOf(),
+);
+
+const posts = sortedRawPosts.map(({ frontmatter: { date, title, description }, file }) => {
+  const slug = getSlugFromPathname(file);
+  return { date, title, description, slug };
+});
+
+const seoProps = {
+  description: "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site.",
+  slug: '',
+  title: 'Piotr Stojanow | Home',
+  plum: true,
+};
+
+const recentPostsProps = {
+  initialPosts: 4,
+  posts,
+};
+
+const recentCTA = 'All Essays';
 ---
 
-<BaseLayout>
-  <main>
-    <TheHero />
+<BaseLayout {...seoProps}>
+  <TheHero />
 
-    <div
-        class="
-          relative
-          max-w-6xl
-          px-4
-          pt-16
-          pb-20
-          mx-auto
-          sm:px-6
-          lg:pt-24 lg:pb-28 lg:px-8
-        "
+  <div class="container mt-30 max-w-6xl px-4 pt-16 pb-20 mx-auto sm:px-6 lg:pt-24 lg:pb-28">
+    <div>
+      <h2
+        class="text-xl font-bold leading-9 tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl sm:leading-10"
       >
-        <div>
-          <h2
-            class="
-              text-3xl
-              font-extrabold
-              leading-9
-              tracking-tight
-              text-gray-900
-              dark:text-white
-              sm:text-4xl sm:leading-10
-            "
-          >
-            Recent articles
-          </h2>
-        </div>
-        <div
-          class="
-            grid
-            gap-16
-            pt-12
-            mt-12
-            border-t-2 border-gray-200
-            dark:border-gray-800
-            lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16
-          "
-        >
-          
-
-          <div class="flex items-center mx-auto">
-            <a href="/essays">
-              <AppButton cta={recentCTA} />
-            </a>
-          </div>
-        </div>
+        Recent articles
+      </h2>
+    </div>
+    <div
+      class="grid gap-16 pt-12 mt-12 border-t-2 border-zinc-200 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
+    >
+      <RecentPosts {...recentPostsProps} client:visible />
+      <div class="flex items-center mx-auto">
+        <a href="/essays" aria-label="Read More Essays">
+          <AppButton cta={recentCTA}>
+            <IcBaselineArrowRightAlt slot="ctaIcon" />
+          </AppButton>
+        </a>
       </div>
-  </main>
-  <TheFooter />
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  .heading {
+    margin-top: var(--spacing-0);
+  }
+</style>
