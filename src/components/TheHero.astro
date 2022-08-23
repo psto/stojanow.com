@@ -1,0 +1,72 @@
+---
+import AppButton from '~/components/AppButton.astro';
+import site from '../config/site';
+
+const { twitterUsername } = site;
+
+const heroCTA = 'Start Here';
+---
+
+<section class="py-12 overflow-hidden md:py-20 lg:py-24">
+  <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <svg
+      class="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+      width="404"
+      height="404"
+      fill="none"
+      viewBox="0 0 404 404"
+      role="img"
+      aria-labelledby="svg-workcation"
+    >
+      <defs>
+        <pattern
+          id="ad119f34-7694-4c31-947f-5c9d249b21f3"
+          x="0"
+          y="0"
+          width="20"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <rect
+            x="0"
+            y="0"
+            width="4"
+            height="4"
+            class="text-zinc-200 dark:text-zinc-800"
+            fill="currentColor"></rect>
+        </pattern>
+      </defs>
+      <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)"></rect>
+    </svg>
+
+    <div class="relative">
+      <blockquote class="text-zinc-900 dark:text-zinc-50">
+        <div class="mb-4 flex items-center justify-center">
+          <img
+            src="/images/avatar@2x.png"
+            alt="Piotr Stojanow avatar"
+            width="100"
+            height="100"
+            class="w-20 h-20 mx-auto rounded-full"
+          />
+        </div>
+        <div
+          class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center grid place-items-center"
+        >
+          <p>
+            Hi, I’m
+            <a
+              href={`https://twitter.com/${twitterUsername}`}
+              class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
+              >Piotr Stojanow<span class="text-zinc-200 dark:text-zinc-800">.</span>
+            </a> Welcome to my online home. I write on the intersection of technology and history. Want
+            to learn more about me?
+          </p>
+          <a href="/about">
+            <AppButton cta={heroCTA} />
+          </a>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>
