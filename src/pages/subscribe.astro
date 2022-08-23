@@ -1,0 +1,47 @@
+---
+import AppTitle from '~/components/AppTitle.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import SubscriptionForm from '~/components/SubscriptionForm.astro';
+import site from '~/config/site';
+
+const { substackUrl, twitterUsername } = site;
+
+const seoProps = {
+  description: 'Subscribe to Stojanow.com newsletter',
+  slug: 'subscribe',
+  title: 'Subscribe',
+  plum: true,
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark text-center">
+    <div class="px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+      <AppTitle>{seoProps.title}</AppTitle>
+      <hr />
+    </div>
+
+    <SubscriptionForm />
+
+    <p>
+      Newsletter link if can't see the form:
+      <a href={`${substackUrl}`} target="_blank" class="no-underline">subscribe 🔔</a>
+    </p>
+    <p>
+      If you prefer "ancient" web technology like <b>RSS</b> 😉, then a
+      <a href="/rss.xml" target="_blank" class="no-underline">feed is available ✅</a>
+    </p>
+    <p>
+      Also, you can find me on
+      <a
+        href={`http://twitter.com/${twitterUsername}`}
+        style="color: #1da1f2"
+        target="_blank"
+        class="no-underline"
+        >🐦 twitter
+      </a>
+      or get in touch through
+      <a href="/contact" class="no-underline">email 📧</a>
+    </p>
+  </div>
+</BaseLayout>
