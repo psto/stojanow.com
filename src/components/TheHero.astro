@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import AppButton from '~/components/AppButton.astro';
 import site from '../config/site';
 
@@ -42,16 +43,17 @@ const heroCTA = 'Start Here';
     <div class="relative">
       <blockquote class="text-zinc-900 dark:text-zinc-50">
         <div class="mb-4 flex items-center justify-center">
-          <img
-            src="/images/avatar@2x.png"
+          <Image
+            src={import('../images/avatar@2x.png')}
             alt="Piotr Stojanow avatar"
-            width="100"
-            height="100"
-            class="w-20 h-20 mx-auto rounded-full"
+            widths={[70, 100]}
+            aspectRatio="1:1"
+            formats={['avif', 'webp']}
+            class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full"
           />
         </div>
         <div
-          class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center grid place-items-center"
+          class="max-w-3xl mx-auto text-lg md:text-2xl xl:text-3xl font-medium leading-9 text-center grid place-items-center"
         >
           <p>
             Hi, I’m
@@ -62,7 +64,7 @@ const heroCTA = 'Start Here';
             </a> Welcome to my online home. I write on the intersection of technology and history. Want
             to learn more about me?
           </p>
-          <a href="/about">
+          <a href="/about" class="mt-4">
             <AppButton cta={heroCTA} />
           </a>
         </div>

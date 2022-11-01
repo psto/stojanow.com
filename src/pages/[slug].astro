@@ -4,7 +4,7 @@ import { getSlugFromPathname } from 'src/utils';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import { Post } from '~/types';
 import { MarkdownInstance } from 'astro';
-import { Img } from 'astro-imagetools/components';
+import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
   const posts = (await Astro.glob('../content/essays/*.md')) as MarkdownInstance<Post>[];
@@ -38,10 +38,15 @@ const seoProps = {
       <article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0">
         <PostHeader date={date} title={title} />
 
-        {/* <img src={image} alt={imageAlt} class="rounded" /> */}
-        <div class="grid justify-center">
-          <Img src={`/src/assets/${image}`} alt={imageAlt} class="mx-auto" />
-        </div>
+        <Image
+          src={import(`../images/posts/${image}.jpg`)}
+          alt={imageAlt}
+          widths={[300, 400, 600, 800]}
+          aspectRatio="4:3"
+          formats={['avif', 'webp']}
+          class="w-full rounded"
+        />
+        <div class="grid justify-center"></div>
 
         <Content class="prose dark:prose-dark" />
       </article>

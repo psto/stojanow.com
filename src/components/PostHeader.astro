@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import AppTitle from '~/components/AppTitle.astro';
 import { formatDate } from '~/utils/index';
 import site from '~/config/site';
@@ -26,11 +27,12 @@ const { date, title } = Astro.props as Props;
 
   <div class="flex justify-center">
     <div class="flex items-center space-x-2">
-      <img
-        src="/images/avatar.png"
+      <Image
+        src={import('../images/avatar@2x.png')}
         alt="Piotr Stojanow avatar"
-        width="50"
-        height="50"
+        width="50px"
+        height="50px"
+        formats={['avif', 'webp']}
         class="w-10 h-10 mx-auto rounded-full"
       />
 

@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import { formatDate } from '~/utils';
 
 export interface Props {
@@ -21,11 +22,11 @@ const {
   <div class="flex py-2 content">
     <div class="flex-1">
       <a href={amazon}>
-        <img
-          src={`${image}`}
-          width="350"
-          height="450"
-          alt={`${title} cover`}
+        <Image
+          src={import(`../images/notes/${image}.jpg`)}
+          alt={`${title} book cover`}
+          widths={[100, 200, 350]}
+          formats={['avif', 'webp']}
           class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
         />
       </a>

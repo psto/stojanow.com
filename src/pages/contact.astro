@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import AppTitle from '~/components/AppTitle.astro';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import site from '~/config/site';
@@ -19,7 +20,12 @@ const seoProps = {
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
       <div class="dark:bg-zinc-200 rounded-xl">
-        <img src={`./images/dove.svg`} sizes="(max-width: 800px) 100vw, 800px" alt="A flying dove"
+        <Image
+          src={`./images/dove.svg`}
+          width={[300, 500, 700]}
+          aspectRatio="1:1"
+          formats={['avif', 'webp']}
+          alt="A flying dove"
         />
       </div>
     </div>

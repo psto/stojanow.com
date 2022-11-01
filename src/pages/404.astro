@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import AppTitle from '~/components/AppTitle.astro';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Plum from '~/components/Plum.vue';
@@ -25,9 +26,12 @@ const siteProps = {
       </p>
       <p>You can also check out my recent <a href="/essays">essays</a>.</p>
       <div class="items-center md:flex">
-        <img
-          src="/images/Don_Quixote_by_Picasso.svg"
+        <Image
+          src={`./images/Don_Quixote_by_Picasso.svg`}
           alt="Don Quixote by Picasso"
+          width={[300, 500, 800]}
+          aspectRatio="1:1"
+          formats={['avif', 'webp']}
           class="bg-white dark:bg-gray-200 rounded-xl"
         />
       </div>
