@@ -15,9 +15,8 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "baseUrl": ".",
     "jsx": "preserve",
-    // Path aliase
+    // Path alias
     "baseUrl": ".",
     "paths": {
       "~/*": [
@@ -26,7 +25,7 @@
     },
     // Provide Vite’s client types to your project
     "types": [
-      "@astrojs/client",
+      "@astrojs/image/client",
       "unplugin-icons/types/vue"
     ],
   }
