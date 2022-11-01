@@ -7,11 +7,8 @@ module.exports = {
       colors: {
         'brand-red': '#cc3535',
         'brand-red-dark': '#CB5F5D',
-        // dark: '#18181b',
         dark: '#0f0d0c',
-        // dark: '#12181b',
-        // 'dark-light': '#2F2F32',
-        'dark-light': '#2a2e35',
+        'dark-light': '#19171D',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -20,8 +17,6 @@ module.exports = {
               marginLeft: 'auto',
               marginRight: 'auto',
             },
-            // color: '#1a1a1a',
-            // color: theme('colors.zinc.900'),
             color: '#31302e',
             a: {
               color: '#cc3535',
@@ -44,6 +39,13 @@ module.exports = {
             },
             'blockquote p:first-of-type::after': {
               content: '',
+            },
+            '[class~="footnotes"]': {
+              fontSize: '0.8em',
+            },
+            '[class~="data-footnote-backref"]': {
+              fontSize: '0.8em',
+              textDecoration: 'none',
             },
           },
         },
