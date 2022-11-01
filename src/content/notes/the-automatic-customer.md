@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2015-10-28
 amazon: https://smile.amazon.com/Automatic-Customer-Creating-Subscription-Business/dp/159184746X
-image: /images/book-covers/the-automatic-customer-john-warrillow.jpg
+image: the-automatic-customer-john-warrillow
 ---
 
 ### What Buyers of Businesses Value

@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2021-07-09
 amazon: https://makebook.io/
-image: /images/book-covers/escaping-the-build-trap.jpg
+image: escaping-the-build-trap
 ---
 
 ## Part I: The Build Trap

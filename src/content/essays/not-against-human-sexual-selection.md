@@ -1,10 +1,10 @@
 ---
 title: 'Not Against Human Sexual Selection'
 date: 2019-07-03 15:16:37 +0200
-description: ''
+description: 'Was human natural direction driven by arranged marriages?'
 category: posts
 tags: posts evolution
-image: /images/posts/rene_magritte-the_lovers_II.jpg
+image: rene_magritte-the_lovers_II
 imageAlt: 'The Lovers II by Rene Magritte'
 ---
 

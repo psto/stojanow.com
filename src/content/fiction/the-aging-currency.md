@@ -4,7 +4,7 @@ date: 2019-07-13 17:59:40 +0200
 description: 'The older Emchines were eager to start the ritual.'
 category: fiction
 tags: fiction posts micro-fiction
-image: /images/posts/me_machine.jpg
+image: me_machine
 imageAlt: 'Me Machine by Daniel Miller'
 ---
 

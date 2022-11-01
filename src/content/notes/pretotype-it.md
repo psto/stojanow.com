@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2021-07-12
 amazon: https://smile.amazon.com/Pretotype-building-Right-before-build-ebook/dp/B007JLHL78
-image: /images/book-covers/pretotype-it.jpg
+image: pretotype-it
 ---
 
 Read the "[pretotype edition](https://www.pretotyping.org/uploads/1/4/0/9/14099067/pretotype_it_2nd_pretotype_edition-2.pdf)" of the book.

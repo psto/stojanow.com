@@ -4,7 +4,7 @@ date: 2020-07-06 20:32:15 +0200
 description: 'It was only by chance that I wished myself into death.'
 category: fiction
 tags: fiction posts micro-fiction
-image: /images/posts/zanchi_-_sisyphus.jpg
+image: zanchi_-_sisyphus
 imageAlt: 'Sisyphus by Zanachi'
 ---
 

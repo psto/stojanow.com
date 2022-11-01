@@ -6,7 +6,7 @@ category: books
 tags: books notes psychology marketing creativity
 dateRead: 2015-04-24
 amazon: https://smile.amazon.com/Technique-Producing-Ideas-James-Young/dp/198781746X
-image: /images/book-covers/a-technique-for-producing-ideas-james-webb-young.jpg
+image: a-technique-for-producing-ideas-james-webb-young
 ---
 
 In learning any art the important things to learn are, first, Principles; and second, Method.

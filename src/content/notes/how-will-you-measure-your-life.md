@@ -6,7 +6,7 @@ category: books
 tags: books notes business
 dateRead: 2014-10-02
 amazon: https://smile.amazon.com/How-Will-Measure-Your-Life/dp/0062102419
-image: /images/book-covers/how-will-you-measure-your-life.jpg
+image: how-will-you-measure-your-life
 ---
 
 There are no quick fixes for the fundamental problems of life.

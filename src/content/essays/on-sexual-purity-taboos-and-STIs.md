@@ -4,7 +4,7 @@ date: 2019-07-02 14:16:37 +0200
 description: 'Doubting the claim that STIs played a role in the cultural evolution of taboos against promiscuity.'
 category: posts
 tags: posts culture
-image: /images/posts/lot-and-his-daughters-master-of-the-prodigal-son.jpg
+image: lot-and-his-daughters-master-of-the-prodigal-son
 imageAlt: 'Lot And His Daughters by Meester van de Verloren Zoon'
 ---
 

@@ -4,7 +4,7 @@ date: 2019-02-03 17:23:00 +0200
 description: 'The Justice Accountant twitched when the last of the executions were coming to an end.'
 category: fiction
 tags: fiction posts micro-fiction
-image: /images/posts/the-triumph-of-the-guillotine-in-hell.jpg
+image: the-triumph-of-the-guillotine-in-hell
 imageAlt: 'Guillotine in Hell painting'
 ---
 

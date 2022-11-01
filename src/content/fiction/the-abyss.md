@@ -4,7 +4,7 @@ date: 2019-01-02 19:49:42 +0200
 description: 'Crossing the border, he closed his eyes.'
 category: fiction
 tags: fiction posts micro-fiction
-image: /images/posts/vesuvius_from_portici.jpg
+image: vesuvius_from_portici
 imageAlt: 'Vesuvius from Portici painting'
 ---
 

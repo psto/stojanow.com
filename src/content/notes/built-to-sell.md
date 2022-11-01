@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2015-06-02
 amazon: https://smile.amazon.com/Built-Sell-Creating-Business-Without/dp/1591845823
-image: /images/book-covers/built-to-sell-john-warrillow.jpg
+image: built-to-sell-john-warrillow
 ---
 
 The Paradox that successful entrepreneurs manage:
