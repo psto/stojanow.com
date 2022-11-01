@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_TWITTER_USERNAME: string;
   readonly PUBLIC_DOMAIN: string;
   readonly PUBLIC_SITE_URL: string;
+  readonly PUBLIC_TWITTER_BEARER_TOKEN: string
 }
 
 interface ImportMeta {
