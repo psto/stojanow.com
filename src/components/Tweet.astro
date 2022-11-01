@@ -1,5 +1,6 @@
 ---
-import { format } from 'date-fns';
+import { Image } from '@astrojs/image/components';
+import { formatDate } from '~/utils';
 const { TweetID } = Astro.props;
 
 const BearerToken = import.meta.env.PUBLIC_TWITTER_BEARER_TOKEN;
@@ -88,121 +89,44 @@ if (JsonIncludes.media) {
 }
 ---
 
-<div class="astro__tweet">
-  <div class="astro__tweet-header">
-    <a href={`https://twitter.com/${username}`} rel="noreferrer noopener">
-      <img
+<div
+  class="flex flex-col max-w-lg bg-white dark:bg-dark-light border border-gray-100 rounded m-0 p-0 dark:border-zinc-800"
+>
+  <div class="flex px-4 pt-4 items-center space-x-2">
+    <a href={`https://twitter.com/${username}/status/${TweetID}`} rel="noreferrer noopener">
+      <Image
         src={profile_image_url}
         alt={`Twitter avatar for ${username}`}
-        class="astro__tweet-header-profile-picture"
+        width="48"
+        aspectRatio="1:1"
+        formats={['avif', 'webp']}
+        class="h-10 w-10 m-0 rounded-full border border-gray-100 dark:border-zinc-800"
       />
     </a>
-    <div class="astro__tweet-header-names">
+    <div>
       <a
-        href={`https://twitter.com/${username}`}
+        href={`https://twitter.com/${username}/status/${TweetID}`}
         rel="noreferrer noopener"
-        class="astro__tweet-header-names-full"
+        class="no-underline"
         >{name}
       </a>
-      <a
-        class="astro__tweet-header-names-username"
-        href={`https://twitter.com/${username}`}
-        rel="noreferrer noopener"
-        >@{username}
-      </a>
+
+      <small>
+        <a
+          class="text-gray-400 dark:text-gray-400 no-underline text-sm"
+          href={`https://twitter.com/${username}/status/${TweetID}`}
+          rel="noreferrer noopener"
+          >@{username}
+        </a>
+        <a
+          href={`https://twitter.com/${username}/status/${TweetID}`}
+          class="text-gray-400 dark:text-gray-400 no-underline"
+          rel="noreferrer noopener"
+          >{formatDate(new Date(created_at))}
+        </a>
+      </small>
     </div>
   </div>
-  <p class="astro__tweet-body" set:html={text}></p>
+  <p class="px-4 prose dark:prose-dark" set:html={text}></p>
   <span set:html={imageItems}></span>
-  <div class="tweet-footer">
-    <a
-      href={`https://twitter.com/${username}/status/${TweetID}`}
-      class="astro__tweet-date"
-      rel="noreferrer noopener"
-      >{format(new Date(created_at), 'MMMM d, yyyy • h:mm aa')}
-    </a>
-  </div>
 </div>
-
-<style>
-  .astro__tweet {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    max-width: 500px;
-    font-size: 0.75em;
-    line-height: 1.35em;
-    border-radius: 5px;
-    margin: 0 auto;
-    min-height: 60px;
-    padding: 0px;
-    border: 1px solid #efefef;
-  }
-  .astro__tweet:hover {
-    border: 1px solid #e7e7e7;
-  }
-  .astro__tweet-media {
-    position: relative;
-    overflow: hidden;
-  }
-  .astro__tweet-media img {
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  .astro__tweet-header {
-    padding: 1rem;
-    display: flex;
-  }
-  .astro__tweet-header-profile-picture {
-    height: 40px;
-    min-height: 40px;
-    width: 40px;
-    border-radius: 50px;
-    background-color: #ececec;
-    margin: 0;
-  }
-  .astro__tweet-header-names {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 1rem;
-    flex: 1 0 auto;
-  }
-  .astro__tweet-header-names-full {
-    color: #1c2022;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .astro__tweet-header-names-username {
-    color: #697882;
-    font-size: 14px;
-  }
-  .astro__tweet-header-twitter-logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .astro__tweet-body {
-    padding: 0 1rem 1rem;
-    color: #1c2022;
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .astro__tweet-date {
-    font-size: 14px;
-    color: #697882;
-    padding: 0 1rem;
-  }
-  .astro__tweet-actions {
-    display: flex;
-    color: #aab8c2;
-    font-size: 14px;
-  }
-  .astro__tweet-actions-button {
-    padding: 1rem;
-  }
-</style>
