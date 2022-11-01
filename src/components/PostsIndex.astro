@@ -1,0 +1,31 @@
+---
+import PostsCard from '~/components/PostsCard.astro';
+import { Post } from '~/types';
+
+export interface Props {
+  posts: Post[];
+  prefix?: string;
+}
+
+const { posts, prefix } = Astro.props as Props;
+---
+
+<div class="relative max-w-7xl mx-auto">
+  <div class="mt-12 max-w-lg mx-auto grid gap-7 lg:grid-cols-3 lg:max-w-none">
+    {
+      posts.map((post) => (
+        <div class="rounded-lg transition-all duration-500 transform shadow-lg dark:bg-dark-light hover:scale-105 hover:shadow-2xl dark:hover:shadow-stone-900 hover:cursor-pointer">
+          {prefix ? (
+            <a href={`/${prefix}/${post.slug}`} aria-label={`Read ${post.title}`}>
+              <PostsCard post={post} imageDir={prefix} />
+            </a>
+          ) : (
+            <a href={`/${post.slug}`} aria-label={`Read ${post.title}`}>
+              <PostsCard post={post} imageDir="posts" />
+            </a>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>
