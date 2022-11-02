@@ -1,18 +1,21 @@
 ---
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import Tweet from '~/components/Tweet.astro';
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Tweet from "~/components/Tweet.astro";
+import ExternalLink from "~/components/ExternalLink.astro";
 
 const seoProps = {
-  description: 'About Piotr Stojanow',
-  slug: 'About',
-  title: 'About',
+  description: "About Piotr Stojanow",
+  slug: "About",
+  title: "About",
   plum: true,
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark">
+  <div
+    class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark"
+  >
     <div class="px-4 mx-auto text-center lg:prose-lg md:pt-0">
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -20,15 +23,16 @@ const seoProps = {
 
     <div class="relative mt-8 mx-auto max-w-2xl">
       <blockquote>
-        "All you have to do is write one true sentence. Write the truest sentence that you know. So
-        finally I would write one true sentence, and then go on from there." — Ernest Hemingway
+        "All you have to do is write one true sentence. Write the truest
+        sentence that you know. So finally I would write one true sentence, and
+        then go on from there." — Ernest Hemingway
       </blockquote>
 
       <p>
-        All my attempts to distill what I know to one true sentence at a time. I also keep a <a
-          href="https://wiki.stojanow.com"
-          >wiki
-        </a> of things I know.
+        All my attempts to distill what I know to one true sentence at a time. I
+        also keep a <ExternalLink href="https://wiki.stojanow.com"
+          >wiki</ExternalLink
+        > of things I know.
       </p>
 
       <p>A taste of subjects I write about:</p>
@@ -60,13 +64,12 @@ const seoProps = {
       <p class="text-center">
         <a href="/contact" class="filter hover:brightness-125">Email me</a>
         or say hi on
-        <a
+        <ExternalLink
           href="http://twitter.com/piotrstojanow"
-          target="_blank"
           style="color: #1da1f2"
-          class="p-0 mr-4 no-underline sm:mr-2 filter hover:brightness-125"
+          className="p-0 mr-4 no-underline sm:mr-2 filter hover:brightness-125"
           >🐦 twitter!
-        </a>
+        </ExternalLink>
       </p>
     </div>
   </div>

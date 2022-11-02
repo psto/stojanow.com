@@ -8,22 +8,27 @@ const navLinks = ref([
   {
     url: '/about',
     label: 'about',
+    externalLink: false,
   },
   {
     url: '/essays',
     label: 'essays',
+    externalLink: false,
   },
   {
     url: '/fiction',
     label: 'fiction',
+    externalLink: false,
   },
   {
     url: '/notes',
     label: 'notes',
+    externalLink: false,
   },
   {
     url: 'https://wiki.stojanow.com',
     label: 'wiki',
+    externalLink: true,
   },
 ]);
 
@@ -43,7 +48,7 @@ function toggle() {
         <!-- Mobile menu button -->
         <div class="flex md:hidden" @click="toggle">
           <button type="button"
-            class="text-gray-500 hover:text-gray-600 focus:text-gray-600 focus:outline-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400"
+            class="p-2 text-gray-500 hover:text-brand-red focus:text-brand-red focus:outline-none dark:text-zinc-200 dark:hover:text-brand-red-dark dark:focus:text-brand-red-dark"
             aria-label="toggle menu">
             <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
               <path fill-rule="evenodd"
@@ -59,7 +64,10 @@ function toggle() {
           <li v-for="nav in navLinks" :key="nav.label"
             class="my-2 font-medium text-brand-red dark:text-brand-red-dark filter hover:brightness-125 md:ml-6"
             @click="toggle">
-            <a :href="`${nav.url}`">
+            <a v-if="nav.externalLink" :href="`${nav.url}`" rel="nofollow noopener noreferrer" target="_blank">
+              {{ nav.label }}
+            </a>
+            <a v-else  :href="`${nav.url}`">
               {{ nav.label }}
             </a>
           </li>
@@ -76,8 +84,6 @@ function toggle() {
             </a>
           </li>
         </ul>
-
-
       </div>
     </div>
   </nav>

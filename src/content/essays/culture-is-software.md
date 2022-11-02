@@ -18,7 +18,7 @@ Culture is transmitting information from one member to another. As our technolog
 
 We moved from standard releases of culture (versions like 1.0 etc.) to a rolling release (continuous delivery of frequent small updates).
 
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Our brains (hardware) run culture (software).<br><br>(h/t <a href="https://twitter.com/BretWeinstein?ref_src=twsrc%5Etfw">@BretWeinstein</a>)</p>&mdash; Piotr Stojanow (@piotrstojanow) <a href="https://twitter.com/piotrstojanow/status/1011499621938618368?ref_src=twsrc%5Etfw">June 26, 2018</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Our brains (hardware) run culture (software).<br><br>(h/t <a href="https://twitter.com/BretWeinstein?ref_src=twsrc%5Etfw" target="_blank">@BretWeinstein</a>)</p>&mdash; Piotr Stojanow (@piotrstojanow) <a href="https://twitter.com/piotrstojanow/status/1011499621938618368?ref_src=twsrc%5Etfw">June 26, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 (link to [tweetstorm](https://twitter.com/piotrstojanow/status/1011499621938618368))

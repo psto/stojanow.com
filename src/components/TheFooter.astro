@@ -1,38 +1,44 @@
 ---
-import RiMailSendLine from '~icons/ri/mail-send-line';
-import RiTwitterLine from '~icons/ri/twitter-line';
-import RiGithubLine from '~icons/ri/github-line';
-import RiBook2Line from '~icons/ri/book-2-line';
-import RiBellLine from '~icons/ri/bell-line';
-import site from '~/config/site';
+import ExternalLink from "~/components/ExternalLink.astro";
+import RiMailSendLine from "~icons/ri/mail-send-line";
+import RiTwitterLine from "~icons/ri/twitter-line";
+import RiGithubLine from "~icons/ri/github-line";
+import RiBook2Line from "~icons/ri/book-2-line";
+import RiBellLine from "~icons/ri/bell-line";
+import site from "~/config/site";
 
 const { githubUsername, twitterUsername } = site;
 
 const footerItems = [
   {
-    label: 'contact',
-    href: '/contact',
+    label: "contact",
+    href: "/contact",
     icon: RiMailSendLine,
+    externalLink: false,
   },
   {
-    label: 'twitter',
+    label: "twitter",
     href: `https://twitter.com/${twitterUsername}`,
     icon: RiTwitterLine,
+    externalLink: true,
   },
   {
-    label: 'github',
+    label: "github",
     href: `https://github.com/${githubUsername}`,
     icon: RiGithubLine,
+    externalLink: true,
   },
   {
-    label: 'wiki',
-    href: 'https://wiki.stojanow.com',
+    label: "wiki",
+    href: "https://wiki.stojanow.com",
     icon: RiBook2Line,
+    externalLink: true,
   },
   {
-    label: 'subscribe',
-    href: '/subscribe',
+    label: "subscribe",
+    href: "/subscribe",
     icon: RiBellLine,
+    externalLink: false,
   },
 ];
 ---
@@ -43,22 +49,39 @@ const footerItems = [
       class="flex flex-wrap items-baseline justify-center text-brand-red dark:text-brand-red-dark"
     >
       {
-        footerItems.map((item) => (
-          <a
-            href={`${item.href}`}
-            class="flex items-center space-x-1 p-2 no-underline border-0 sm:mr-2 filter hover:brightness-125"
-          >
-            {<item.icon />}{' '}
-            <span class="text-zinc-600 dark:text-zinc-400">
-              {item.label}
-              <span />
-            </span>
-          </a>
-        ))
+        footerItems.map((item) => {
+          {
+            return item.externalLink ? (
+              <ExternalLink
+                href={`${item.href}`}
+                className="flex items-center space-x-1 p-2 no-underline border-0 sm:mr-2 filter hover:brightness-125"
+              >
+                {<item.icon />}{" "}
+                <span class="text-zinc-600 dark:text-zinc-400">
+                  {item.label}
+                  <span />
+                </span>
+              </ExternalLink>
+            ) : (
+              <a
+                href={`${item.href}`}
+                class="flex items-center space-x-1 p-2 no-underline border-0 sm:mr-2 filter hover:brightness-125"
+              >
+                {<item.icon />}{" "}
+                <span class="text-zinc-600 dark:text-zinc-400">
+                  {item.label}
+                  <span />
+                </span>
+              </a>
+            );
+          }
+        })
       }
     </div>
 
-    <div class="block p-2 m-0 text-xs leading-normal text-center text-zinc-600 dark:text-zinc-400">
+    <div
+      class="block p-2 m-0 text-xs leading-normal text-center text-zinc-600 dark:text-zinc-400"
+    >
       <a
         href="/copyright"
         class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"

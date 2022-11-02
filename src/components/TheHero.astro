@@ -1,11 +1,12 @@
 ---
-import { Image } from '@astrojs/image/components';
-import AppButton from '~/components/AppButton.astro';
-import site from '../config/site';
+import { Image } from "@astrojs/image/components";
+import AppButton from "~/components/AppButton.astro";
+import ExternalLink from "./ExternalLink.astro";
+import site from "../config/site";
 
 const { twitterUsername } = site;
 
-const heroCTA = 'Start Here';
+const heroCTA = "Start Here";
 ---
 
 <section class="py-12 overflow-hidden md:py-20 lg:py-24">
@@ -37,18 +38,21 @@ const heroCTA = 'Start Here';
             fill="currentColor"></rect>
         </pattern>
       </defs>
-      <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)"></rect>
+      <rect
+        width="404"
+        height="404"
+        fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)"></rect>
     </svg>
 
     <div class="relative">
       <blockquote class="text-zinc-900 dark:text-zinc-50">
         <div class="mb-4 flex items-center justify-center">
           <Image
-            src={import('../images/avatar@2x.png')}
+            src={import("../images/avatar@2x.png")}
             alt="Piotr Stojanow avatar"
             widths={[70, 100]}
             aspectRatio="1:1"
-            formats={['avif', 'webp']}
+            formats={["avif", "webp"]}
             class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full"
           />
         </div>
@@ -57,12 +61,14 @@ const heroCTA = 'Start Here';
         >
           <p>
             Hi, I’m
-            <a
+            <ExternalLink
               href={`https://twitter.com/${twitterUsername}`}
-              class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
-              >Piotr Stojanow<span class="text-zinc-200 dark:text-zinc-800">.</span>
-            </a> Welcome to my online home. I write on the intersection of technology and history. Want
-            to learn more about me?
+              className="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
+              >Piotr Stojanow<span class="text-zinc-200 dark:text-zinc-800"
+                >.</span
+              >
+            </ExternalLink> Welcome to my online home. I write on the intersection
+            of technology and history. Want to learn more about me?
           </p>
           <a href="/about" class="mt-4">
             <AppButton cta={heroCTA} />

@@ -1,6 +1,7 @@
 ---
-import { Image } from '@astrojs/image/components';
-import { formatDate } from '~/utils';
+import { Image } from "@astrojs/image/components";
+import { formatDate } from "~/utils";
+import ExternalLink from "~/components/ExternalLink.astro";
 
 export interface Props {
   note: {
@@ -21,15 +22,15 @@ const {
 <header>
   <div class="flex py-2 content">
     <div class="flex-1">
-      <a href={amazon}>
+      <ExternalLink ariaLabel="Amazon smile book link" href={amazon}>
         <Image
           src={import(`../images/notes/${image}.jpg`)}
           alt={`${title} book cover`}
           widths={[100, 200, 350]}
-          formats={['avif', 'webp']}
+          formats={["avif", "webp"]}
           class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
         />
-      </a>
+      </ExternalLink>
     </div>
     <div class="flex-1 px-2 item-body">
       <h2 class="mb-4 text-center md:text-4xl p-name lg:mb-8">
@@ -44,7 +45,8 @@ const {
         {formatDate(dateRead)}
       </time>
       <br />
-      Check out <a href={amazon}>Amazon</a> for more details and reviews.
+      Check out <ExternalLink href={amazon}>Amazon</ExternalLink> for more details
+      and reviews.
     </small>
     <p>{description}</p>
   </div>

@@ -1,8 +1,9 @@
 ---
-import { Image } from '@astrojs/image/components';
-import AppTitle from '~/components/AppTitle.astro';
-import { formatDate } from '~/utils/index';
-import site from '~/config/site';
+import { Image } from "@astrojs/image/components";
+import AppTitle from "~/components/AppTitle.astro";
+import ExternalLink from "~/components/ExternalLink.astro";
+import { formatDate } from "~/utils/index";
+import site from "~/config/site";
 
 const { twitterUsername } = site;
 
@@ -20,7 +21,10 @@ const { date, title } = Astro.props as Props;
   </div>
 
   <div class="flex justify-center">
-    <time datetime={date} class="block text-sm italic text-center text-gray-400">
+    <time
+      datetime={date}
+      class="block text-sm italic text-center text-gray-400"
+    >
       {formatDate(date)}
     </time>
   </div>
@@ -28,26 +32,28 @@ const { date, title } = Astro.props as Props;
   <div class="flex justify-center">
     <div class="flex items-center space-x-2">
       <Image
-        src={import('../images/avatar@2x.png')}
+        src={import("../images/avatar@2x.png")}
         alt="Piotr Stojanow avatar"
         width="50px"
         height="50px"
-        formats={['avif', 'webp']}
+        formats={["avif", "webp"]}
         class="w-10 h-10 mx-auto rounded-full"
       />
 
       <dl class="text-sm font-medium text-gray-700 whitespace-nowrap">
         <dt class="sr-only">Name</dt>
         <dd>
-          <a href="/" class="text-gray-700 dark:text-gray-300 no-underline"> Piotr Stojanow</a>
+          <p class="m-0 text-gray-700 dark:text-gray-300 no-underline">
+            Piotr Stojanow
+          </p>
         </dd>
         <dt class="sr-only">Twitter</dt>
         <dd>
-          <a
+          <ExternalLink
             href={`https://twitter.com/${twitterUsername}`}
-            class="no-underline text-primary-600 hover:text-primary-700"
+            className="no-underline text-primary-600 hover:text-primary-700"
             >@piotrstojanow
-          </a>
+          </ExternalLink>
         </dd>
       </dl>
     </div>

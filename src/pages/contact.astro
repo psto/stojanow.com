@@ -1,22 +1,25 @@
 ---
-import { Image } from '@astrojs/image/components';
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import site from '~/config/site';
+import { Image } from "@astrojs/image/components";
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import ExternalLink from "~/components/ExternalLink.astro";
+import site from "~/config/site";
 const { substackUrl, twitterUsername } = site;
 
 const seoProps = {
   description:
-    'Contact Piotr Stojanow by email or twitter, subscribe to the newsletter or the RSS feed.',
-  slug: 'contact',
-  title: 'Contact',
+    "Contact Piotr Stojanow by email or twitter, subscribe to the newsletter or the RSS feed.",
+  slug: "contact",
+  title: "Contact",
   plum: true,
 };
 ---
 
 <BaseLayout {...seoProps}>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-    <div class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+    <div
+      class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
       <div class="dark:bg-zinc-200 rounded-xl">
@@ -24,28 +27,31 @@ const seoProps = {
           src={`./images/dove.svg`}
           width={[300, 500, 700]}
           aspectRatio="1:1"
-          formats={['avif', 'webp']}
+          formats={["avif", "webp"]}
           alt="A flying dove"
         />
       </div>
     </div>
-    <div class="relative mx-auto mt-12 max-w-2xl prose dark:prose-dark text-center">
+    <div
+      class="relative mx-auto mt-12 max-w-2xl prose dark:prose-dark text-center"
+    >
       <p>
-        <strong>piotr</strong><span class="text-zinc-600 dark:text-zinc-400">&</span><strong
-          >stojanow@gmail.com
-        </strong>
+        <strong>piotr</strong><span class="text-zinc-600 dark:text-zinc-400"
+          >&</span
+        ><strong>stojanow@gmail.com</strong>
         <span class="text-zinc-600 dark:text-zinc-400">(without the &)</span>
         <br />
         Get in touch on
-        <a
+        <ExternalLink
           href={`https://twitter.com/${twitterUsername}`}
           style="color: #1da1f2"
-          target="_blank"
-          class="no-underline filter hover:brightness-125"
+          className="no-underline filter hover:brightness-125"
           >🐦 twitter
-        </a>
+        </ExternalLink>
         <br />
-        <a href={`${substackUrl}`} target="_blank" class="no-underline">🔔 subscribe</a>
+        <ExternalLink href={`${substackUrl}`} className="no-underline">
+          🔔 subscribe
+        </ExternalLink>
       </p>
     </div>
   </div>

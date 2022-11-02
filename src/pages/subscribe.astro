@@ -1,22 +1,27 @@
 ---
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import SubscriptionForm from '~/components/SubscriptionForm.astro';
-import site from '~/config/site';
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import SubscriptionForm from "~/components/SubscriptionForm.astro";
+import site from "~/config/site";
+import ExternalLink from "~/components/ExternalLink.astro";
 
 const { substackUrl, twitterUsername } = site;
 
 const seoProps = {
-  description: 'Subscribe to Stojanow.com newsletter',
-  slug: 'subscribe',
-  title: 'Subscribe',
+  description: "Subscribe to Stojanow.com newsletter",
+  slug: "subscribe",
+  title: "Subscribe",
   plum: true,
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark text-center">
-    <div class="px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+  <div
+    class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark text-center"
+  >
+    <div
+      class="px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
     </div>
@@ -25,21 +30,24 @@ const seoProps = {
 
     <p>
       Newsletter link if can't see the form:
-      <a href={`${substackUrl}`} target="_blank" class="no-underline">subscribe 🔔</a>
+      <ExternalLink href={`${substackUrl}`} className="no-underline">
+        subscribe 🔔
+      </ExternalLink>
     </p>
     <p>
       If you prefer "ancient" web technology like <b>RSS</b> 😉, then a
-      <a href="/rss.xml" target="_blank" class="no-underline">feed is available ✅</a>
+      <a href="/rss.xml" target="_blank" class="no-underline"
+        >feed is available ✅</a
+      >
     </p>
     <p>
       Also, you can find me on
-      <a
+      <ExternalLink
         href={`http://twitter.com/${twitterUsername}`}
         style="color: #1da1f2"
-        target="_blank"
-        class="no-underline"
+        className="no-underline"
         >🐦 twitter
-      </a>
+      </ExternalLink>
       or get in touch through
       <a href="/contact" class="no-underline">email 📧</a>
     </p>
