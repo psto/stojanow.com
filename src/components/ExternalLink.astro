@@ -1,0 +1,21 @@
+---
+interface Props {
+  href: string;
+  ariaLabel?: string;
+  className?: string;
+  style?: string;
+}
+
+const { ariaLabel, href, className, style } = Astro.props as Props;
+---
+
+<a
+  aria-label={ariaLabel}
+  class={className}
+  href={href}
+  rel="nofollow noopener noreferrer"
+  target="_blank"
+  style={style}
+>
+  <slot />
+</a>
