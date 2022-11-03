@@ -1,6 +1,6 @@
 ---
 title: 'Are Your Lights On?: How to Figure Out What the Problem Really Is by Donald Gause and Gerald Weinberg'
-date: 2019-02-24 21:39:10 +0200
+date: 2019-02-24 21:39:10+0200
 description: "A problem is a difference between things as desired and things as perceived. It's not enough to solve it logically. We have to put it into a social context. Don't solve problems for people who don't want them solved, don't know they have a problem, they can easily solve them themselves or don't have a sense of humour."
 category: books
 tags: books notes problem-solving

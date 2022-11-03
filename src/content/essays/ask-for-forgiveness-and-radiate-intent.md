@@ -1,6 +1,6 @@
 ---
 title: 'Ask for forgiveness and radiate intent'
-date: 2019-06-27 19:12:37 +0200
+date: 2019-06-27 19:12:37+0200
 description: "Asking for forgivness is viable strategy. It levels the playing field and guarantees that the 'offender' has skin in the game."
 category: posts
 tags: posts advice strategy intent forgiveness

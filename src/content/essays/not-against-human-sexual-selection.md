@@ -1,6 +1,6 @@
 ---
 title: 'Not Against Human Sexual Selection'
-date: 2019-07-03 15:16:37 +0200
+date: 2019-07-03 15:16:37+0200
 description: 'Was human natural direction driven by arranged marriages?'
 category: posts
 tags: posts evolution

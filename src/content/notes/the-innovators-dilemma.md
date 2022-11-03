@@ -1,6 +1,6 @@
 ---
 title: "The Innovator's Dilemma by Clayton Christensen"
-date: 2019-03-19 12:47:45 +0200
+date: 2019-03-19 12:47:45+0200
 description: 'How cash cows incentives companies to ignore disruptive technologies at their own peril. Discovering new markets also involves failure. Optimize plans for learning and discovery rather than execution.'
 category: books
 tags: books notes business entrepreneurship

@@ -1,6 +1,6 @@
 ---
 title: "The Antidote: Happiness for People Who Can't Stand Positive Thinking by Oliver Burkeman"
-date: 2019-02-13 20:39:10 +0200
+date: 2019-02-13 20:39:10+0200
 description: "Lovely exploration of happiness by embracing 'the negative path' of achieving it (through failure, pessimism, insecurity and uncertainty - the very things we try to avoid). Burkeman presents a unique collage of inversive ways of looking at life (and death)."
 category: books
 tags: books notes psychology

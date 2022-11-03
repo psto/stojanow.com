@@ -1,6 +1,6 @@
 ---
 title: 'A Technique for Producing Ideas by James Webb Young'
-date: 2019-02-21 15:10:29 +0200
+date: 2019-02-21 15:10:29+0200
 description: "A practical guide for generating ideas by an advertising executive. Develop a habit of searching for relationships between facts. As a result, you'll be able to produce new combinations of old elements - ideas."
 category: books
 tags: books notes psychology marketing creativity

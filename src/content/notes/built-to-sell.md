@@ -1,6 +1,6 @@
 ---
 title: 'Built to Sell: Creating a Business That Can Thrive Without You by John Warrillow'
-date: 2019-03-04 22:54:26 +0200
+date: 2019-03-04 22:54:26+0200
 description: 'A crash course in building a sellable business from the ground up. The business equivalent of the principle of starting with an end in mind. Think in systems, have a process, specialize and say no to projects outside your area of expertise.'
 category: books
 tags: books notes business entrepreneurship

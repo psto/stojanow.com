@@ -1,6 +1,6 @@
 ---
 title: 'The Art of Procrastination: A Guide to Effective Dawdling, Lollygagging and Postponing by John Perry'
-date: 2020-02-09 13:00:45 +0200
+date: 2020-02-09 13:00:45+0200
 description: "The art of getting a lot of things done by structuring your procrastination. We procrastinate to avoid doing something more important. Embrace and exploit this fact by making it work for you. Arrange your to-do list, so that there are always tasks at the top that both seem important (but aren't) and have a deadline (but don't). They give you a license to accomplish difficult and crucial projects by not doing something that seems even more vital."
 category: books
 tags: books notes productivity

@@ -1,6 +1,6 @@
 ---
 title: 'The Automatic Customer: Creating a Subscription Business in Any Industry by John Warrillow'
-date: 2019-03-08 12:05:58 +0200
+date: 2019-03-08 12:05:58+0200
 description: 'An in-depth dive into subscription-based business models. To get consumers to commit, you have to give them a big return on their investment. To grow your business reduce the churn and acquire customers for max 1/3 of their lifetime value.'
 category: books
 tags: books notes business entrepreneurship
