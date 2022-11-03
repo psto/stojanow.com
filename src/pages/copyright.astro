@@ -2,12 +2,12 @@
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
+import { COPYRIGHT_ENTITY } from "~/constants/entities";
 
 const seoProps = {
-  description:
-    "Stojanow.com copyright information. All content is released under Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).",
+  description: `Stojanow.com copyright information. All content is released under Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0) ${COPYRIGHT_ENTITY} Piotr Stojanow`,
   slug: "copyright",
-  title: "Copyright",
+  title: `Copyright ${COPYRIGHT_ENTITY}`,
   plum: true,
 };
 ---

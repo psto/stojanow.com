@@ -5,6 +5,7 @@ import RiTwitterLine from "~icons/ri/twitter-line";
 import RiGithubLine from "~icons/ri/github-line";
 import RiBook2Line from "~icons/ri/book-2-line";
 import RiBellLine from "~icons/ri/bell-line";
+import { COPYRIGHT_ENTITY } from "~/constants/entities";
 import site from "~/config/site";
 
 const { githubUsername, twitterUsername } = site;
@@ -86,7 +87,8 @@ const footerItems = [
         href="/copyright"
         class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
         >CC BY-NC 4.0
-      </a> © Piotr Stojanow
+      </a>
+      {`${COPYRIGHT_ENTITY} Piotr Stojanow`}
     </div>
   </div>
 </footer>
