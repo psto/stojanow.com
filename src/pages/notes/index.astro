@@ -13,9 +13,9 @@ const sortedRawPosts = rawPosts.sort(
 );
 
 const notes = sortedRawPosts.map(
-  ({ frontmatter: { date, title, description, image, imageAlt }, file }) => {
+  ({ frontmatter: { date, title, description, image  }, file }) => {
     const slug = getSlugFromPathname(file);
-    return { date, title, description, image, imageAlt, slug };
+    return { date, title, description, image, imageAlt: `${title} book cover`, slug };
   },
 );
 

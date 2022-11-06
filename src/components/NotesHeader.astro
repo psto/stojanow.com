@@ -11,11 +11,12 @@ export interface Props {
     dateRead: string;
     amazon: string;
     image: string;
+    imageAlt: string;
   };
 }
 
 const {
-  note: { title, description, dateRead, amazon, image },
+  note: { title, description, dateRead, amazon, image, imageAlt },
 } = Astro.props as Props;
 ---
 
@@ -25,7 +26,7 @@ const {
       <ExternalLink ariaLabel="Amazon smile book link" href={amazon}>
         <Image
           src={import(`../images/notes/${image}.jpg`)}
-          alt={`${title} book cover`}
+          alt={imageAlt}
           widths={[100, 200, 350]}
           formats={["avif", "webp"]}
           class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
