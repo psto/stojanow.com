@@ -1,41 +1,48 @@
 ---
-import PostHeader from '~/components/PostHeader.astro';
-import { getSlugFromPathname } from 'src/utils';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import { Post } from '~/types';
-import { MarkdownInstance } from 'astro';
-import { Image } from '@astrojs/image/components';
+import PostHeader from "~/components/PostHeader.astro";
+import { getSlugFromPathname } from "src/utils";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Post } from "~/types";
+import { MarkdownInstance } from "astro";
+import { Image } from "@astrojs/image/components";
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob('../content/essays/*.md')) as MarkdownInstance<Post>[];
+  const posts = (await Astro.glob(
+    "../content/essays/*.md"
+  )) as MarkdownInstance<Post>[];
 
   return posts.map(
-    ({ Content, file, frontmatter: { date, title, description, image, imageAlt, plum } }) => {
+    ({
+      Content,
+      file,
+      frontmatter: { date, title, description, image, imageAlt },
+    }) => {
       const slug = getSlugFromPathname(file);
 
       return {
         params: { slug },
-        props: { Content, date, title, description, image, imageAlt, plum },
+        props: { Content, date, title, description, image, imageAlt },
       };
-    },
+    }
   );
 }
 
-const { Content, title, date, description, image, imageAlt, plum } = Astro.props;
+const { Content, title, date, description, image, imageAlt } = Astro.props;
 const { slug } = Astro.params;
 
 const seoProps = {
   description,
   slug,
   title,
-  plum,
 };
 ---
 
 <BaseLayout {...seoProps}>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
     <div class="mx-auto">
-      <article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0">
+      <article
+        class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0"
+      >
         <PostHeader date={date} title={title} />
 
         <Image
@@ -43,7 +50,7 @@ const seoProps = {
           alt={imageAlt}
           widths={[300, 400, 600, 800]}
           aspectRatio="4:3"
-          formats={['avif', 'webp']}
+          formats={["avif", "webp"]}
           class="w-full rounded"
         />
         <div class="grid justify-center"></div>

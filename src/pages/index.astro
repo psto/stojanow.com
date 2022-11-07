@@ -1,29 +1,33 @@
 ---
-import AppButton from '~/components/AppButton.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import TheHero from '~/components/TheHero.astro';
-import RecentPosts from '~/components/RecentPosts.vue';
-import { getSlugFromPathname } from '~/utils';
-import { Post } from '~/types';
-import { MarkdownInstance } from 'astro';
-import IcBaselineArrowRightAlt from '~icons/ic/baseline-arrow-right-alt';
+import AppButton from "~/components/AppButton.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import TheHero from "~/components/TheHero.astro";
+import RecentPosts from "~/components/RecentPosts.vue";
+import { getSlugFromPathname } from "~/utils";
+import { Post } from "~/types";
+import { MarkdownInstance } from "astro";
+import IcBaselineArrowRightAlt from "~icons/ic/baseline-arrow-right-alt";
 
-const rawPosts = (await Astro.glob('../content/essays/*.md')) as MarkdownInstance<Post>[];
+const rawPosts = (await Astro.glob(
+  "../content/essays/*.md"
+)) as MarkdownInstance<Post>[];
 const sortedRawPosts = rawPosts.sort(
   ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
-    new Date(dateB).valueOf() - new Date(dateA).valueOf(),
+    new Date(dateB).valueOf() - new Date(dateA).valueOf()
 );
 
-const posts = sortedRawPosts.map(({ frontmatter: { date, title, description }, file }) => {
-  const slug = getSlugFromPathname(file);
-  return { date, title, description, slug };
-});
+const posts = sortedRawPosts.map(
+  ({ frontmatter: { date, title, description }, file }) => {
+    const slug = getSlugFromPathname(file);
+    return { date, title, description, slug };
+  }
+);
 
 const seoProps = {
-  description: "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site.",
-  slug: '',
-  title: 'Piotr Stojanow | Home',
-  plum: true,
+  description:
+    "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site.",
+  slug: "",
+  title: "Piotr Stojanow | Home",
 };
 
 const recentPostsProps = {
@@ -31,13 +35,15 @@ const recentPostsProps = {
   posts,
 };
 
-const recentCTA = 'All Essays';
+const recentCTA = "All Essays";
 ---
 
 <BaseLayout {...seoProps}>
   <TheHero />
 
-  <div class="container mt-30 max-w-6xl px-4 pt-16 pb-20 mx-auto sm:px-6 lg:pt-24 lg:pb-28">
+  <div
+    class="container mt-30 max-w-6xl px-4 pt-16 pb-20 mx-auto sm:px-6 lg:pt-24 lg:pb-28"
+  >
     <div>
       <h2
         class="text-xl font-bold leading-9 tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl sm:leading-10"

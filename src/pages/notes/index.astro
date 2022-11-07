@@ -1,36 +1,46 @@
 ---
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import PostsIndex from '~/components/PostsIndex.astro';
-import { getSlugFromPathname } from '../../utils/index';
-import { Post } from 'src/types';
-import { MarkdownInstance } from 'astro';
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import PostsIndex from "~/components/PostsIndex.astro";
+import { getSlugFromPathname } from "../../utils/index";
+import { Post } from "src/types";
+import { MarkdownInstance } from "astro";
 
-const rawPosts = (await Astro.glob('../../content/notes/*.md')) as MarkdownInstance<Post>[];
+const rawPosts = (await Astro.glob(
+  "../../content/notes/*.md"
+)) as MarkdownInstance<Post>[];
 const sortedRawPosts = rawPosts.sort(
   ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
-    new Date(dateB).valueOf() - new Date(dateA).valueOf(),
+    new Date(dateB).valueOf() - new Date(dateA).valueOf()
 );
 
 const notes = sortedRawPosts.map(
-  ({ frontmatter: { date, title, description, image  }, file }) => {
+  ({ frontmatter: { date, title, description, image }, file }) => {
     const slug = getSlugFromPathname(file);
-    return { date, title, description, image, imageAlt: `${title} book cover`, slug };
-  },
+    return {
+      date,
+      title,
+      description,
+      image,
+      imageAlt: `${title} book cover`,
+      slug,
+    };
+  }
 );
 
 const seoProps = {
   description:
     "Piotr Stojanow's book notes. Detailed notes on books I've read. If a book is here, then it's recommended.",
-  slug: 'notes',
-  title: 'Notes',
-  plum: true,
+  slug: "notes",
+  title: "Notes",
 };
 ---
 
 <BaseLayout {...seoProps}>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-    <div class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+    <div
+      class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
     </div>

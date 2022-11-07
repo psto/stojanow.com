@@ -5,7 +5,6 @@ export interface Post {
   slug?: string;
   image?: string;
   imageAlt?: string;
-  plum?: boolean;
 }
 
 export interface Note {
@@ -15,5 +14,4 @@ export interface Note {
   dateRead: string;
   amazon: string;
   image: string;
-  plum?: boolean;
 }

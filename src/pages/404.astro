@@ -1,25 +1,19 @@
 ---
-import { Image } from '@astrojs/image/components';
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import Plum from '~/components/Plum.vue';
-
-const siteProps = {
-  plum: true,
-};
+import { Image } from "@astrojs/image/components";
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
 ---
 
-<BaseLayout {...siteProps}>
-  <Plum client:idle />
-  <Plum client:idle />
-  <Plum client:idle />
-  <Plum client:idle />
-  <Plum client:idle />
+<BaseLayout>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-    <div class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+    <div
+      class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
       <AppTitle>Page not found 😣</AppTitle>
     </div>
-    <div class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0 text-center">
+    <div
+      class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0 text-center"
+    >
       <p>
         If this was my fault (like a bad link) I'd appreciate a
         <a href="/contact">heads up</a>.
@@ -31,7 +25,7 @@ const siteProps = {
           alt="Don Quixote by Picasso"
           width={[300, 500, 800]}
           aspectRatio="1:1"
-          formats={['avif', 'webp']}
+          formats={["avif", "webp"]}
           class="bg-white dark:bg-gray-200 rounded-xl"
         />
       </div>

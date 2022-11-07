@@ -1,35 +1,38 @@
 ---
-import AppTitle from '~/components/AppTitle.astro';
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import { getSlugFromPathname } from '~/utils';
-import { Post } from '~/types';
-import { MarkdownInstance } from 'astro';
-import PostsIndex from '~/components/PostsIndex.astro';
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { getSlugFromPathname } from "~/utils";
+import { Post } from "~/types";
+import { MarkdownInstance } from "astro";
+import PostsIndex from "~/components/PostsIndex.astro";
 
-const rawPosts = (await Astro.glob('../content/essays/*.md')) as MarkdownInstance<Post>[];
+const rawPosts = (await Astro.glob(
+  "../content/essays/*.md"
+)) as MarkdownInstance<Post>[];
 const sortedRawPosts = rawPosts.sort(
   ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
-    new Date(dateB).valueOf() - new Date(dateA).valueOf(),
+    new Date(dateB).valueOf() - new Date(dateA).valueOf()
 );
 
 const posts = sortedRawPosts.map(
   ({ frontmatter: { date, title, description, image, imageAlt }, file }) => {
     const slug = getSlugFromPathname(file);
     return { date, title, description, image, imageAlt, slug };
-  },
+  }
 );
 
 const seoProps = {
   description: "Piotr Stojanow's essays",
-  slug: 'essays',
-  title: 'Essays',
-  plum: true,
+  slug: "essays",
+  title: "Essays",
 };
 ---
 
 <BaseLayout {...seoProps}>
   <div class="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-    <div class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0">
+    <div
+      class="max-w-2xl px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
     </div>

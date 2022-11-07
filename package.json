@@ -42,7 +42,6 @@
   "dependencies": {
     "@nanostores/persistent": "^0.6.2",
     "@nanostores/vue": "^0.6.0",
-    "@vueuse/core": "^9.1.1",
     "nanostores": "^0.6.0"
   }
 }
