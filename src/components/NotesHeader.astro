@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import { formatDate } from "~/utils";
 import ExternalLink from "~/components/ExternalLink.astro";
 
@@ -24,10 +24,13 @@ const {
   <div class="flex py-2 content">
     <div class="flex-1">
       <ExternalLink ariaLabel="Amazon smile book link" href={amazon}>
-        <Image
+        <Picture
           src={import(`../images/notes/${image}.jpg`)}
           alt={imageAlt}
-          widths={[100, 200, 350]}
+          widths={[100, 200, 300]}
+          sizes="(max-width: 300px)"
+          aspectRatio="3:4"
+          loading="eager"
           formats={["avif", "webp"]}
           class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
         />

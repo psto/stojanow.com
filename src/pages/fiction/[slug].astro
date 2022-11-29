@@ -1,23 +1,29 @@
 ---
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import PostHeader from '~/components/PostHeader.astro';
-import { getSlugFromPathname } from '~/utils';
-import { Post } from '~/types';
-import { MarkdownInstance } from 'astro';
-import { Image } from '@astrojs/image/components';
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import PostHeader from "~/components/PostHeader.astro";
+import { getSlugFromPathname } from "~/utils";
+import { Post } from "~/types";
+import { MarkdownInstance } from "astro";
+import { Picture } from "@astrojs/image/components";
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob('../../content/fiction/*.md')) as MarkdownInstance<Post>[];
+  const posts = (await Astro.glob(
+    "../../content/fiction/*.md"
+  )) as MarkdownInstance<Post>[];
 
   return posts.map(
-    ({ Content, file, frontmatter: { date, title, description, image, imageAlt } }) => {
+    ({
+      Content,
+      file,
+      frontmatter: { date, title, description, image, imageAlt },
+    }) => {
       const slug = getSlugFromPathname(file);
 
       return {
         params: { slug },
         props: { Content, date, title, description, image, imageAlt },
       };
-    },
+    }
   );
 }
 
@@ -34,15 +40,19 @@ const seoProps = {
 <BaseLayout {...seoProps}>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
     <div class="mx-auto">
-      <article class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0">
+      <article
+        class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0"
+      >
         <PostHeader date={date} title={title} />
 
-        <Image
+        <Picture
           src={import(`../../images/fiction/${image}.jpg`)}
           alt={imageAlt}
-          widths={[300, 400, 600, 800]}
+          widths={[300, 500, 700]}
           aspectRatio="4:3"
-          formats={['avif', 'webp']}
+          sizes="(max-width: 700px) 100vw, 700px"
+          formats={["avif", "webp"]}
+          loading="eager"
           class="w-full rounded"
         />
 

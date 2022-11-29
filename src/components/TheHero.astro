@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import AppButton from "~/components/AppButton.astro";
 import ExternalLink from "./ExternalLink.astro";
 import site from "../config/site";
@@ -47,10 +47,11 @@ const heroCTA = "Start Here";
     <div class="relative">
       <blockquote class="text-zinc-900 dark:text-zinc-50">
         <div class="mb-4 flex items-center justify-center">
-          <Image
+          <Picture
             src={import("../images/avatar@2x.png")}
             alt="Piotr Stojanow avatar"
             widths={[70, 100]}
+            sizes="(max-width: 50px)"
             aspectRatio="1:1"
             formats={["avif", "webp"]}
             class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full"
@@ -64,13 +65,13 @@ const heroCTA = "Start Here";
             <ExternalLink
               href={`https://twitter.com/${twitterUsername}`}
               className="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
-              >Piotr Stojanow<span class="text-zinc-200 dark:text-zinc-800"
+              >Piotr Stojanow<span class="text-zinc-900 dark:text-zinc-50"
                 >.</span
               >
             </ExternalLink> Welcome to my online home. I write on the intersection
             of technology and history. Want to learn more about me?
           </p>
-          <a href="/about" class="mt-4">
+          <a href="/essays" class="mt-4">
             <AppButton cta={heroCTA} />
           </a>
         </div>

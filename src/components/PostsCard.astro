@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Picture } from "@astrojs/image/components";
 
 export interface Props {
   post: {
@@ -19,12 +19,12 @@ const { post, imageDir } = Astro.props as Props;
   class="w-full h-full flex flex-col rounded-lg shadow-lg overflow-hidden bg-white dark:bg-dark-light"
 >
   <div class="flex-shrink-0">
-    <Image
+    <Picture
       src={import(`../images/${imageDir}/${post.image}.jpg`)}
       alt={post.imageAlt}
-      widths={[300, 400, 600, 800]}
-      aspectRatio="4:3"
-      formats={['avif', 'webp']}
+      widths={[300, 500]}
+      sizes="(max-width: 300px)"
+      formats={["avif", "webp"]}
       class="h-48 w-full object-cover"
     />
   </div>
@@ -40,7 +40,9 @@ const { post, imageDir } = Astro.props as Props;
       </div>
     </div>
     <div class="mt-6">
-      <p class="text-brand-red hover:text-black dark:text-white dark:hover:text-brand-red-dark">
+      <p
+        class="text-brand-red hover:text-black dark:text-white dark:hover:text-brand-red-dark"
+      >
         Read More
       </p>
     </div>

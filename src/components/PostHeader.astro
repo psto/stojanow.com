@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import AppTitle from "~/components/AppTitle.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
 import { formatDate } from "~/utils/index";
@@ -16,14 +16,14 @@ const { date, title } = Astro.props as Props;
 ---
 
 <header>
-  <div class="lg:prose-lg">
+  <div class="lg:prose-lg mb-8">
     <AppTitle>{title}</AppTitle>
   </div>
 
   <div class="flex justify-center">
     <time
       datetime={date}
-      class="block text-sm italic text-center text-gray-400"
+      class="block text-sm italic text-center text-gray-600 dark:text-gray-400"
     >
       {formatDate(date)}
     </time>
@@ -31,11 +31,12 @@ const { date, title } = Astro.props as Props;
 
   <div class="flex justify-center">
     <div class="flex items-center space-x-2">
-      <Image
+      <Picture
         src={import("../images/avatar@2x.png")}
         alt="Piotr Stojanow avatar"
-        width="50px"
-        height="50px"
+        widths={[50]}
+        sizes="(max-width: 50px)"
+        aspectRatio="1:1"
         formats={["avif", "webp"]}
         class="w-10 h-10 mx-auto rounded-full"
       />
