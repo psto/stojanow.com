@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 ---
@@ -11,21 +10,18 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
     >
       <AppTitle>Page not found 😣</AppTitle>
     </div>
-    <div
-      class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0 text-center"
-    >
+    <div class="mx-auto mt-12 max-w-2xl prose dark:prose-dark text-center">
       <p>
         If this was my fault (like a bad link) I'd appreciate a
         <a href="/contact">heads up</a>.
       </p>
       <p>You can also check out my recent <a href="/essays">essays</a>.</p>
       <div class="items-center md:flex">
-        <Image
-          src={`./images/Don_Quixote_by_Picasso.svg`}
+        <img
+          src="./images/Don_Quixote_by_Picasso.svg"
+          width="400"
+          height="473"
           alt="Don Quixote by Picasso"
-          width={[300, 500, 800]}
-          aspectRatio="1:1"
-          formats={["avif", "webp"]}
           class="bg-white dark:bg-gray-200 rounded-xl"
         />
       </div>
