@@ -2,15 +2,8 @@
 import RiMoonLine from '~icons/ri/moon-line';
 import RiSunLine from '~icons/ri/sun-line';
 import { useThemeSwitcher } from '~/composables/useThemeSwitcher';
-import { onMounted, ref } from 'vue';
 
 const { theme, toggleTheme } = useThemeSwitcher();
-
-const isMounted = ref(false);
-
-onMounted(() => {
-  isMounted.value = true;
-})
 </script>
 
 <template>
