@@ -22,7 +22,6 @@ module.exports = {
               color: '#cc3535',
               filter: 'var(--tw-brightness)',
               '&:hover': {
-                color: '#ff7f00',
                 '--tw-brightness': 'brightness(1.25)',
               },
             },
