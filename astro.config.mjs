@@ -3,10 +3,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import vue from '@astrojs/vue';
 import Icons from 'unplugin-icons/vite';
-import mdx from "@astrojs/mdx";
 import robotsTxt from 'astro-robots-txt';
 import compress from "astro-compress";
-
 import image from "@astrojs/image";
 
 // https://astro.build/config
@@ -15,9 +13,7 @@ export default defineConfig({
   experimental: {
     integrations: true
   },
-  integrations: [sitemap(), tailwind(), vue(), mdx(), compress(), robotsTxt({
-    sitemap: false
-  }), image()],
+  integrations: [sitemap(), tailwind(), vue(), compress({ img: false, svg: false }), robotsTxt({ sitemap: false }), image()],
   vite: {
     plugins: [Icons()],
     ssr: {
