@@ -8,11 +8,11 @@ import site from "~/config/site";
 const { twitterUsername } = site;
 
 export interface Props {
-  date?: string;
+  date: string;
   title: string;
 }
 
-const { date, title } = Astro.props as Props;
+const { date, title } = Astro.props;
 ---
 
 <header>
@@ -53,7 +53,8 @@ const { date, title } = Astro.props as Props;
           <ExternalLink
             href={`https://twitter.com/${twitterUsername}`}
             className="no-underline text-primary-600 hover:text-primary-700"
-            >@piotrstojanow
+          >
+            @piotrstojanow
           </ExternalLink>
         </dd>
       </dl>

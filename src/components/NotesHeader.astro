@@ -1,58 +1,57 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import { formatDate } from "~/utils";
 import ExternalLink from "~/components/ExternalLink.astro";
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "~/utils";
 
-export interface Props {
-  note: {
-    title: string;
-    description: string;
-    date: string;
-    dateRead: string;
-    amazon: string;
-    image: string;
-    imageAlt: string;
-  };
+interface Props {
+  note: CollectionEntry<"notes">;
 }
 
-const {
-  note: { title, description, dateRead, amazon, image, imageAlt },
-} = Astro.props as Props;
+const { note } = Astro.props;
+const imageAlt = note.data.imageAlt || "";
 ---
 
 <header>
   <div class="flex py-2 content">
-    <div class="flex-1">
-      <ExternalLink ariaLabel="Amazon smile book link" href={amazon}>
-        <Picture
-          src={import(`../images/notes/${image}.jpg`)}
-          alt={imageAlt}
-          widths={[100, 200, 300]}
-          sizes="(max-width: 300px)"
-          aspectRatio="3:4"
-          loading="eager"
-          formats={["avif", "webp"]}
-          class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
-        />
-      </ExternalLink>
-    </div>
+    {
+      note.data.image && (
+        <div class="flex-1">
+          <ExternalLink
+            ariaLabel="Amazon smile book link"
+            href={note.data.amazon}
+          >
+            <Picture
+              src={import(`../images/notes/${note.data.image}.jpg`)}
+              alt={imageAlt}
+              widths={[100, 200, 300]}
+              sizes="(max-width: 300px)"
+              aspectRatio="3:4"
+              loading="eager"
+              formats={["avif", "webp"]}
+              class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
+            />
+          </ExternalLink>
+        </div>
+      )
+    }
     <div class="flex-1 px-2 item-body">
       <h2 class="mb-4 text-center md:text-4xl p-name lg:mb-8">
-        {title}
+        {note.data.title}
       </h2>
     </div>
   </div>
   <div>
     <small>
       Date read:
-      <time datetime={dateRead} class="italic">
-        {formatDate(dateRead)}
+      <time datetime={note.data.dateRead.toString()} class="italic">
+        {formatDate(note.data.dateRead)}
       </time>
       <br />
-      Check out <ExternalLink href={amazon}>Amazon</ExternalLink> for more details
-      and reviews.
+      Check out <ExternalLink href={note.data.amazon}>Amazon</ExternalLink> for more
+      details and reviews.
     </small>
-    <p>{description}</p>
+    <p>{note.data.description}</p>
   </div>
 
   <hr />

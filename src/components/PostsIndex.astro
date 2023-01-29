@@ -1,13 +1,16 @@
 ---
-import PostsCard from '~/components/PostsCard.astro';
-import { Post } from '~/types';
+import type { CollectionEntry } from "astro:content";
+import PostsCard from "~/components/PostsCard.astro";
 
-export interface Props {
-  posts: Post[];
+interface Props {
+  posts:
+    | CollectionEntry<"essays">[]
+    | CollectionEntry<"fiction">[]
+    | CollectionEntry<"notes">[];
   prefix?: string;
 }
 
-const { posts, prefix } = Astro.props as Props;
+const { posts, prefix } = Astro.props;
 ---
 
 <div class="relative max-w-7xl mx-auto">
@@ -16,11 +19,14 @@ const { posts, prefix } = Astro.props as Props;
       posts.map((post) => (
         <div class="rounded-lg transition-all duration-500 transform shadow-lg dark:bg-dark-light hover:scale-105 hover:shadow-2xl dark:hover:shadow-stone-900 hover:cursor-pointer">
           {prefix ? (
-            <a href={`/${prefix}/${post.slug}`} aria-label={`Read ${post.title}`}>
+            <a
+              href={`/${prefix}/${post.slug}`}
+              aria-label={`Read ${post.data.title}`}
+            >
               <PostsCard post={post} imageDir={prefix} />
             </a>
           ) : (
-            <a href={`/${post.slug}`} aria-label={`Read ${post.title}`}>
+            <a href={`/${post.slug}`} aria-label={`Read ${post.data.title}`}>
               <PostsCard post={post} imageDir="posts" />
             </a>
           )}
