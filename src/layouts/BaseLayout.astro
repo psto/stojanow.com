@@ -23,13 +23,23 @@ const { siteLanguage: lang } = site;
     <title>{title}</title>
   </head>
   <BaseHead {description} {slug} {title} />
-  <body class="bg-white dark:bg-dark">
+  <body
+    class="base-layout bg-white dark:bg-dark grid grid-rows-[auto,1fr,auto]"
+  >
     <TheNavigation client:load />
-    <div class="min-h-screen flex flex-col">
+    <div class="flex flex-col">
       <div class="pt-4 md:pt-8">
         <slot />
       </div>
     </div>
     <TheFooter />
   </body>
+
+  <style>
+    /* when dvh is not supported fallback to vh  */
+    .base-layout {
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+  </style>
 </html>
