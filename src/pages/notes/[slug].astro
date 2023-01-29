@@ -1,49 +1,25 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro";
-import { getSlugFromPathname } from "~/utils";
-import { Note } from "~/types";
-import { MarkdownInstance } from "astro";
 import NotesHeader from "~/components/NotesHeader.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob(
-    "../../content/notes/*.md"
-  )) as MarkdownInstance<Note>[];
+  const notes = await getCollection("notes");
 
-  return posts.map(
-    ({
-      Content,
-      file,
-      frontmatter: { title, description, date, dateRead, amazon, image },
-    }) => {
-      const slug = getSlugFromPathname(file);
-
-      return {
-        params: { slug },
-        props: { Content, title, description, date, dateRead, image, amazon },
-      };
-    }
-  );
+  return notes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
 }
 
-const { Content, title, description, date, dateRead, image, amazon } =
-  Astro.props;
+const { note } = Astro.props;
 const { slug } = Astro.params;
-
-const note = {
-  title,
-  description,
-  date,
-  dateRead,
-  image,
-  imageAlt: `${title} book cover`,
-  amazon,
-};
+const { Content } = await note.render();
 
 const seoProps = {
-  description,
+  description: note.data.description,
+  title: note.data.title,
   slug,
-  title,
 };
 ---
 

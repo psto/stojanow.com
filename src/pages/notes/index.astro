@@ -2,30 +2,12 @@
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostsIndex from "~/components/PostsIndex.astro";
-import { getSlugFromPathname } from "../../utils/index";
-import { Post } from "src/types";
-import { MarkdownInstance } from "astro";
+import { getCollection } from "astro:content";
 
-const rawPosts = (await Astro.glob(
-  "../../content/notes/*.md"
-)) as MarkdownInstance<Post>[];
-const sortedRawPosts = rawPosts.sort(
-  ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
-    new Date(dateB).valueOf() - new Date(dateA).valueOf()
-);
-
-const notes = sortedRawPosts.map(
-  ({ frontmatter: { date, title, description, image }, file }) => {
-    const slug = getSlugFromPathname(file);
-    return {
-      date,
-      title,
-      description,
-      image,
-      imageAlt: `${title} book cover`,
-      slug,
-    };
-  }
+const notes = await getCollection("notes");
+const sortedNotes = notes.sort(
+  (noteA, noteB) =>
+    new Date(noteB.data.date).valueOf() - new Date(noteA.data.date).valueOf()
 );
 
 const seoProps = {
@@ -45,6 +27,6 @@ const seoProps = {
       <hr />
     </div>
 
-    <PostsIndex posts={notes} prefix="notes" />
+    <PostsIndex posts={sortedNotes} prefix="notes" />
   </div>
 </BaseLayout>
