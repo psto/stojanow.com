@@ -1,39 +1,26 @@
 ---
 import PostHeader from "~/components/PostHeader.astro";
-import { getSlugFromPathname } from "src/utils";
 import BaseLayout from "~/layouts/BaseLayout.astro";
-import { Post } from "~/types";
-import { MarkdownInstance } from "astro";
 import { Picture } from "@astrojs/image/components";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob(
-    "../content/essays/*.md"
-  )) as MarkdownInstance<Post>[];
+  const essays = await getCollection("essays");
 
-  return posts.map(
-    ({
-      Content,
-      file,
-      frontmatter: { date, title, description, image, imageAlt },
-    }) => {
-      const slug = getSlugFromPathname(file);
-
-      return {
-        params: { slug },
-        props: { Content, date, title, description, image, imageAlt },
-      };
-    }
-  );
+  return essays.map((essay) => ({
+    params: { slug: essay.slug },
+    props: { essay },
+  }));
 }
 
-const { Content, title, date, description, image, imageAlt } = Astro.props;
+const { essay } = Astro.props;
 const { slug } = Astro.params;
+const { Content } = await essay.render();
 
 const seoProps = {
-  description,
+  description: essay.data.description,
+  title: essay.data.title,
   slug,
-  title,
 };
 ---
 
@@ -43,14 +30,14 @@ const seoProps = {
       <article
         class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0"
       >
-        <PostHeader date={date} title={title} />
+        <PostHeader date={essay.data.date} title={essay.data.title} />
 
         {
           /* TODO: research sizes viewport - vw or ship with aspectRatio="4:3" instead */
         }
         <Picture
-          src={import(`../images/posts/${image}.jpg`)}
-          alt={imageAlt}
+          src={import(`../images/posts/${essay.data.image}.jpg`)}
+          alt={essay.data.imageAlt}
           widths={[500, 700]}
           sizes="100vw"
           formats={["avif", "webp"]}

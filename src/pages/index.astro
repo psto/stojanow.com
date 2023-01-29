@@ -2,25 +2,14 @@
 import AppButton from "~/components/AppButton.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import TheHero from "~/components/TheHero.astro";
-import RecentPosts from "~/components/RecentPosts.vue";
-import { getSlugFromPathname } from "~/utils";
-import { Post } from "~/types";
-import { MarkdownInstance } from "astro";
 import IcBaselineArrowRightAlt from "~icons/ic/baseline-arrow-right-alt";
+import { getCollection } from "astro:content";
+import { formatDate } from "~/utils";
 
-const rawPosts = (await Astro.glob(
-  "../content/essays/*.md"
-)) as MarkdownInstance<Post>[];
-const sortedRawPosts = rawPosts.sort(
-  ({ frontmatter: { date: dateA } }, { frontmatter: { date: dateB } }) =>
-    new Date(dateB).valueOf() - new Date(dateA).valueOf()
-);
-
-const posts = sortedRawPosts.map(
-  ({ frontmatter: { date, title, description }, file }) => {
-    const slug = getSlugFromPathname(file);
-    return { date, title, description, slug };
-  }
+const essays = await getCollection("essays");
+const sortedEssays = essays.sort(
+  (essayA, essayB) =>
+    new Date(essayB.data.date).valueOf() - new Date(essayA.data.date).valueOf()
 );
 
 const seoProps = {
@@ -28,11 +17,6 @@ const seoProps = {
     "Piotr Stojanow's essays, blog, tweetstorms and book notes. A personal site.",
   slug: "",
   title: "Piotr Stojanow | Home",
-};
-
-const recentPostsProps = {
-  initialPosts: 4,
-  posts,
 };
 
 const recentCTA = "All Essays";
@@ -54,7 +38,28 @@ const recentCTA = "All Essays";
     <div
       class="grid gap-16 pt-12 mt-12 border-t-2 border-zinc-200 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
     >
-      <RecentPosts {...recentPostsProps} client:visible />
+      {
+        sortedEssays.map(({ data: { date, title, description }, slug }) => (
+          <div>
+            <div class="flex items-baseline">
+              <div class="flex mr-8 text-sm leading-5 text-zinc-700 dark:text-zinc-400">
+                <time datetime={date}>{formatDate(date)}</time>
+              </div>
+            </div>
+
+            <a href={`/${slug}`} class="group">
+              <h3 class="mt-4 text-xl font-semibold leading-7 text-brand-red dark:text-brand-red-dark filter hover:brightness-125">
+                {title}
+              </h3>
+
+              <p class="mt-3 text-base leading-6 text-zinc-700 dark:text-zinc-200">
+                {description}
+              </p>
+            </a>
+          </div>
+        ))
+      }
+
       <div class="flex items-center mx-auto">
         <a href="/essays" aria-label="Read More Essays">
           <AppButton cta={recentCTA}>
