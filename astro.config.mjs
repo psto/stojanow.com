@@ -9,10 +9,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://stojanow.com',
-  experimental: {
-    integrations: true
-  },
+  site: 'https://stojanow.com/',
   integrations: [sitemap(), tailwind(), vue(), compress({ img: false, svg: false }), robotsTxt({ sitemap: false }), image()],
   vite: {
     plugins: [Icons()],
