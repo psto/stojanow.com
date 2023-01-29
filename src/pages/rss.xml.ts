@@ -1,40 +1,25 @@
 import rss from '@astrojs/rss';
-import { getSlugFromPathname } from '~/utils';
+import { getCollection } from 'astro:content';
 import site from '~/config/site';
 
-const { siteTitle, siteUrl } = site;
+const { siteDescription, siteTitle, siteUrl } = site;
 
 export async function get() {
-  const postModules = await import.meta.glob('../content/essays/*.md');
-  const posts = await Promise.all(Object.keys(postModules).map((path) => postModules[path]()));
+  const posts = await getCollection('essays');
 
   return rss({
     title: siteTitle,
     stylesheet: true,
-    description: siteTitle,
+    description: siteDescription,
     site: siteUrl,
     customData: `<language>en-gb</language>`,
     items: posts
-      .sort(
-        (
-          { frontmatter: { date: dateA } },
-          { frontmatter: { date: dateB } },
-        ) => Date.parse(dateA) - Date.parse(dateB),
-      )
-      .map(
-        ({
-          file,
-          frontmatter: { date, title, description },
-        }) => {
-          const slug = getSlugFromPathname(file);
-
-          return {
-            title,
-            description,
-            link: `${siteUrl}/${slug}/`,
-            pubDate: new Date(date),
-          };
-        },
-      ),
+      .map((post) => ({
+        title: post.data.title,
+        description: post.data.description,
+        link: `${siteUrl}/${post.slug}/`,
+        pubDate: new Date(post.data.date),
+      }))
+      .sort((postA, postB) => postB.pubDate.getTime() - postA.pubDate.getTime()),
   });
 }
