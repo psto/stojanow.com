@@ -1,11 +1,10 @@
 # build output
-dist
+dist/
+# generated types
+.astro/
 
 # dependencies
 node_modules/
-package-lock.lock
-package-lock.json
-yarn.lock
 
 # logs
 npm-debug.log*

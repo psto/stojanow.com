@@ -1,3 +1,4 @@
+/// <reference path="../.astro/types.d.ts" />
 interface ImportMetaEnv {
   readonly DB_PASSWORD: string;
   readonly PUBLIC_POKEAPI: string;
