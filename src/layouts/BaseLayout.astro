@@ -5,7 +5,12 @@ import TheNavigation from "~/components/TheNavigation.vue";
 import TheFooter from "~/components/TheFooter.astro";
 import site from "~/config/site";
 
-const { description, slug, title } = Astro.props;
+type Props = {
+  description: string;
+  title: string;
+};
+
+const { description, title } = Astro.props;
 const { siteLanguage: lang } = site;
 ---
 
@@ -22,7 +27,7 @@ const { siteLanguage: lang } = site;
     />
     <title>{title}</title>
   </head>
-  <BaseHead {description} {slug} {title} />
+  <BaseHead {description} {title} />
   <body
     class="base-layout bg-white dark:bg-dark grid grid-rows-[auto,1fr,auto]"
   >
