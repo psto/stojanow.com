@@ -2,7 +2,7 @@
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostHeader from "~/components/PostHeader.astro";
 import { Picture } from "@astrojs/image/components";
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const fiction = await getCollection("fiction");
@@ -13,9 +13,14 @@ export async function getStaticPaths() {
   }));
 }
 
+type Props = { story: CollectionEntry<"fiction"> };
+type Slug = Pick<CollectionEntry<"notes">, "slug">;
+
 const { story } = Astro.props;
-const { slug } = Astro.params;
+const { slug } = Astro.params as Slug;
 const { Content } = await story.render();
+
+const imageAlt = story.data.imageAlt || "";
 
 const seoProps = {
   description: story.data.description,
@@ -30,18 +35,25 @@ const seoProps = {
       <article
         class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0"
       >
-        <PostHeader date={story.data.date} title={story.data.title} />
-
-        <Picture
-          src={import(`../../images/fiction/${story.data.image}.jpg`)}
-          alt={story.data.imageAlt}
-          widths={[300, 500, 700]}
-          aspectRatio="4:3"
-          sizes="(max-width: 700px) 100vw, 700px"
-          formats={["avif", "webp"]}
-          loading="eager"
-          class="w-full rounded"
+        <PostHeader
+          date={story.data.date.toString()}
+          title={story.data.title}
         />
+
+        {
+          story.data.image && (
+            <Picture
+              src={import(`../../images/fiction/${story.data.image}.jpg`)}
+              alt={imageAlt}
+              widths={[300, 500, 700]}
+              aspectRatio="4:3"
+              sizes="(max-width: 700px) 100vw, 700px"
+              formats={["avif", "webp"]}
+              loading="eager"
+              class="w-full rounded"
+            />
+          )
+        }
 
         <Content class="prose dark:prose-dark" />
       </article>

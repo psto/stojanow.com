@@ -2,7 +2,7 @@
 import PostHeader from "~/components/PostHeader.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import { Picture } from "@astrojs/image/components";
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
@@ -13,9 +13,14 @@ export async function getStaticPaths() {
   }));
 }
 
+type Props = { essay: CollectionEntry<"essays"> };
+type Slug = Pick<CollectionEntry<"essays">, "slug">;
+
 const { essay } = Astro.props;
-const { slug } = Astro.params;
+const { slug } = Astro.params as Slug;
 const { Content } = await essay.render();
+
+const imageAlt = essay.data.imageAlt || "";
 
 const seoProps = {
   description: essay.data.description,
@@ -30,20 +35,27 @@ const seoProps = {
       <article
         class="max-w-2xl px-4 pt-8 pb-16 mx-auto prose dark:prose-dark md:pt-0"
       >
-        <PostHeader date={essay.data.date} title={essay.data.title} />
+        <PostHeader
+          date={essay.data.date.toString()}
+          title={essay.data.title}
+        />
 
         {
           /* TODO: research sizes viewport - vw or ship with aspectRatio="4:3" instead */
         }
-        <Picture
-          src={import(`../images/posts/${essay.data.image}.jpg`)}
-          alt={essay.data.imageAlt}
-          widths={[500, 700]}
-          sizes="100vw"
-          formats={["avif", "webp"]}
-          loading="eager"
-          class="w-full rounded"
-        />
+        {
+          essay.data.image && (
+            <Picture
+              src={import(`../images/posts/${essay.data.image}.jpg`)}
+              alt={imageAlt}
+              widths={[500, 700]}
+              sizes="100vw"
+              formats={["avif", "webp"]}
+              loading="eager"
+              class="w-full rounded"
+            />
+          )
+        }
 
         <Content class="prose dark:prose-dark" />
       </article>

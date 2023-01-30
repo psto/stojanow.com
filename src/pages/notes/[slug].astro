@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import NotesHeader from "~/components/NotesHeader.astro";
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
@@ -12,8 +12,11 @@ export async function getStaticPaths() {
   }));
 }
 
+type Props = { note: CollectionEntry<"notes"> };
+type Slug = Pick<CollectionEntry<"notes">, "slug">;
+
 const { note } = Astro.props;
-const { slug } = Astro.params;
+const { slug } = Astro.params as Slug;
 const { Content } = await note.render();
 
 const seoProps = {
