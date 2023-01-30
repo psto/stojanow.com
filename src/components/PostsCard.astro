@@ -2,14 +2,13 @@
 import { Picture } from "@astrojs/image/components";
 import type { CollectionEntry } from "astro:content";
 
-interface Props {
+type Props = {
   post:
     | CollectionEntry<"essays">
     | CollectionEntry<"fiction">
     | CollectionEntry<"notes">;
-  prefix?: string;
   imageDir: string;
-}
+};
 
 const { post, imageDir } = Astro.props;
 const imageAlt = post.data.imageAlt || "";

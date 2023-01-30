@@ -1,9 +1,9 @@
 ---
-export interface Props {
+type Props = {
   cta: string;
-}
+};
 
-const { cta = 'Read More' } = Astro.props as Props;
+const { cta = "Read More" } = Astro.props;
 ---
 
 <button

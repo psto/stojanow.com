@@ -4,9 +4,9 @@ import ExternalLink from "~/components/ExternalLink.astro";
 import type { CollectionEntry } from "astro:content";
 import { formatDate } from "~/utils";
 
-interface Props {
+type Props = {
   note: CollectionEntry<"notes">;
-}
+};
 
 const { note } = Astro.props;
 const imageAlt = note.data.imageAlt || "";

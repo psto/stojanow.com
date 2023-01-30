@@ -2,13 +2,13 @@
 import type { CollectionEntry } from "astro:content";
 import PostsCard from "~/components/PostsCard.astro";
 
-interface Props {
+type Props = {
   posts:
     | CollectionEntry<"essays">[]
     | CollectionEntry<"fiction">[]
     | CollectionEntry<"notes">[];
   prefix?: string;
-}
+};
 
 const { posts, prefix } = Astro.props;
 ---

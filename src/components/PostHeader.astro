@@ -7,10 +7,10 @@ import site from "~/config/site";
 
 const { twitterUsername } = site;
 
-export interface Props {
+type Props = {
   date: string;
   title: string;
-}
+};
 
 const { date, title } = Astro.props;
 ---

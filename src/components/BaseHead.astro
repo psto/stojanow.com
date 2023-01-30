@@ -3,6 +3,11 @@ import ColorMode from "~/components/ColorMode.astro";
 import site from "~/config/site";
 import { VERTICAL_LINE_ENTITY } from "~/constants/entities";
 
+type Props = {
+  description: string;
+  title: string;
+};
+
 const { siteTitle } = site;
 
 const { description, title } = Astro.props;
