@@ -1,14 +1,19 @@
 ---
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
+
+const title = "Page not found 😣";
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={title}
+  description="Check out my other resources on the homepage."
+>
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
     <div
       class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark md:pt-0 lg:prose-lg"
     >
-      <AppTitle>Page not found 😣</AppTitle>
+      <AppTitle>{title}</AppTitle>
     </div>
     <div class="prose mx-auto mt-12 max-w-2xl text-center dark:prose-dark">
       <p>
