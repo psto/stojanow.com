@@ -3,12 +3,10 @@ import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostsIndex from "~/components/PostsIndex.astro";
 import { getCollection } from "astro:content";
+import { formatContent } from "~/utils";
 
 const notes = await getCollection("notes");
-const sortedNotes = notes.sort(
-  (noteA, noteB) =>
-    new Date(noteB.data.date).valueOf() - new Date(noteA.data.date).valueOf()
-);
+const sortedNotes = formatContent(notes);
 
 const seoProps = {
   description:

@@ -3,12 +3,10 @@ import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostsIndex from "~/components/PostsIndex.astro";
 import { getCollection } from "astro:content";
+import { formatContent } from "~/utils";
 
 const fiction = await getCollection("fiction");
-const sortedFiction = fiction.sort(
-  (storyA, storyB) =>
-    new Date(storyB.data.date).valueOf() - new Date(storyA.data.date).valueOf()
-);
+const sortedFiction = formatContent(fiction);
 
 const seoProps = {
   description: "Piotr Stojanow's flash fiction and microfiction",

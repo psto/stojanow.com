@@ -1,11 +1,13 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import site from '~/config/site';
+import { formatContent } from '~/utils';
 
 const { siteDescription, siteTitle, siteUrl } = site;
 
 export async function get() {
   const posts = await getCollection('essays');
+  const formatedPosts = formatContent(posts)
 
   return rss({
     title: siteTitle,
@@ -13,7 +15,7 @@ export async function get() {
     description: siteDescription,
     site: siteUrl,
     customData: `<language>en-gb</language>`,
-    items: posts
+    items: formatedPosts
       .map((post) => ({
         title: post.data.title,
         description: post.data.description,

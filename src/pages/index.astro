@@ -4,13 +4,12 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import TheHero from "~/components/TheHero.astro";
 import IcBaselineArrowRightAlt from "~icons/ic/baseline-arrow-right-alt";
 import { getCollection } from "astro:content";
-import { formatDate } from "~/utils";
+import { formatContent, formatDate } from "~/utils";
 
 const essays = await getCollection("essays");
-const sortedEssays = essays.sort(
-  (essayA, essayB) =>
-    new Date(essayB.data.date).valueOf() - new Date(essayA.data.date).valueOf()
-);
+const sortedEssays = formatContent(essays, {
+  limit: 4,
+});
 
 const seoProps = {
   description:
@@ -26,7 +25,7 @@ const recentCTA = "All Essays";
   <TheHero />
 
   <div
-    class="container mt-30 max-w-6xl px-4 pt-16 pb-20 mx-auto sm:px-6 lg:pt-24 lg:pb-28"
+    class="mt-30 container mx-auto max-w-6xl px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28"
   >
     <div>
       <h2
@@ -36,19 +35,19 @@ const recentCTA = "All Essays";
       </h2>
     </div>
     <div
-      class="grid gap-16 pt-12 mt-12 border-t-2 border-zinc-200 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
+      class="mt-12 grid gap-16 border-t-2 border-zinc-200 pt-12 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
     >
       {
         sortedEssays.map(({ data: { date, title, description }, slug }) => (
           <div>
             <div class="flex items-baseline">
-              <div class="flex mr-8 text-sm leading-5 text-zinc-700 dark:text-zinc-400">
+              <div class="mr-8 flex text-sm leading-5 text-zinc-700 dark:text-zinc-400">
                 <time datetime={date.toString()}>{formatDate(date)}</time>
               </div>
             </div>
 
             <a href={`/${slug}`} class="group">
-              <h3 class="mt-4 text-xl font-semibold leading-7 text-brand-red dark:text-brand-red-dark filter hover:brightness-125">
+              <h3 class="mt-4 text-xl font-semibold leading-7 text-brand-red filter hover:brightness-125 dark:text-brand-red-dark">
                 {title}
               </h3>
 
@@ -60,7 +59,7 @@ const recentCTA = "All Essays";
         ))
       }
 
-      <div class="flex items-center mx-auto">
+      <div class="mx-auto flex items-center">
         <a href="/essays" aria-label="Read More Essays">
           <AppButton cta={recentCTA}>
             <IcBaselineArrowRightAlt slot="ctaIcon" />

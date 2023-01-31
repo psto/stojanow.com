@@ -3,11 +3,13 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostHeader from "~/components/PostHeader.astro";
 import { Picture } from "@astrojs/image/components";
 import { CollectionEntry, getCollection } from "astro:content";
+import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
   const fiction = await getCollection("fiction");
+  const formattedFiction = formatContent(fiction);
 
-  return fiction.map((story) => ({
+  return formattedFiction.map((story) => ({
     params: { slug: story.slug },
     props: { story },
   }));

@@ -2,11 +2,13 @@
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import NotesHeader from "~/components/NotesHeader.astro";
 import { CollectionEntry, getCollection } from "astro:content";
+import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
+  const formattedNotes = formatContent(notes);
 
-  return notes.map((note) => ({
+  return formattedNotes.map((note) => ({
     params: { slug: note.slug },
     props: { note },
   }));
