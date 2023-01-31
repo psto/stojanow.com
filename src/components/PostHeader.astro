@@ -16,14 +16,14 @@ const { date, title } = Astro.props;
 ---
 
 <header>
-  <div class="lg:prose-lg mb-8">
+  <div class="mb-8 lg:prose-lg">
     <AppTitle>{title}</AppTitle>
   </div>
 
   <div class="flex justify-center">
     <time
       datetime={date}
-      class="block text-sm italic text-center text-gray-600 dark:text-gray-400"
+      class="block text-center text-sm italic text-gray-600 dark:text-gray-400"
     >
       {formatDate(date)}
     </time>
@@ -41,10 +41,10 @@ const { date, title } = Astro.props;
         class="w-10 h-10 mx-auto rounded-full"
       />
 
-      <dl class="text-sm font-medium text-gray-700 whitespace-nowrap">
+      <dl class="whitespace-nowrap text-sm font-medium text-gray-700">
         <dt class="sr-only">Name</dt>
         <dd>
-          <p class="m-0 text-gray-700 dark:text-gray-300 no-underline">
+          <p class="m-0 text-gray-700 no-underline dark:text-gray-300">
             Piotr Stojanow
           </p>
         </dd>

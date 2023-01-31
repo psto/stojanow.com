@@ -13,11 +13,11 @@ type Props = {
 const { posts, prefix } = Astro.props;
 ---
 
-<div class="relative max-w-7xl mx-auto">
-  <div class="mt-12 max-w-lg mx-auto grid gap-7 lg:grid-cols-3 lg:max-w-none">
+<div class="relative mx-auto max-w-7xl">
+  <div class="mx-auto mt-12 grid max-w-lg gap-7 lg:max-w-none lg:grid-cols-3">
     {
       posts.map((post) => (
-        <div class="rounded-lg transition-all duration-500 transform shadow-lg dark:bg-dark-light hover:scale-105 hover:shadow-2xl dark:hover:shadow-stone-900 hover:cursor-pointer">
+        <div class="transform rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-2xl dark:bg-dark-light dark:hover:shadow-stone-900">
           {prefix ? (
             <a
               href={`/${prefix}/${post.slug}`}

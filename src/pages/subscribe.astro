@@ -16,10 +16,10 @@ const seoProps = {
 
 <BaseLayout {...seoProps}>
   <div
-    class="relative max-w-2xl px-4 pt-16 lg:pt-24 mx-auto prose dark:prose-dark text-center"
+    class="prose relative mx-auto max-w-2xl px-4 pt-16 text-center dark:prose-dark lg:pt-24"
   >
     <div
-      class="px-4 mx-auto prose text-center dark:prose-dark lg:prose-lg md:pt-0"
+      class="prose mx-auto px-4 text-center dark:prose-dark md:pt-0 lg:prose-lg"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -45,7 +45,8 @@ const seoProps = {
         href={`http://twitter.com/${twitterUsername}`}
         style="color: #1da1f2"
         className="no-underline"
-        >🐦 twitter
+      >
+        🐦 twitter
       </ExternalLink>
       or get in touch through
       <a href="/contact" class="no-underline">email 📧</a>

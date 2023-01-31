@@ -1,11 +1,11 @@
 ---
-title: 'Not Against Human Sexual Selection'
+title: "Not Against Human Sexual Selection"
 date: 2019-07-03 15:16:37+0200
-description: 'Was human natural direction driven by arranged marriages?'
+description: "Was human natural direction driven by arranged marriages?"
 category: posts
 tags: posts evolution
 image: rene_magritte-the_lovers_II
-imageAlt: 'The Lovers II by Rene Magritte'
+imageAlt: "The Lovers II by Rene Magritte"
 ---
 
 Tanner Greer posted recently [Against Human Sexual Selection](https://scholars-stage.blogspot.com/2019/05/against-human-sexual-selection.html) on his insightful [blog](https://scholars-stage.blogspot.com/). In it he takes issue with evolutionary psychology for explaining "female mate preferences and male phenotypes (...) through the frame of sexual selection".

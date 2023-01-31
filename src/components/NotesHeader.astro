@@ -13,7 +13,7 @@ const imageAlt = note.data.imageAlt || "";
 ---
 
 <header>
-  <div class="flex py-2 content">
+  <div class="content flex py-2">
     {
       note.data.image && (
         <div class="flex-1">
@@ -29,14 +29,14 @@ const imageAlt = note.data.imageAlt || "";
               aspectRatio="3:4"
               loading="eager"
               formats={["avif", "webp"]}
-              class="border-2 border-gray-200 dark:border-gray-600 mr-4 rounded object-fill"
+              class="mr-4 rounded border-2 border-gray-200 object-fill dark:border-gray-600"
             />
           </ExternalLink>
         </div>
       )
     }
-    <div class="flex-1 px-2 item-body">
-      <h2 class="mb-4 text-center md:text-4xl p-name lg:mb-8">
+    <div class="item-body flex-1 px-2">
+      <h2 class="p-name mb-4 text-center md:text-4xl lg:mb-8">
         {note.data.title}
       </h2>
     </div>

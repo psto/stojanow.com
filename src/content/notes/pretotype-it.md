@@ -1,7 +1,7 @@
 ---
-title: 'Pretotype It: Make sure you are building the right it before you build it right by Alberto Savoia'
+title: "Pretotype It: Make sure you are building the right it before you build it right by Alberto Savoia"
 date: 2021-11-12 20:46:31+0200
-description: 'A technique for validating your ideas before building them with the minimum investment of time, money and effort. Avoid premature perfectionism and the desire to add more features. Confront your ideas with reality as soon as possible by getting them in front of people.'
+description: "A technique for validating your ideas before building them with the minimum investment of time, money and effort. Avoid premature perfectionism and the desire to add more features. Confront your ideas with reality as soon as possible by getting them in front of people."
 category: books
 tags: books notes business entrepreneurship
 dateRead: 2021-07-12

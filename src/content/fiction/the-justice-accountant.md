@@ -1,11 +1,11 @@
 ---
-title: 'The Justice Accountant'
+title: "The Justice Accountant"
 date: 2019-02-03 17:23:00+0200
-description: 'The Justice Accountant twitched when the last of the executions were coming to an end.'
+description: "The Justice Accountant twitched when the last of the executions were coming to an end."
 category: fiction
 tags: fiction posts micro-fiction
 image: the-triumph-of-the-guillotine-in-hell
-imageAlt: 'Guillotine in Hell painting'
+imageAlt: "Guillotine in Hell painting"
 ---
 
 The Justice Accountant twitched when the last of the executions were coming to an end.

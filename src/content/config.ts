@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection } from "astro:content";
 
 const postCollection = defineCollection({
   schema: z.object({
@@ -25,8 +25,7 @@ const noteCollection = defineCollection({
 });
 
 export const collections = {
-  'essays': postCollection,
-  'fiction': postCollection,
-  'notes': noteCollection,
+  essays: postCollection,
+  fiction: postCollection,
+  notes: noteCollection,
 };
-

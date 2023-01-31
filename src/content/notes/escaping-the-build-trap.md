@@ -1,7 +1,7 @@
 ---
-title: 'Escaping the Build Trap: How Effective Product Management Creates Real Value by Melisa Perri'
+title: "Escaping the Build Trap: How Effective Product Management Creates Real Value by Melisa Perri"
 date: 2021-12-13 13:49:46+0200
-description: 'Shipping is a muscle that you develop by solving your problems. Your constraints force you to build faster and leaner. That gives you advantages over teams ruled by groupthink and VC money. Make your growth organic and monetize ASAP. Scale by automating whatever you can.'
+description: "Shipping is a muscle that you develop by solving your problems. Your constraints force you to build faster and leaner. That gives you advantages over teams ruled by groupthink and VC money. Make your growth organic and monetize ASAP. Scale by automating whatever you can."
 category: books
 tags: books notes business entrepreneurship
 dateRead: 2021-07-09

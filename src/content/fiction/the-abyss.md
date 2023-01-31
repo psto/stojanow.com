@@ -1,11 +1,11 @@
 ---
-title: 'The Abyss'
+title: "The Abyss"
 date: 2019-01-02 19:49:42+0200
-description: 'Crossing the border, he closed his eyes.'
+description: "Crossing the border, he closed his eyes."
 category: fiction
 tags: fiction posts micro-fiction
 image: vesuvius_from_portici
-imageAlt: 'Vesuvius from Portici painting'
+imageAlt: "Vesuvius from Portici painting"
 ---
 
 Crossing the border, he closed his eyes.

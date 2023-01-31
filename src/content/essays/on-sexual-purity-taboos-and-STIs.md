@@ -1,11 +1,11 @@
 ---
-title: 'On Sexual Purity Taboos and STIs'
+title: "On Sexual Purity Taboos and STIs"
 date: 2019-07-02 14:16:37+0200
-description: 'Doubting the claim that STIs played a role in the cultural evolution of taboos against promiscuity.'
+description: "Doubting the claim that STIs played a role in the cultural evolution of taboos against promiscuity."
 category: posts
 tags: posts culture
 image: lot-and-his-daughters-master-of-the-prodigal-son
-imageAlt: 'Lot And His Daughters by Meester van de Verloren Zoon'
+imageAlt: "Lot And His Daughters by Meester van de Verloren Zoon"
 ---
 
 Scott Alexander in his latest sequence on [cultural evolution](https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/) speculates that "[STIs played a role in the cultural evolution of taboos against promiscuity and homosexuality](https://slatestarcodex.com/2019/06/19/are-sexual-purity-taboos-a-response-to-stis/)". I doubt this claim.

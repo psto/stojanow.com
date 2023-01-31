@@ -1,5 +1,5 @@
 ---
-title: 'Managing Oneself by Peter Drucker'
+title: "Managing Oneself by Peter Drucker"
 date: 2019-03-01 19:12:37+0200
 description: "Know yourself and develop your own metric driven approach to managing yourself. Put yourself in situations where your strengths can produce results. Don't try to change others. Recognize their strengths and help them promote their strengths."
 category: books

@@ -1,13 +1,13 @@
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-import site from '~/config/site';
-import { formatContent } from '~/utils';
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import site from "~/config/site";
+import { formatContent } from "~/utils";
 
 const { siteDescription, siteTitle, siteUrl } = site;
 
 export async function get() {
-  const posts = await getCollection('essays');
-  const formatedPosts = formatContent(posts)
+  const posts = await getCollection("essays");
+  const formatedPosts = formatContent(posts);
 
   return rss({
     title: siteTitle,
@@ -22,6 +22,8 @@ export async function get() {
         link: `${siteUrl}/${post.slug}/`,
         pubDate: new Date(post.data.date),
       }))
-      .sort((postA, postB) => postB.pubDate.getTime() - postA.pubDate.getTime()),
+      .sort(
+        (postA, postB) => postB.pubDate.getTime() - postA.pubDate.getTime()
+      ),
   });
 }

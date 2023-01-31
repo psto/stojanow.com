@@ -1,11 +1,11 @@
 ---
-title: 'Imagined Happiness'
+title: "Imagined Happiness"
 date: 2020-07-06 20:32:15+0200
-description: 'It was only by chance that I wished myself into death.'
+description: "It was only by chance that I wished myself into death."
 category: fiction
 tags: fiction posts micro-fiction
 image: zanchi_-_sisyphus
-imageAlt: 'Sisyphus by Zanachi'
+imageAlt: "Sisyphus by Zanachi"
 ---
 
 It was only by chance that I wished myself into death.

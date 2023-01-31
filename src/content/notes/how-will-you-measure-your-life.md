@@ -1,5 +1,5 @@
 ---
-title: 'How Will You Measure Your Life? by Clayton Christensen'
+title: "How Will You Measure Your Life? by Clayton Christensen"
 date: 2019-03-24 19:38:43+0200
 description: "Deals with the question: how can we find satisfaction in life? Avoid the trap of marginal thinking. The best time to invest in relationships is when we don't think it's necessary. We project what we want and assume that others want the same thing. To improve any relationship ask 'what job does X need me to do the most?' and then do it."
 category: books
