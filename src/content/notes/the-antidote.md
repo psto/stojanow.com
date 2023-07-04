@@ -6,7 +6,7 @@ category: books
 tags: books notes psychology
 dateRead: 2015-09-30
 amazon: https://smile.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015
-image: the-antidote-oliver-burkeman
+image: "../../assets/notes/the-antidote-oliver-burkeman.jpg"
 ---
 
 ## On Trying Too Hard to Be Happy

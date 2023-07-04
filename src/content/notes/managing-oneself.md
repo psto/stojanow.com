@@ -6,7 +6,7 @@ category: books
 tags: books notes management
 dateRead: 2014-09-28
 amazon: https://smile.amazon.com/Managing-Oneself-Harvard-Business-Classics/dp/142212312X
-image: managing-oneself-peter-drucker
+image: "../../assets/notes/managing-oneself-peter-drucker.jpg"
 ---
 
 We live in an age of tremendous opportunity. Anyone can rise to the top.

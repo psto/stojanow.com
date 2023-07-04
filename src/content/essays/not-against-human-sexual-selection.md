@@ -4,7 +4,7 @@ date: 2019-07-03 15:16:37+0200
 description: "Was human natural direction driven by arranged marriages?"
 category: posts
 tags: posts evolution
-image: rene_magritte-the_lovers_II
+image: "../../assets/posts/rene_magritte-the_lovers_II.jpg"
 imageAlt: "The Lovers II by Rene Magritte"
 ---
 

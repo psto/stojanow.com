@@ -6,7 +6,7 @@ category: books
 tags: books notes problem-solving
 dateRead: 2015-11-17
 amazon: https://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161
-image: are-your-lights-on
+image: "../../assets/notes/are-your-lights-on.jpg"
 ---
 
 Consider the question, "**Whose problem is it?**". It attempts to:

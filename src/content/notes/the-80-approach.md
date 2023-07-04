@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2014-02-19
 amazon: https://smile.amazon.com/80-Approach-Dan-Sullivan/dp/1897239297
-image: the-80-approach-dan-sullivan
+image: "../../assets/notes/the-80-approach-dan-sullivan.jpg"
 ---
 
 Entrepreneurial individuals are those who continually strive to make things more useful and valuable than they found them.

@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2014-03-09
 amazon: https://smile.amazon.com/Innovators-Dilemma-Revolutionary-Change-Business/dp/0062060244
-image: the-innovators-dilemma
+image: "../../assets/notes/the-innovators-dilemma.jpg"
 ---
 
 Companies fail because of: listening to customers, investing heavily in new technologies, being well-managed and competitive.

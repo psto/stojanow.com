@@ -6,7 +6,7 @@ category: books
 tags: books notes productivity
 dateRead: 2019-02-19
 amazon: https://smile.amazon.com/Art-Procrastination-Effective-Lollygagging-Postponing/dp/0761171673
-image: the-art-of-procrastination
+image: "../../assets/notes/the-art-of-procrastination.jpg"
 ---
 
 ## The Paradox of Procrastination

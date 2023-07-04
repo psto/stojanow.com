@@ -6,7 +6,7 @@ category: books
 tags: books notes business entrepreneurship
 dateRead: 2021-07-12
 amazon: https://makebook.io/
-image: make-pieter-levels
+image: "../../assets/notes/make-pieter-levels.jpg"
 ---
 
 You may need to try shipping 10 to 30 products for 1 to 3 years before you have anything that works. That's how this approach works. You build stuff and see what sticks.

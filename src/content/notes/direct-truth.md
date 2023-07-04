@@ -6,7 +6,7 @@ category: books
 tags: books notes philosophy
 dateRead: 2019-07-25 11:05:58 +0200
 amazon: https://smile.amazon.com/Direct-Truth-Uncompromising-non-prescriptive-questions/dp/1724334417
-image: direct-truth-kapil-gupta
+image: "../../assets/notes/direct-truth-kapil-gupta.jpg"
 ---
 
 ### Who am I?
