@@ -1,8 +1,8 @@
 ---
+import { Image } from 'astro:assets'
+import { CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostHeader from "~/components/PostHeader.astro";
-import { Picture } from "@astrojs/image/components";
-import { CollectionEntry, getCollection } from "astro:content";
 import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
@@ -22,7 +22,7 @@ const { story } = Astro.props;
 const { slug } = Astro.params as Slug;
 const { Content } = await story.render();
 
-const imageAlt = story.data.imageAlt || "";
+const storyImage = story.data.image;
 
 const seoProps = {
   description: story.data.description,
@@ -43,16 +43,13 @@ const seoProps = {
         />
 
         {
-          story.data.image && (
-            <Picture
-              src={import(`../../images/fiction/${story.data.image}.jpg`)}
-              alt={imageAlt}
-              widths={[300, 500, 700]}
-              aspectRatio="4:3"
-              sizes="(max-width: 700px) 100vw, 700px"
-              formats={["avif", "webp"]}
-              loading="eager"
+          storyImage && (
+            <Image
+              src={storyImage}
+              alt={storyImage || ""}
+              format="avif"
               class="w-full rounded"
+              loading="eager"
             />
           )
         }

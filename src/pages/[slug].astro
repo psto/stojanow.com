@@ -1,8 +1,8 @@
 ---
+import { Image } from 'astro:assets'
+import { CollectionEntry, getCollection } from "astro:content";
 import PostHeader from "~/components/PostHeader.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
-import { Picture } from "@astrojs/image/components";
-import { CollectionEntry, getCollection } from "astro:content";
 import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
@@ -22,7 +22,7 @@ const { essay } = Astro.props;
 const { slug } = Astro.params as Slug;
 const { Content } = await essay.render();
 
-const imageAlt = essay.data.imageAlt || "";
+const essayImage = essay.data.image;
 
 const seoProps = {
   description: essay.data.description,
@@ -46,15 +46,13 @@ const seoProps = {
           /* TODO: research sizes viewport - vw or ship with aspectRatio="4:3" instead */
         }
         {
-          essay.data.image && (
-            <Picture
-              src={import(`../images/posts/${essay.data.image}.jpg`)}
-              alt={imageAlt}
-              widths={[500, 700]}
-              sizes="100vw"
-              formats={["avif", "webp"]}
-              loading="eager"
+          essayImage && (
+            <Image
+              src={essayImage}
+              alt={essayImage || ""}
+              format="avif"
               class="w-full rounded"
+              loading="eager"
             />
           )
         }
