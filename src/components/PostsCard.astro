@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
@@ -7,11 +7,9 @@ type Props = {
     | CollectionEntry<"essays">
     | CollectionEntry<"fiction">
     | CollectionEntry<"notes">;
-  imageDir: string;
 };
 
-const { post, imageDir } = Astro.props;
-const imageAlt = post.data.imageAlt || "";
+const { post } = Astro.props;
 ---
 
 <div
@@ -20,12 +18,12 @@ const imageAlt = post.data.imageAlt || "";
   {
     post.data.image && (
       <div class="flex-shrink-0">
-        <Picture
-          src={import(`../images/${imageDir}/${post.data.image}.jpg`)}
-          alt={imageAlt}
-          widths={[300, 500]}
-          sizes="(max-width: 300px)"
-          formats={["avif", "webp"]}
+        <Image
+          src={post.data.image}
+          alt={post.data.imageAlt || ""}
+          height={post.data.image.height}
+          width={post.data.image.width}
+          format="avif"
           class="h-48 w-full object-cover"
         />
       </div>

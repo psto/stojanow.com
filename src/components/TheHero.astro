@@ -1,8 +1,9 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
 import AppButton from "~/components/AppButton.astro";
 import ExternalLink from "./ExternalLink.astro";
 import site from "../config/site";
+import avatar from "~/assets/avatar@2x.png"
 
 const { twitterUsername } = site;
 
@@ -47,13 +48,12 @@ const heroCTA = "Start Here";
     <div class="relative">
       <blockquote class="text-zinc-900 dark:text-zinc-50">
         <div class="mb-4 flex items-center justify-center">
-          <Picture
-            src={import("../images/avatar@2x.png")}
+          <Image
+            src={avatar}
             alt="Piotr Stojanow avatar"
-            widths={[70, 100]}
-            sizes="(max-width: 50px)"
-            aspectRatio="1:1"
-            formats={["avif", "webp"]}
+            height={avatar.height}
+            width={avatar.width}
+            format="avif"
             class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full"
           />
         </div>

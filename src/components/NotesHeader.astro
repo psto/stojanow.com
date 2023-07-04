@@ -1,7 +1,7 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import ExternalLink from "~/components/ExternalLink.astro";
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from "astro:content";
+import ExternalLink from "~/components/ExternalLink.astro";
 import { formatDate } from "~/utils";
 
 type Props = {
@@ -9,27 +9,24 @@ type Props = {
 };
 
 const { note } = Astro.props;
-const imageAlt = note.data.imageAlt || "";
+const noteImage = note.data.image;
 ---
 
 <header>
   <div class="content flex py-2">
     {
-      note.data.image && (
+      noteImage && (
         <div class="flex-1">
           <ExternalLink
             ariaLabel="Amazon smile book link"
             href={note.data.amazon}
           >
-            <Picture
-              src={import(`../images/notes/${note.data.image}.jpg`)}
-              alt={imageAlt}
-              widths={[100, 200, 300]}
-              sizes="(max-width: 300px)"
-              aspectRatio="3:4"
-              loading="eager"
-              formats={["avif", "webp"]}
+            <Image
+              src={noteImage}
+              alt={noteImage || ""}
+              format="avif"
               class="mr-4 rounded border-2 border-gray-200 object-fill dark:border-gray-600"
+              loading="eager"
             />
           </ExternalLink>
         </div>

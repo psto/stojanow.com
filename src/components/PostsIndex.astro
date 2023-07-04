@@ -23,11 +23,11 @@ const { posts, prefix } = Astro.props;
               href={`/${prefix}/${post.slug}`}
               aria-label={`Read ${post.data.title}`}
             >
-              <PostsCard post={post} imageDir={prefix} />
+              <PostsCard post={post} />
             </a>
           ) : (
             <a href={`/${post.slug}`} aria-label={`Read ${post.data.title}`}>
-              <PostsCard post={post} imageDir="posts" />
+              <PostsCard post={post} />
             </a>
           )}
         </div>
