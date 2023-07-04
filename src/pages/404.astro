@@ -1,6 +1,7 @@
 ---
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
+import donQuixote from "~/assets/Don_Quixote_by_Picasso.svg";
 
 const title = "Page not found 😣";
 ---
@@ -23,9 +24,9 @@ const title = "Page not found 😣";
       <p>You can also check out my recent <a href="/essays">essays</a>.</p>
       <div class="items-center md:flex">
         <img
-          src="/images/Don_Quixote_by_Picasso.svg"
-          width="400"
-          height="473"
+          src={donQuixote.src}
+          width={donQuixote.width}
+          height={donQuixote.height}
           alt="Don Quixote by Picasso"
           class="rounded-xl bg-white dark:bg-gray-200"
         />
