@@ -1,7 +1,7 @@
 ---
 import "~/styles/global.css";
 import BaseHead from "~/components/BaseHead.astro";
-import TheNavigation from "~/components/TheNavigation.vue";
+import TheNavigation from "~/components/TheNavigation.astro";
 import TheFooter from "~/components/TheFooter.astro";
 import site from "~/config/site";
 
@@ -31,7 +31,7 @@ const { siteLanguage: lang } = site;
   <body
     class="base-layout grid grid-rows-[auto,1fr,auto] bg-white dark:bg-dark"
   >
-    <TheNavigation client:load />
+    <TheNavigation />
     <div class="flex flex-col">
       <div class="pt-4 md:pt-8">
         <slot />

@@ -1,0 +1,115 @@
+---
+import TheLogo from "~/components/TheLogo.astro";
+import ToggleTheme from "~/components/ToggleTheme.vue";
+
+const navLinks = [
+  {
+    url: "/about",
+    label: "about",
+    externalLink: false,
+  },
+  {
+    url: "/essays",
+    label: "essays",
+    externalLink: false,
+  },
+  {
+    url: "/fiction",
+    label: "fiction",
+    externalLink: false,
+  },
+  {
+    url: "/notes",
+    label: "notes",
+    externalLink: false,
+  },
+  {
+    url: "https://wiki.stojanow.com",
+    label: "wiki",
+    externalLink: true,
+  },
+];
+---
+
+<script>
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+  function toggleMobileMenu() {
+    mobileMenu?.classList.toggle("hidden");
+  }
+
+  mobileMenuButton?.addEventListener("click", toggleMobileMenu);
+</script>
+
+<nav>
+  <div
+    class="container mx-auto max-w-6xl px-6 py-4 md:flex md:items-center md:justify-between"
+  >
+    <div class="flex items-center justify-between">
+      <div>
+        <a href="/" aria-label="stojanow.com logo">
+          <TheLogo />
+        </a>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden">
+        <button
+          id="mobile-menu-button"
+          class="p-2 text-gray-500 hover:text-brand-red focus:text-brand-red focus:outline-none dark:text-zinc-200 dark:hover:text-brand-red-dark dark:focus:text-brand-red-dark"
+          title="Toggles light & dark"
+          aria-label="auto"
+          aria-live="polite"
+        >
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+            <path
+              fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+    <div id="mobile-menu" class="hidden items-center md:flex">
+      <ul class="flex flex-col items-center justify-center md:mx-6 md:flex-row">
+        {
+          navLinks.map((nav) => (
+            <li class="my-2 font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6">
+              {nav.externalLink ? (
+                <a
+                  href={nav.url}
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  {nav.label}
+                </a>
+              ) : (
+                <a href={nav.url}>{nav.label}</a>
+              )}
+            </li>
+          ))
+        }
+        <li
+          class="my-2 grid px-2 font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6"
+        >
+          <ToggleTheme
+            client:load
+            class="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
+          />
+        </li>
+        <li
+          class="my-2 flex items-center justify-center text-center font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6"
+        >
+          <a
+            class="block transform rounded-lg bg-brand-red px-3 py-2 text-center font-semibold text-white filter transition duration-300 hover:brightness-125 dark:bg-brand-red-dark dark:text-black"
+            href="/subscribe"
+          >
+            Subscribe
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
