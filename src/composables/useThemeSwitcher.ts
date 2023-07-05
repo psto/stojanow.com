@@ -1,8 +1,8 @@
 import { watchEffect } from 'vue';
 import { useStore } from '@nanostores/vue';
-import { themeStore, setTheme } from '~/stores/themeStore';
+import { $themeStore, setTheme } from '~/stores/themeStore';
 
-const theme = useStore(themeStore);
+const theme = useStore($themeStore);
 
 export function useThemeSwitcher() {
   const toggleTheme = () => {
