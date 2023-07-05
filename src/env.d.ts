@@ -1,4 +1,5 @@
 /// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client-image" />
 interface ImportMetaEnv {
   readonly PUBLIC_GITHUB_USERNAME: string;
   readonly PUBLIC_CONTACT_EMAIL: string;
