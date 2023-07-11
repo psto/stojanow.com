@@ -42,13 +42,16 @@ const seoProps = {
 
         {
           story.data.image && (
-            <Image
-              src={story.data.image}
-              alt={story.data.imageAlt || ""}
-              format="avif"
-              class="w-full rounded"
-              loading="eager"
-            />
+            <figure>
+              <Image
+                src={story.data.image}
+                alt={story.data.imageAlt || ""}
+                format="avif"
+                class="w-full rounded"
+                loading="eager"
+              />
+              <figcaption class="text-center">{story.data.imageAlt}</figcaption>
+            </figure>
           )
         }
 

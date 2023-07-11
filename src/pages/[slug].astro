@@ -45,13 +45,16 @@ const seoProps = {
         }
         {
           essay.data.image && (
-            <Image
-              src={essay.data.image}
-              alt={essay.data.imageAlt || ""}
-              format="avif"
-              class="w-full rounded"
-              loading="eager"
-            />
+            <figure>
+              <Image
+                src={essay.data.image}
+                alt={essay.data.imageAlt || ""}
+                format="avif"
+                class="w-full rounded"
+                loading="eager"
+              />
+              <figcaption class="text-center">{essay.data.imageAlt}</figcaption>
+            </figure>
           )
         }
 
