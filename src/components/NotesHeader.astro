@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import ExternalLink from "~/components/ExternalLink.astro";
 import { formatDate } from "~/utils";
@@ -9,21 +9,20 @@ type Props = {
 };
 
 const { note } = Astro.props;
-const noteImage = note.data.image;
 ---
 
 <header>
   <div class="content flex py-2">
     {
-      noteImage && (
+      note.data.image && (
         <div class="flex-1">
           <ExternalLink
             ariaLabel="Amazon smile book link"
             href={note.data.amazon}
           >
             <Image
-              src={noteImage}
-              alt={noteImage || ""}
+              src={note.data.image}
+              alt={`${note.data.title} cover`}
               format="avif"
               class="mr-4 rounded border-2 border-gray-200 object-fill dark:border-gray-600"
               loading="eager"
