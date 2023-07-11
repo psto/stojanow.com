@@ -5,7 +5,7 @@ description: "It was only by chance that I wished myself into death."
 category: fiction
 tags: fiction posts micro-fiction
 image: "../../assets/fiction/zanchi_-_sisyphus.jpg"
-imageAlt: "Sisyphus by Zanachi"
+imageAlt: "Sisyphus by Antonio Zanachi"
 ---
 
 It was only by chance that I wished myself into death.

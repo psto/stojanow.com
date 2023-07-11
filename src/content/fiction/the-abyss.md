@@ -5,7 +5,7 @@ description: "Crossing the border, he closed his eyes."
 category: fiction
 tags: fiction posts micro-fiction
 image: "../../assets/fiction/vesuvius_from_portici.jpg"
-imageAlt: "Vesuvius from Portici painting"
+imageAlt: "Vesuvius from Portici by Joseph Wright of Derby"
 ---
 
 Crossing the border, he closed his eyes.

@@ -5,7 +5,7 @@ description: "The Justice Accountant twitched when the last of the executions we
 category: fiction
 tags: fiction posts micro-fiction
 image: "../../assets/fiction/the-triumph-of-the-guillotine-in-hell.jpg"
-imageAlt: "Guillotine in Hell painting"
+imageAlt: "The Triumph of the Guillotine in Hell by Nicolas Antoine Taunay"
 ---
 
 The Justice Accountant twitched when the last of the executions were coming to an end.
