@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
@@ -9,23 +9,39 @@ type Props = {
     | CollectionEntry<"notes">;
 };
 
-const { post } = Astro.props;
+const {
+  post: {
+    data: { description, title, image, imageAlt },
+  },
+} = Astro.props;
 ---
 
 <div
   class="flex h-full w-full flex-col overflow-hidden rounded-lg bg-white shadow-lg dark:bg-dark-light"
 >
   {
-    post.data.image && (
+    image && (
       <div class="flex-shrink-0">
-        <Image
-          src={post.data.image}
-          alt={post.data.imageAlt || ""}
-          height={post.data.image.height}
-          width={post.data.image.width}
-          format="avif"
-          class="h-48 w-full object-cover"
-        />
+        {/* images in notes content do not have imageAlt property */}
+        {imageAlt ? (
+          <Image
+            src={image}
+            alt={imageAlt || ""}
+            height={image.height}
+            width={image.width}
+            format="avif"
+            class="h-48 w-full object-cover"
+          />
+        ) : (
+          <Image
+            src={image}
+            alt={`${title} cover`}
+            height={image.height}
+            width={image.width}
+            format="avif"
+            class="h-48 w-full object-cover"
+          />
+        )}
       </div>
     )
   }
@@ -35,9 +51,9 @@ const { post } = Astro.props;
         <p
           class="text-xl font-semibold text-brand-red hover:text-gray-900 dark:text-brand-red-dark dark:hover:text-white"
         >
-          {post.data.title}
+          {title}
         </p>
-        <p class="mt-3 text-base dark:text-gray-400">{post.data.description}</p>
+        <p class="mt-3 text-base dark:text-gray-400">{description}</p>
       </div>
     </div>
     <div class="mt-6">
