@@ -9,9 +9,6 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://stojanow.com/',
-  experimental: {
-   assets: true
-  },
   integrations: [sitemap(), tailwind(), vue(), compress({ img: false, svg: false }), robotsTxt({ sitemap: false })],
   vite: {
     plugins: [Icons()],
