@@ -1,4 +1,5 @@
-import type { CollectionEntry, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { collections } from "~/content/config";
 
 export function formatDate(dateStr: string | Date) {
   return new Date(dateStr).toLocaleDateString('en', {
@@ -8,7 +9,7 @@ export function formatDate(dateStr: string | Date) {
   });
 }
 
-type CollectionKey = Parameters<typeof getCollection>[0]
+type CollectionKey = keyof typeof collections;
 type CollectionEntries<TCollection> = TCollection extends CollectionKey ? CollectionEntry<TCollection> : never;
 
 export function formatContent<TCollection extends CollectionKey>(posts: CollectionEntries<TCollection>[], {

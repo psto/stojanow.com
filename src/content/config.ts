@@ -1,16 +1,14 @@
-import { z, defineCollection } from "astro:content";
-
-const postSchema = ({ image }) => z.object({
-  title: z.string(),
-  date: z.string().or(z.date()),
-  description: z.string(),
-  draft: z.boolean().optional(),
-  image: image().optional(),
-  imageAlt: z.string().optional(),
-});
+import { defineCollection, z } from "astro:content";
 
 const postCollection = defineCollection({
-  schema: postSchema,
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    date: z.string().or(z.date()),
+    description: z.string(),
+    draft: z.boolean().optional(),
+    image: image().optional(),
+    imageAlt: z.string().optional(),
+  }),
 });
 
 const noteCollection = defineCollection({
