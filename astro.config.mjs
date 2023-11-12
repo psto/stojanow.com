@@ -1,5 +1,5 @@
 import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
+import { defineConfig, squooshImageService } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import vue from '@astrojs/vue';
 import Icons from 'unplugin-icons/vite';
@@ -9,6 +9,9 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://stojanow.com/',
+  image: {
+    service: squooshImageService(),
+  },
   integrations: [sitemap(), tailwind(), vue(), compress({ img: false, svg: false }), robotsTxt({ sitemap: false })],
   vite: {
     plugins: [Icons()],

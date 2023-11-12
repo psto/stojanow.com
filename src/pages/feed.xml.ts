@@ -5,7 +5,10 @@ import { formatContent } from "~/utils";
 
 const { siteDescription, siteTitle, siteUrl } = site;
 
-export async function get() {
+console.log(site)
+console.log(siteUrl)
+
+export async function GET() {
   const posts = await getCollection("essays");
   const formatedPosts = formatContent(posts);
 
