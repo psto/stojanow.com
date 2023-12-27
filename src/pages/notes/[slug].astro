@@ -6,7 +6,7 @@ import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const formattedNotes = formatContent(notes);
+  const formattedNotes = formatContent<"notes">(notes);
 
   return formattedNotes.map((note) => ({
     params: { slug: note.slug },
@@ -15,10 +15,9 @@ export async function getStaticPaths() {
 }
 
 type Props = { note: CollectionEntry<"notes"> };
-type Slug = Pick<CollectionEntry<"notes">, "slug">;
 
 const { note } = Astro.props;
-const { slug } = Astro.params as Slug;
+const { slug } = Astro.params;
 const { Content } = await note.render();
 
 const seoProps = {
@@ -29,10 +28,10 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
     <div class="mx-auto">
       <article
-        class="prose mx-auto max-w-2xl px-4 pt-8 pb-16 dark:prose-dark md:pt-0"
+        class="prose mx-auto max-w-2xl px-4 pb-16 pt-8 dark:prose-dark md:pt-0"
       >
         <NotesHeader note={note} />
 

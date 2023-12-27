@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import { formatContent } from "~/utils";
 
 const notes = await getCollection("notes");
-const sortedNotes = formatContent(notes);
+const sortedNotes = formatContent<"notes">(notes);
 
 const seoProps = {
   description:

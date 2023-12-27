@@ -9,10 +9,9 @@ export function formatDate(dateStr: string | Date) {
   });
 }
 
-type CollectionKey = keyof typeof collections;
-type CollectionEntries<TCollection> = TCollection extends CollectionKey ? CollectionEntry<TCollection> : never;
+type CollectionsKey = keyof typeof collections;
 
-export function formatContent<TCollection extends CollectionKey>(posts: CollectionEntries<TCollection>[], {
+export function formatContent<TCollection extends CollectionsKey>(posts: CollectionEntry<TCollection>[], {
   filterOutDrafts = true,
   filterOutFuturePosts = true,
   sortByDate = true,
@@ -24,7 +23,7 @@ export function formatContent<TCollection extends CollectionKey>(posts: Collecti
   limit?: undefined | number,
 } = {}) {
 
-  const filteredPosts = posts.reduce((acc: CollectionEntries<TCollection>[], post) => {
+  const filteredPosts = posts.reduce((acc: CollectionEntry<TCollection>[], post) => {
     const { date, draft } = post.data;
     if (filterOutDrafts && draft) return acc;
 

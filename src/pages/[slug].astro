@@ -7,7 +7,7 @@ import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
-  const formattedEssays = formatContent(essays);
+  const formattedEssays = formatContent<"essays">(essays);
 
   return formattedEssays.map((essay) => ({
     params: { slug: essay.slug },
@@ -16,10 +16,9 @@ export async function getStaticPaths() {
 }
 
 type Props = { essay: CollectionEntry<"essays"> };
-type Slug = Pick<CollectionEntry<"essays">, "slug">;
 
 const { essay } = Astro.props;
-const { slug } = Astro.params as Slug;
+const { slug } = Astro.params;
 const { Content } = await essay.render();
 
 const seoProps = {

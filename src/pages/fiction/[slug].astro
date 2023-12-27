@@ -7,7 +7,7 @@ import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
   const fiction = await getCollection("fiction");
-  const formattedFiction = formatContent(fiction);
+  const formattedFiction = formatContent<"fiction">(fiction);
 
   return formattedFiction.map((story) => ({
     params: { slug: story.slug },
@@ -16,10 +16,9 @@ export async function getStaticPaths() {
 }
 
 type Props = { story: CollectionEntry<"fiction"> };
-type Slug = Pick<CollectionEntry<"notes">, "slug">;
 
 const { story } = Astro.props;
-const { slug } = Astro.params as Slug;
+const { slug } = Astro.params;
 const { Content } = await story.render();
 
 const seoProps = {

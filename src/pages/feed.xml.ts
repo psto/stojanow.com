@@ -10,7 +10,7 @@ console.log(siteUrl)
 
 export async function GET() {
   const posts = await getCollection("essays");
-  const formatedPosts = formatContent(posts);
+  const formatedPosts = formatContent<"essays">(posts);
 
   return rss({
     title: siteTitle,

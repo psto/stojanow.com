@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import { formatContent } from "~/utils";
 
 const fiction = await getCollection("fiction");
-const sortedFiction = formatContent(fiction);
+const sortedFiction = formatContent<"fiction">(fiction);
 
 const seoProps = {
   description: "Piotr Stojanow's flash fiction and microfiction",
