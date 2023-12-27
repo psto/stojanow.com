@@ -8,7 +8,7 @@ import RiBellLine from "~icons/ri/bell-line";
 import { COPYRIGHT_ENTITY } from "~/constants/entities";
 import site from "~/config/site";
 
-const { githubUsername, twitterUsername } = site;
+const { author, githubUsername, twitterUsername } = site;
 
 const footerItems = [
   {
@@ -88,7 +88,7 @@ const footerItems = [
         class="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
         >CC BY-NC 4.0
       </a>
-      {`${COPYRIGHT_ENTITY} Piotr Stojanow`}
+      {`${COPYRIGHT_ENTITY} ${author}`}
     </div>
   </div>
 </footer>

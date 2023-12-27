@@ -6,7 +6,7 @@ import avatar from "~/assets/avatar@2x.png"
 import { formatDate } from "~/utils/index";
 import site from "~/config/site";
 
-const { twitterUsername } = site;
+const { author, twitterUsername } = site;
 
 type Props = {
   date: string;
@@ -34,7 +34,7 @@ const { date, title } = Astro.props;
     <div class="flex items-center space-x-2">
       <Image
         src={avatar}
-        alt="Piotr Stojanow avatar"
+        alt={`${author}'s avatar`}
         height={avatar.height}
         width={avatar.width}
         class="w-10 h-10 mx-auto rounded-full"
@@ -44,7 +44,7 @@ const { date, title } = Astro.props;
         <dt class="sr-only">Name</dt>
         <dd>
           <p class="m-0 text-gray-700 no-underline dark:text-gray-300">
-            Piotr Stojanow
+            {author}
           </p>
         </dd>
         <dt class="sr-only">Twitter</dt>
@@ -53,7 +53,7 @@ const { date, title } = Astro.props;
             href={`https://twitter.com/${twitterUsername}`}
             className="no-underline text-primary-600 hover:text-primary-700"
           >
-            @piotrstojanow
+            {`@${twitterUsername}`}
           </ExternalLink>
         </dd>
       </dl>

@@ -5,10 +5,10 @@ import SubscriptionForm from "~/components/SubscriptionForm.astro";
 import site from "~/config/site";
 import ExternalLink from "~/components/ExternalLink.astro";
 
-const { substackUrl, twitterUsername } = site;
+const { siteDomain, substackUrl, twitterUsername } = site;
 
 const seoProps = {
-  description: "Subscribe to Stojanow.com newsletter",
+  description: `Subscribe to ${siteDomain} newsletter`,
   slug: "subscribe",
   title: "Subscribe",
 };
@@ -19,7 +19,7 @@ const seoProps = {
     class="prose relative mx-auto max-w-2xl px-4 pt-16 text-center dark:prose-dark lg:pt-24"
   >
     <div
-      class="prose mx-auto px-4 text-center dark:prose-dark md:pt-0 lg:prose-lg"
+      class="prose mx-auto px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -48,7 +48,7 @@ const seoProps = {
       >
         🐦 twitter
       </ExternalLink>
-      or get in touch through
+       or get in touch through
       <a href="/contact" class="no-underline">email 📧</a>
     </p>
   </div>

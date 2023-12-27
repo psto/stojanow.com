@@ -4,21 +4,23 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostsIndex from "~/components/PostsIndex.astro";
 import { getCollection } from "astro:content";
 import { formatContent } from "~/utils";
+import site from "~/config/site";
 
 const fiction = await getCollection("fiction");
 const sortedFiction = formatContent<"fiction">(fiction);
 
+const { author } = site;
 const seoProps = {
-  description: "Piotr Stojanow's flash fiction and microfiction",
+  description: `${author}'s flash fiction and microfiction`,
   slug: "fiction",
   title: "Fiction",
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
     <div
-      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark md:pt-0 lg:prose-lg"
+      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />

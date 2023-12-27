@@ -2,9 +2,11 @@
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
+import site from "~/config/site";
 
+const { author } = site;
 const seoProps = {
-  description: "About Piotr Stojanow",
+  description: `About ${author}`,
   slug: "About",
   title: "About",
 };
@@ -14,7 +16,7 @@ const seoProps = {
   <div
     class="prose relative mx-auto max-w-2xl px-4 pt-16 dark:prose-dark lg:pt-24"
   >
-    <div class="mx-auto px-4 text-center md:pt-0 lg:prose-lg">
+    <div class="mx-auto px-4 text-center lg:prose-lg md:pt-0">
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
     </div>
@@ -37,11 +39,11 @@ const seoProps = {
 
       <p class="text-center">
         <a href="/contact" class="filter hover:brightness-125">Email me</a>
-        or say hi on
+         or say hi on
         <ExternalLink
           href="http://twitter.com/piotrstojanow"
           style="color: #1da1f2"
-          className="p-0 mr-4 no-underline sm:mr-2 filter hover:brightness-125"
+          className="mr-4 p-0 no-underline filter hover:brightness-125 sm:mr-2"
         >
           🐦 twitter!
         </ExternalLink>

@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import AppButton from "~/components/AppButton.astro";
 import ExternalLink from "./ExternalLink.astro";
 import site from "../config/site";
-import avatar from "~/assets/avatar@2x.png"
+import avatar from "~/assets/avatar@2x.png";
 
-const { twitterUsername } = site;
+const { author, twitterUsername } = site;
 
 const heroCTA = "Start Here";
 ---
@@ -13,7 +13,7 @@ const heroCTA = "Start Here";
 <section class="overflow-hidden py-12 md:py-20 lg:py-24">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <svg
-      class="absolute top-full right-full translate-x-1/3 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2"
+      class="absolute right-full top-full -translate-y-1/4 translate-x-1/3 transform lg:translate-x-1/2 xl:-translate-y-1/2"
       width="404"
       height="404"
       fill="none"
@@ -50,10 +50,10 @@ const heroCTA = "Start Here";
         <div class="mb-4 flex items-center justify-center">
           <Image
             src={avatar}
-            alt="Piotr Stojanow avatar"
+            alt={`${author}'s avatar`}
             height={avatar.height}
             width={avatar.width}
-            class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full"
+            class="mx-auto h-14 w-14 rounded-full md:h-20 md:w-20"
           />
         </div>
         <div
@@ -63,13 +63,11 @@ const heroCTA = "Start Here";
             Hi, I’m
             <ExternalLink
               href={`https://twitter.com/${twitterUsername}`}
-              className="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
+              className="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
             >
-              Piotr Stojanow<span class="text-zinc-900 dark:text-zinc-50"
-                >.</span
-              >
-            </ExternalLink> Welcome to my online home. I write on the intersection
-            of technology and history. Want to learn more about me?
+              {author}<span class="text-zinc-900 dark:text-zinc-50">.</span>
+            </ExternalLink> Welcome to my online home. I write on the
+            intersection of technology and history. Want to learn more about me?
           </p>
           <a href="/essays" class="mt-4">
             <AppButton cta={heroCTA} />

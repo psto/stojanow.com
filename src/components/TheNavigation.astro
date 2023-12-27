@@ -1,6 +1,9 @@
 ---
 import TheLogo from "~/components/TheLogo.astro";
 import ToggleTheme from "~/components/ToggleTheme.vue";
+import site from "~/config/site";
+
+const { siteDomain } = site;
 
 const navLinks = [
   {
@@ -48,7 +51,7 @@ const navLinks = [
   >
     <div class="flex items-center justify-between">
       <div>
-        <a href="/" aria-label="stojanow.com logo">
+        <a href="/" aria-label={`${siteDomain} logo`}>
           <TheLogo />
         </a>
       </div>

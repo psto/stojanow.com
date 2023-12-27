@@ -3,18 +3,21 @@ import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
 import { COPYRIGHT_ENTITY } from "~/constants/entities";
+import site from "~/config/site";
+
+const { author, siteDomain } = site;
 
 const seoProps = {
-  description: `Stojanow.com copyright information. All content is released under Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0) ${COPYRIGHT_ENTITY} Piotr Stojanow`,
+  description: `${siteDomain} copyright information. All content is released under Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0) ${COPYRIGHT_ENTITY} ${author}`,
   slug: "copyright",
   title: `Copyright ${COPYRIGHT_ENTITY}`,
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
     <div
-      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark md:pt-0 lg:prose-lg"
+      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -31,8 +34,8 @@ const seoProps = {
       <h3>You are free to:</h3>
 
       <p>
-        <strong>Share</strong> - copy and redistribute the material in any medium
-        or format
+        <strong>Share</strong> - copy and redistribute the material in any
+        medium or format
       </p>
       <p>
         <strong>Adapt</strong> - remix, transform, and build upon the material
@@ -42,12 +45,13 @@ const seoProps = {
 
       <p>
         <b>Attribution</b> - You must give appropriate credit, provide a link to
-        the license, and indicate if changes were made. You may do so in any reasonable
-        manner, but not in any way that suggests the licensor endorses you or your
-        use.
+        the license, and indicate if changes were made. You may do so in any
+        reasonable manner, but not in any way that suggests the licensor
+        endorses you or your use.
       </p>
       <p>
-        <b>NonCommercial</b> - You may not use the material for commercial purposes.
+        <b>NonCommercial</b> - You may not use the material for commercial
+        purposes.
       </p>
 
       <p>

@@ -4,6 +4,7 @@ const site = {
   siteLanguage: 'en-GB',
   siteTitle: 'Piotr Stojanow',
   siteUrl: import.meta.env ? import.meta.env.PUBLIC_SITE_URL : '',
+  siteDomain: import.meta.env ? import.meta.env.PUBLIC_DOMAIN : '',
   siteDescription: 'All the essays, tweetstorms, book notes and blog in one place.',
   icon: 'public/icon.png',
   substackUrl:

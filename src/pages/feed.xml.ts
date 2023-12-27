@@ -5,9 +5,6 @@ import { formatContent } from "~/utils";
 
 const { siteDescription, siteTitle, siteUrl } = site;
 
-console.log(site)
-console.log(siteUrl)
-
 export async function GET() {
   const posts = await getCollection("essays");
   const formatedPosts = formatContent<"essays">(posts);
