@@ -6,8 +6,10 @@ import { formatContent } from "~/utils";
 const { siteDescription, siteTitle, siteUrl } = site;
 
 export async function GET() {
-  const posts = await getCollection("essays");
-  const formatedPosts = formatContent<"essays">(posts);
+  const essays = await getCollection("essays");
+  const fiction = await getCollection("fiction");
+  const posts = [...essays, ...fiction];
+  const formatedPosts = formatContent<"essays" | "fiction">(posts);
 
   return rss({
     title: siteTitle,
