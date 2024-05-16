@@ -1,22 +1,30 @@
-import sitemap from '@astrojs/sitemap';
-import { defineConfig, squooshImageService } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import vue from '@astrojs/vue';
-import Icons from 'unplugin-icons/vite';
-import robotsTxt from 'astro-robots-txt';
+import sitemap from "@astrojs/sitemap";
+import { defineConfig, squooshImageService } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import Icons from "unplugin-icons/vite";
+import robotsTxt from "astro-robots-txt";
 import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://stojanow.com/',
+  site: "https://stojanow.com/",
   image: {
     service: squooshImageService(),
   },
-  integrations: [sitemap(), tailwind(), vue(), compress({ img: false, svg: false }), robotsTxt({ sitemap: false })],
+  integrations: [
+    sitemap(),
+    tailwind(),
+    compress({ img: false, svg: false }),
+    robotsTxt({ sitemap: false }),
+  ],
   vite: {
-    plugins: [Icons()],
+    plugins: [
+      Icons({
+        compiler: "astro",
+      }),
+    ],
     ssr: {
-      external: ['svgo']
-    }
-  }
+      external: ["svgo"],
+    },
+  },
 });

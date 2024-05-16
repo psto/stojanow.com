@@ -5,13 +5,9 @@
     // Path alias
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ],
+      "~/*": ["src/*"]
     },
     // Provide Vite’s client types to your project
-    "types": [
-      "unplugin-icons/types/vue"
-    ],
+    "types": ["unplugin-icons/types/astro"]
   }
 }

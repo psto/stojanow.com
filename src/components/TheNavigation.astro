@@ -1,6 +1,6 @@
 ---
 import TheLogo from "~/components/TheLogo.astro";
-import ToggleTheme from "~/components/ToggleTheme.vue";
+import ToggleTheme from "~/components/ToggleTheme.astro";
 import site from "~/config/site";
 
 const { siteDomain } = site;
@@ -98,7 +98,6 @@ const navLinks = [
           class="my-2 grid px-2 font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6"
         >
           <ToggleTheme
-            client:only
             class="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
           />
         </li>
