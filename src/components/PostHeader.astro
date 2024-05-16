@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import AppTitle from "~/components/AppTitle.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
-import avatar from "~/assets/avatar@2x.png"
+import avatar from "~/assets/avatar@2x.png";
 import { formatDate } from "~/utils/index";
 import site from "~/config/site";
 
@@ -37,21 +37,21 @@ const { date, title } = Astro.props;
         alt={`${author}'s avatar`}
         height={avatar.height}
         width={avatar.width}
-        class="w-10 h-10 mx-auto rounded-full"
+        class="mx-auto h-10 w-10 rounded-full"
       />
 
       <dl class="whitespace-nowrap text-sm font-medium text-gray-700">
         <dt class="sr-only">Name</dt>
-        <dd>
+        <dd class="m-0 pl-0">
           <p class="m-0 text-gray-700 no-underline dark:text-gray-300">
             {author}
           </p>
         </dd>
         <dt class="sr-only">Twitter</dt>
-        <dd>
+        <dd class="pl-0">
           <ExternalLink
             href={`https://twitter.com/${twitterUsername}`}
-            className="no-underline text-primary-600 hover:text-primary-700"
+            className="text-primary-600 hover:text-primary-700 no-underline"
           >
             {`@${twitterUsername}`}
           </ExternalLink>
