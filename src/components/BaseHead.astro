@@ -11,17 +11,19 @@ type Props = {
 const { siteTitle } = site;
 
 const { description, title } = Astro.props;
-const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
+
+let pageTitle = title
+  ? `${title} ${VERTICAL_LINE_ENTITY} ${siteTitle}`
+  : siteTitle;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<head>
-  <title>{pageTitle}</title>
-  <meta name="description" content={description} />
-  <meta
-    name="robots"
-    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  />
-  <link rel="canonical" href={canonicalURL} />
-  <ColorMode />
-</head>
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<meta
+  name="robots"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+<link rel="canonical" href={canonicalURL} />
+<ColorMode />

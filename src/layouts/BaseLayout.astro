@@ -25,9 +25,8 @@ const { siteLanguage: lang } = site;
       type="image/png"
       sizes="16x16"
     />
-    <title>{title}</title>
+    <BaseHead {description} {title} />
   </head>
-  <BaseHead {description} {title} />
   <body
     class="base-layout grid grid-rows-[auto,1fr,auto] bg-white dark:bg-dark"
   >
@@ -38,13 +37,12 @@ const { siteLanguage: lang } = site;
       </div>
     </div>
     <TheFooter />
+    <style>
+      /* when dvh is not supported fallback to vh  */
+      .base-layout {
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+    </style>
   </body>
-
-  <style>
-    /* when dvh is not supported fallback to vh  */
-    .base-layout {
-      min-height: 100vh;
-      min-height: 100dvh;
-    }
-  </style>
 </html>

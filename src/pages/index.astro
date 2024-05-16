@@ -17,7 +17,7 @@ const { author } = site;
 const seoProps = {
   description: `${author}'s essays, blog, tweetstorms and book notes. A personal site.`,
   slug: "",
-  title: `${author} | Home`,
+  title: "",
 };
 
 const recentCTA = "All Essays";
@@ -64,7 +64,7 @@ const recentCTA = "All Essays";
       <div class="mx-auto flex items-center">
         <a href="/essays" aria-label="Read More Essays">
           <AppButton cta={recentCTA}>
-            <IcBaselineArrowRightAlt slot="ctaIcon" />
+            <IcBaselineArrowRightAlt />
           </AppButton>
         </a>
       </div>
