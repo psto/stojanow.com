@@ -12,26 +12,26 @@
     "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@astrojs/rss": "^4.0.1",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.3",
-    "@astrojs/vue": "^4.0.2",
-    "@iconify/json": "^2.2.154",
-    "@tailwindcss/typography": "^0.5.10",
-    "@typescript-eslint/parser": "^6.13.2",
-    "astro": "^4.0.3",
-    "astro-compress": "^2.2.3",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.2.0",
+    "@iconify/json": "^2.2.210",
+    "@tailwindcss/typography": "^0.5.13",
+    "@typescript-eslint/parser": "^7.9.0",
+    "astro": "^4.8.4",
+    "astro-compress": "^2.2.23",
     "astro-robots-txt": "^1.0.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.55.0",
-    "eslint-plugin-astro": "^0.30.0",
-    "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2",
-    "prettier-plugin-tailwindcss": "^0.5.9",
-    "typescript": "^5.3.3",
-    "unplugin-icons": "^0.18.1",
-    "vite": "^5.0.7",
-    "vue": "^3.3.11"
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.2.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "typescript": "^5.4.5",
+    "unplugin-icons": "^0.19.0",
+    "vite": "^5.2.11",
+    "vue": "^3.4.27"
   },
   "repository": {
     "type": "git",
@@ -42,9 +42,7 @@
     "vite": "^2.9.14"
   },
   "dependencies": {
-    "@nanostores/persistent": "^0.9.1",
-    "@nanostores/vue": "^0.10.0",
-    "nanostores": "^0.9.5",
-    "tailwindcss": "^3.3.6"
+    "nanostores": "^0.10.3",
+    "tailwindcss": "^3.4.3"
   }
 }
