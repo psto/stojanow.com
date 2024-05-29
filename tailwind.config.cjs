@@ -39,6 +39,17 @@ module.exports = {
             'blockquote p:first-of-type::after': {
               content: '',
             },
+            code: {
+              color: theme('colors.slate.200'),
+              backgroundColor: theme('colors.slate.800'),
+              borderRadius: '0.15rem'
+            },
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            },
             '[class~="footnotes"]': {
               fontSize: '0.8em',
             },
