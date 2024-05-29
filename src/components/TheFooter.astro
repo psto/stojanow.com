@@ -3,6 +3,7 @@ import ExternalLink from "~/components/ExternalLink.astro";
 import RiMailSendLine from "~icons/ri/mail-send-line";
 import RiTwitterLine from "~icons/ri/twitter-line";
 import RiGithubLine from "~icons/ri/github-line";
+import RiBookReadLine from "~icons/ri/book-read-line";
 import RiBook2Line from "~icons/ri/book-2-line";
 import RiBellLine from "~icons/ri/bell-line";
 import { COPYRIGHT_ENTITY } from "~/constants/entities";
@@ -30,6 +31,12 @@ const footerItems = [
     externalLink: true,
   },
   {
+    label: "TIL",
+    href: `/til`,
+    icon: RiBookReadLine,
+    externalLink: false,
+  },
+  {
     label: "wiki",
     href: "https://wiki.stojanow.com",
     icon: RiBook2Line,
@@ -44,7 +51,7 @@ const footerItems = [
 ];
 ---
 
-<footer class="mx-auto mt-auto max-w-3xl px-4 pt-8 pb-8 md:pt-0">
+<footer class="mx-auto mt-auto max-w-3xl px-4 pb-8 pt-8 md:pt-0">
   <div class="mx-auto py-12">
     <div
       class="flex flex-wrap items-baseline justify-center text-brand-red dark:text-brand-red-dark"

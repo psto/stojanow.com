@@ -1,0 +1,47 @@
+---
+import AppTitle from "~/components/AppTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { formatContent } from "~/utils";
+
+const tilCollection = await getCollection("til");
+const sortedTIL = formatContent<"til">(tilCollection);
+
+const seoProps = {
+  description: "Things I've learned.",
+  slug: "til",
+  title: "TIL",
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+    <div
+      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
+    >
+      <AppTitle>{seoProps.title}</AppTitle>
+
+      <p>{seoProps.description}</p>
+      <hr />
+    </div>
+
+    <section class="mt-12 relative mx-auto max-w-6xl bg-white dark:bg-dark">
+      {
+        sortedTIL.map((til) => (
+          <div class="container px-5 py-4 mx-auto">
+            <div class="py-4">
+              <div class="md:flex-grow">
+
+                <h2 class="text-2xl font-semibold text-brand-red hover:text-gray-900 dark:text-brand-red-dark dark:hover:text-white">
+                  <a href={`/til/${til.slug}`}>{til.data.title}</a>
+                </h2>
+                <p class="mt-3 text-base dark:text-gray-400">{til.data.description}</p>
+                <a href={`/til/${til.slug}`} class="inline-flex mt-3 text-brand-red hover:text-black dark:text-white dark:hover:text-brand-red-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </div>
+</BaseLayout>

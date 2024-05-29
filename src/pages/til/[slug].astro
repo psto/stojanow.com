@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import PostHeader from "~/components/PostHeader.astro";
+import { formatContent } from "~/utils";
+
+export async function getStaticPaths() {
+  const tilCollection = await getCollection("til");
+  const formattedTILs = formatContent<"til">(tilCollection);
+
+  return formattedTILs.map((til) => ({
+    params: { slug: til.slug },
+    props: { til },
+  }));
+}
+
+type Props = { til: CollectionEntry<"til"> };
+
+const { til } = Astro.props;
+const { slug } = Astro.params;
+const { Content } = await til.render();
+
+const seoProps = {
+  description: til.data.description,
+  title: til.data.title,
+  slug,
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+    <div class="mx-auto">
+      <article
+        class="prose mx-auto max-w-2xl px-4 pb-16 pt-8 dark:prose-dark md:pt-0"
+      >
+        <PostHeader date={til.data.date.toString()} title={til.data.title} />
+
+        <Content class="prose dark:prose-dark" />
+      </article>
+    </div>
+  </div>
+</BaseLayout>
