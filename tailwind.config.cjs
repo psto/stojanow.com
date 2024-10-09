@@ -57,6 +57,9 @@ module.exports = {
               fontSize: '0.8em',
               textDecoration: 'none',
             },
+            hr: {
+              borderColor: theme('colors.zinc.600'),
+            },
           },
         },
         dark: {
@@ -79,7 +82,7 @@ module.exports = {
                 backgroundColor: theme('colors.zinc.600'),
               },
               hr: {
-                borderColor: theme('colors.zinc.800'),
+                borderColor: theme('colors.zinc.200'),
               },
               blockquote: {
                 color: '#7F7F8F',
