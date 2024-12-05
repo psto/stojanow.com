@@ -9,7 +9,7 @@ const { author, substackUrl, twitterUsername } = site;
 
 const seoProps = {
   description: `Contact ${author} by email or twitter, subscribe to the newsletter or the RSS feed.`,
-  slug: "contact",
+  id: "contact",
   title: "Contact",
 };
 ---
@@ -37,7 +37,7 @@ const seoProps = {
         ><strong>stojanow@gmail.com</strong>
         <span class="text-zinc-600 dark:text-zinc-400">(without the &)</span>
         <br />
-         Get in touch on
+        Get in touch on
         <ExternalLink
           href={`https://twitter.com/${twitterUsername}`}
           style="color: #1da1f2"

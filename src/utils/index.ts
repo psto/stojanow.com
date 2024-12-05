@@ -1,5 +1,5 @@
 import type { CollectionEntry } from "astro:content";
-import { collections } from "~/content/config";
+import { collections } from "~/content.config";
 
 export function formatDate(dateStr: string | Date) {
   return new Date(dateStr).toLocaleDateString('en', {

@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import NotesHeader from "~/components/NotesHeader.astro";
 import { formatContent } from "~/utils";
@@ -9,7 +9,7 @@ export async function getStaticPaths() {
   const formattedNotes = formatContent<"notes">(notes);
 
   return formattedNotes.map((note) => ({
-    params: { slug: note.slug },
+    params: { id: note.id },
     props: { note },
   }));
 }
@@ -17,13 +17,13 @@ export async function getStaticPaths() {
 type Props = { note: CollectionEntry<"notes"> };
 
 const { note } = Astro.props;
-const { slug } = Astro.params;
-const { Content } = await note.render();
+const { id } = Astro.params;
+const { Content } = await render(note);
 
 const seoProps = {
   description: note.data.description,
   title: note.data.title,
-  slug,
+  id,
 };
 ---
 

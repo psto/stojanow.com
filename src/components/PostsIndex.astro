@@ -20,13 +20,13 @@ const { posts, prefix } = Astro.props;
         <div class="transform rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-2xl dark:bg-dark-light dark:hover:shadow-stone-900">
           {prefix ? (
             <a
-              href={`/${prefix}/${post.slug}`}
+              href={`/${prefix}/${post.id}`}
               aria-label={`Read ${post.data.title}`}
             >
               <PostsCard post={post} />
             </a>
           ) : (
-            <a href={`/${post.slug}`} aria-label={`Read ${post.data.title}`}>
+            <a href={`/${post.id}`} aria-label={`Read ${post.data.title}`}>
               <PostsCard post={post} />
             </a>
           )}

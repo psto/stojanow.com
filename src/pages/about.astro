@@ -7,7 +7,7 @@ import site from "~/config/site";
 const { author } = site;
 const seoProps = {
   description: `About ${author}`,
-  slug: "About",
+  id: "About",
   title: "About",
 };
 ---
@@ -39,7 +39,7 @@ const seoProps = {
 
       <p class="text-center">
         <a href="/contact" class="filter hover:brightness-125">Email me</a>
-         or say hi on
+        or say hi on
         <ExternalLink
           href="http://twitter.com/piotrstojanow"
           style="color: #1da1f2"

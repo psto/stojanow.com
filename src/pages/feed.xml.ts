@@ -21,7 +21,7 @@ export async function GET() {
       .map((post) => ({
         title: post.data.title,
         description: post.data.description,
-        link: `${siteUrl}/${post.slug}/`,
+        link: `${siteUrl}/${post.id}/`,
         pubDate: new Date(post.data.date),
       }))
       .sort(

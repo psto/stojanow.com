@@ -16,7 +16,7 @@ const { author } = site;
 
 const seoProps = {
   description: `${author}'s essays, blog, tweetstorms and book notes. A personal site.`,
-  slug: "",
+  id: "",
   title: "",
 };
 
@@ -40,7 +40,7 @@ const recentCTA = "All Essays";
       class="mt-12 grid gap-16 border-t-2 border-zinc-200 pt-12 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
     >
       {
-        sortedEssays.map(({ data: { date, title, description }, slug }) => (
+        sortedEssays.map(({ data: { date, title, description }, id }) => (
           <div>
             <div class="flex items-baseline">
               <div class="mr-8 flex text-sm leading-5 text-zinc-700 dark:text-zinc-400">
@@ -48,7 +48,7 @@ const recentCTA = "All Essays";
               </div>
             </div>
 
-            <a href={`/${slug}`} class="group">
+            <a href={`/${id}`} class="group">
               <h3 class="mt-4 text-xl font-semibold leading-7 text-brand-red filter hover:brightness-125 dark:text-brand-red-dark">
                 {title}
               </h3>
