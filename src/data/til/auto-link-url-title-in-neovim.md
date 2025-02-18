@@ -13,7 +13,7 @@ I wrote a small `lua` function that does the same thing:
 ```lua
 -- ~/.config/nvim/lua/util/functions.lua
 function M.get_url_title()
-  -- grap url from cliboard
+  -- grab url from cliboard
   local url = vim.fn.getreg "+"
 
   -- use curl to fetch url

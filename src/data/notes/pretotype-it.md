@@ -84,7 +84,7 @@ Pretotyping does not have the power to turn a wrong **it** into a right **it** -
 
 We invite failure, we seek it, we hunt it down and get it to show us its ugly face as soon as possible so we can determine if we are on the wrong track and make the necessary adjustments early on.
 
-Playing this game with failure only makes sense if the ba**it** we use is something cheap and inexpensive, a pretotype that we put together in a few hours or days and at a minimal cost - something we don’t mind abandoning.
+Playing this game with failure only makes sense if the bait we use is something cheap and inexpensive, a pretotype that we put together in a few hours or days and at a minimal cost - something we don’t mind abandoning.
 
 ### Three ways to deal with the beast of failure:
 

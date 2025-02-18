@@ -15,9 +15,9 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
     <div
-      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
+      class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
 
@@ -25,13 +25,13 @@ const seoProps = {
       <hr />
     </div>
 
-    <section class="relative mx-auto mt-12 max-w-6xl bg-white dark:bg-dark">
+    <section class="dark:bg-dark relative mx-auto mt-12 max-w-6xl bg-white">
       {
         sortedTIL.map((til) => (
           <div class="container mx-auto px-5 py-4">
             <div class="py-4">
-              <div class="md:flex-grow">
-                <h2 class="text-2xl font-semibold text-brand-red hover:text-gray-900 dark:text-brand-red-dark dark:hover:text-white">
+              <div class="md:grow">
+                <h2 class="text-brand-red dark:text-brand-red-dark text-2xl font-semibold hover:text-gray-900 dark:hover:text-white">
                   <a href={`/til/${til.id}`}>{til.data.title}</a>
                 </h2>
                 <p class="mt-3 text-base dark:text-gray-400">
@@ -39,7 +39,7 @@ const seoProps = {
                 </p>
                 <a
                   href={`/til/${til.id}`}
-                  class="mt-3 inline-flex text-brand-red hover:text-black dark:text-white dark:hover:text-brand-red-dark"
+                  class="text-brand-red dark:hover:text-brand-red-dark mt-3 inline-flex hover:text-black dark:text-white"
                 >
                   Read More
                 </a>

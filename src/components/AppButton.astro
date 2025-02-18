@@ -7,7 +7,7 @@ const { cta = "Read More" } = Astro.props;
 ---
 
 <button
-  class="flex transform items-center space-x-1 rounded-md border border-brand-red bg-white px-4 py-2 text-lg font-medium leading-6 text-brand-red transition duration-300 hover:bg-brand-red hover:text-white hover:brightness-125 dark:border-brand-red-dark dark:bg-dark dark:text-brand-red-dark dark:hover:bg-brand-red-dark dark:hover:text-black md:px-8 md:py-4 md:text-xl"
+  class="border-brand-red text-brand-red hover:bg-brand-red dark:border-brand-red-dark dark:bg-dark dark:text-brand-red-dark dark:hover:bg-brand-red-dark flex transform cursor-pointer items-center gap-1 rounded-md border bg-white px-4 py-2 text-lg leading-6 font-medium transition duration-300 hover:text-white hover:brightness-125 md:px-8 md:py-4 md:text-xl dark:hover:text-black"
 >
   <span>{cta}</span>
   <slot name="ctaIcon" />

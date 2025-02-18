@@ -17,11 +17,11 @@ const {
 ---
 
 <div
-  class="flex h-full w-full flex-col overflow-hidden rounded-lg bg-white shadow-lg dark:bg-dark-light"
+  class="dark:bg-dark-light flex h-full w-full flex-col overflow-hidden rounded-lg bg-white shadow-lg"
 >
   {
     image && (
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         {/* images in notes content do not have imageAlt property */}
         {imageAlt ? (
           <Image
@@ -47,7 +47,7 @@ const {
     <div class="flex-1">
       <div class="mt-2 block">
         <p
-          class="text-xl font-semibold text-brand-red hover:text-gray-900 dark:text-brand-red-dark dark:hover:text-white"
+          class="text-brand-red dark:text-brand-red-dark text-xl font-semibold hover:text-gray-900 dark:hover:text-white"
         >
           {title}
         </p>
@@ -56,7 +56,7 @@ const {
     </div>
     <div class="mt-6">
       <p
-        class="text-brand-red hover:text-black dark:text-white dark:hover:text-brand-red-dark"
+        class="text-brand-red dark:hover:text-brand-red-dark hover:text-black dark:text-white"
       >
         Read More
       </p>

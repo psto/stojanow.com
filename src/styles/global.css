@@ -1,3 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@config "../../tailwind.config.cjs";
+
+@theme {
+  --color-brand-red: #cc3535;
+  --color-brand-red-dark: #CB5F5D;
+  --color-dark: #0f0d0c;
+  --color-dark-light: #19171D;
+}

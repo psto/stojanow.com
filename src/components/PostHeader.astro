@@ -17,21 +17,21 @@ const { date, title } = Astro.props;
 ---
 
 <header>
-  <div class="mb-8 lg:prose-lg">
+  <div class="lg:prose-lg mb-8">
     <AppTitle>{title}</AppTitle>
   </div>
 
   <div class="flex justify-center">
     <time
       datetime={date}
-      class="block text-center text-sm italic text-gray-600 dark:text-gray-400"
+      class="block text-center text-sm text-gray-600 italic dark:text-gray-400"
     >
       {formatDate(date)}
     </time>
   </div>
 
   <div class="flex justify-center">
-    <div class="flex items-center space-x-2">
+    <div class="flex items-center gap-2">
       <Image
         src={avatar}
         alt={`${author}'s avatar`}
@@ -40,7 +40,7 @@ const { date, title } = Astro.props;
         class="mx-auto h-10 w-10 rounded-full"
       />
 
-      <dl class="whitespace-nowrap text-sm font-medium text-gray-700">
+      <dl class="text-sm font-medium whitespace-nowrap text-gray-700">
         <dt class="sr-only">Name</dt>
         <dd class="m-0 pl-0">
           <p class="m-0 text-gray-700 no-underline dark:text-gray-300">

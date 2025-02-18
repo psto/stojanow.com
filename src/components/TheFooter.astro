@@ -51,10 +51,10 @@ const footerItems = [
 ];
 ---
 
-<footer class="mx-auto mt-auto max-w-3xl px-4 pb-8 pt-8 md:pt-0">
+<footer class="mx-auto mt-auto max-w-3xl px-4 pt-8 pb-8 md:pt-0">
   <div class="mx-auto py-12">
     <div
-      class="flex flex-wrap items-baseline justify-center text-brand-red dark:text-brand-red-dark"
+      class="text-brand-red dark:text-brand-red-dark flex flex-wrap items-baseline justify-center"
     >
       {
         footerItems.map((item) => {
@@ -62,7 +62,7 @@ const footerItems = [
             return item.externalLink ? (
               <ExternalLink
                 href={`${item.href}`}
-                className="flex items-center space-x-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
+                className="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
               >
                 {<item.icon />}{" "}
                 <span class="text-zinc-600 dark:text-zinc-400">
@@ -73,7 +73,7 @@ const footerItems = [
             ) : (
               <a
                 href={`${item.href}`}
-                class="flex items-center space-x-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
+                class="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
               >
                 {<item.icon />}{" "}
                 <span class="text-zinc-600 dark:text-zinc-400">
@@ -92,7 +92,7 @@ const footerItems = [
     >
       <a
         href="/copyright"
-        class="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
+        class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
         >CC BY-NC 4.0
       </a>
       {`${COPYRIGHT_ENTITY} ${author}`}

@@ -64,7 +64,7 @@ const navLinks = [
       <div class="flex md:hidden">
         <button
           id="mobile-menu-button"
-          class="p-2 text-gray-500 hover:text-brand-red focus:text-brand-red focus:outline-none dark:text-zinc-200 dark:hover:text-brand-red-dark dark:focus:text-brand-red-dark"
+          class="hover:text-brand-red focus:text-brand-red dark:hover:text-brand-red-dark dark:focus:text-brand-red-dark cursor-pointer p-2 text-gray-500 focus:outline-hidden dark:text-zinc-200"
           title="Toggles light & dark"
           aria-label="auto"
           aria-live="polite"
@@ -84,7 +84,7 @@ const navLinks = [
       <ul class="flex flex-col items-center justify-center md:mx-6 md:flex-row">
         {
           navLinks.map((nav) => (
-            <li class="my-2 font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6">
+            <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:brightness-125 md:ml-6">
               {nav.externalLink ? (
                 <a
                   href={nav.url}
@@ -100,17 +100,17 @@ const navLinks = [
           ))
         }
         <li
-          class="my-2 grid px-2 font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6"
+          class="text-brand-red dark:text-brand-red-dark my-2 grid px-2 font-medium filter hover:brightness-125 md:ml-6"
         >
           <ToggleTheme
-            class="text-brand-red filter hover:brightness-125 dark:text-brand-red-dark"
+            class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
           />
         </li>
         <li
-          class="my-2 flex items-center justify-center text-center font-medium text-brand-red filter hover:brightness-125 dark:text-brand-red-dark md:ml-6"
+          class="text-brand-red dark:text-brand-red-dark my-2 flex items-center justify-center text-center font-medium filter hover:brightness-125 md:ml-6"
         >
           <a
-            class="block transform rounded-lg bg-brand-red px-3 py-2 text-center font-semibold text-white filter transition duration-300 hover:brightness-125 dark:bg-brand-red-dark dark:text-black"
+            class="bg-brand-red dark:bg-brand-red-dark block transform rounded-lg px-3 py-2 text-center font-semibold text-white filter transition duration-300 hover:brightness-125 dark:text-black"
             href="/subscribe"
           >
             Subscribe
