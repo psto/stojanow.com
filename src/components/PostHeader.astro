@@ -43,7 +43,7 @@ const { date, title } = Astro.props;
       <dl class="text-sm font-medium whitespace-nowrap text-gray-700">
         <dt class="sr-only">Name</dt>
         <dd class="m-0 pl-0">
-          <p class="m-0 text-gray-700 no-underline dark:text-gray-300">
+          <p class="m-0 text-gray-700 dark:text-gray-300">
             {author}
           </p>
         </dd>
@@ -51,7 +51,7 @@ const { date, title } = Astro.props;
         <dd class="pl-0">
           <ExternalLink
             href={`https://twitter.com/${twitterUsername}`}
-            className="text-primary-600 hover:text-primary-700 no-underline"
+            className="text-primary-600 hover:text-primary-700 no-underline hover:underline"
           >
             {`@${twitterUsername}`}
           </ExternalLink>

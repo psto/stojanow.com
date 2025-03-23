@@ -15,7 +15,8 @@ module.exports = {
               color: '#cc3535',
               filter: 'var(--tw-brightness)',
               '&:hover': {
-                '--tw-brightness': 'brightness(1.25)',
+                '--tw-brightness': 'brightness(1.10)',
+                color: 'black',
               },
             },
             blockquote: {
@@ -64,6 +65,9 @@ module.exports = {
               },
               a: {
                 color: '#CB5F5D',
+                '&:hover': {
+                  color: 'white',
+                },
               },
               strong: {
                 color: 'var(--color-zinc-200)',

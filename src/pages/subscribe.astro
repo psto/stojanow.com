@@ -16,10 +16,10 @@ const seoProps = {
 
 <BaseLayout {...seoProps}>
   <div
-    class="prose relative mx-auto max-w-2xl px-4 pt-16 text-center dark:prose-dark lg:pt-24"
+    class="prose dark:prose-dark relative mx-auto max-w-2xl px-4 pt-16 text-center lg:pt-24"
   >
     <div
-      class="prose mx-auto px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
+      class="prose dark:prose-dark lg:prose-lg mx-auto px-4 text-center md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -29,27 +29,19 @@ const seoProps = {
 
     <p>
       Newsletter link if can't see the form:
-      <ExternalLink href={`${substackUrl}`} className="no-underline">
-        subscribe 🔔
-      </ExternalLink>
+      <ExternalLink href={`${substackUrl}`}> subscribe 🔔 </ExternalLink>
     </p>
     <p>
       If you prefer "ancient" web technology like <b>RSS</b> 😉, then a
-      <a href="/feed.xml" target="_blank" class="no-underline"
-        >feed is available ✅</a
-      >
+      <a href="/feed.xml" target="_blank">feed is available ✅</a>
     </p>
     <p>
       Also, you can find me on
-      <ExternalLink
-        href={`http://twitter.com/${twitterUsername}`}
-        style="color: #1da1f2"
-        className="no-underline"
-      >
-        🐦 twitter
+      <ExternalLink href={`http://twitter.com/${twitterUsername}`}>
+        twitter 🐦
       </ExternalLink>
       or get in touch through
-      <a href="/contact" class="no-underline">email 📧</a>
+      <a href="/contact">email 📧</a>
     </p>
   </div>
 </BaseLayout>

@@ -84,7 +84,7 @@ const navLinks = [
       <ul class="flex flex-col items-center justify-center md:mx-6 md:flex-row">
         {
           navLinks.map((nav) => (
-            <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:brightness-125 md:ml-6">
+            <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:text-black hover:brightness-125 md:ml-6 dark:hover:text-white">
               {nav.externalLink ? (
                 <a
                   href={nav.url}
@@ -102,9 +102,7 @@ const navLinks = [
         <li
           class="text-brand-red dark:text-brand-red-dark my-2 grid px-2 font-medium filter hover:brightness-125 md:ml-6"
         >
-          <ToggleTheme
-            class="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
-          />
+          <ToggleTheme class="filter hover:brightness-125" />
         </li>
         <li
           class="text-brand-red dark:text-brand-red-dark my-2 flex items-center justify-center text-center font-medium filter hover:brightness-125 md:ml-6"
@@ -113,7 +111,7 @@ const navLinks = [
             class="bg-brand-red dark:bg-brand-red-dark block transform rounded-lg px-3 py-2 text-center font-semibold text-white filter transition duration-300 hover:brightness-125 dark:text-black"
             href="/subscribe"
           >
-            Subscribe
+            subscribe
           </a>
         </li>
       </ul>

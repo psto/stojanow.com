@@ -14,9 +14,9 @@ const seoProps = {
 
 <BaseLayout {...seoProps}>
   <div
-    class="prose relative mx-auto max-w-2xl px-4 pt-16 dark:prose-dark lg:pt-24"
+    class="prose dark:prose-dark relative mx-auto max-w-2xl px-4 pt-16 lg:pt-24"
   >
-    <div class="mx-auto px-4 text-center lg:prose-lg md:pt-0">
+    <div class="lg:prose-lg mx-auto px-4 text-center md:pt-0">
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
     </div>
@@ -30,22 +30,21 @@ const seoProps = {
 
       <p>
         All my attempts to distill what I know to one true sentence at a time. I
-        also keep a <ExternalLink href="https://wiki.stojanow.com">
-          wiki
-        </ExternalLink> of things I know.
+        also keep a <ExternalLink href="https://wiki.stojanow.com"
+          >wiki</ExternalLink
+        > of things I know.
       </p>
 
       <p>A taste of subjects I write about:</p>
 
       <p class="text-center">
-        <a href="/contact" class="filter hover:brightness-125">Email me</a>
+        <a href="/contact" class="filter hover:underline">Email me</a>
         or say hi on
         <ExternalLink
           href="http://twitter.com/piotrstojanow"
-          style="color: #1da1f2"
-          className="mr-4 p-0 no-underline filter hover:brightness-125 sm:mr-2"
+          className="mr-4 p-0 filter hover:underline sm:mr-2"
         >
-          🐦 twitter!
+          twitter 🐦
         </ExternalLink>
       </p>
     </div>

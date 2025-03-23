@@ -15,9 +15,9 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
     <div
-      class="prose mx-auto max-w-2xl px-4 text-center dark:prose-dark lg:prose-lg md:pt-0"
+      class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
       <AppTitle>{seoProps.title}</AppTitle>
       <hr />
@@ -30,24 +30,23 @@ const seoProps = {
         />
       </div>
     </div>
-    <div class="prose mx-auto mt-12 max-w-2xl text-center dark:prose-dark">
+    <div class="prose dark:prose-dark mx-auto mt-12 max-w-2xl text-center">
       <p>
         <strong>piotr</strong><span class="text-zinc-600 dark:text-zinc-400"
           >&</span
         ><strong>stojanow@gmail.com</strong>
-        <span class="text-zinc-600 dark:text-zinc-400">(without the &)</span>
+        <span class="text-zinc-600 dark:text-zinc-400">(without the &)</span> 📧
         <br />
         Get in touch on
         <ExternalLink
           href={`https://twitter.com/${twitterUsername}`}
-          style="color: #1da1f2"
-          className="no-underline filter hover:brightness-125"
+          className="filter hover:underline"
         >
-          🐦 twitter
+          twitter 🐦
         </ExternalLink>
         <br />
-        <ExternalLink href={`${substackUrl}`} className="no-underline">
-          🔔 subscribe
+        <ExternalLink href={`${substackUrl}`} className="hover:underline">
+          Subscribe 🔔
         </ExternalLink>
       </p>
     </div>

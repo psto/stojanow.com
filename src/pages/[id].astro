@@ -40,9 +40,6 @@ const seoProps = {
         />
 
         {
-          /* TODO: research sizes viewport - vw or ship with aspectRatio="4:3" instead */
-        }
-        {
           essay.data.image && (
             <figure>
               <Image
@@ -50,8 +47,11 @@ const seoProps = {
                 alt={essay.data.imageAlt || ""}
                 class="w-full rounded-sm"
                 loading="eager"
+                aria-describedby="caption-for-image"
               />
-              <figcaption class="text-center">{essay.data.imageAlt}</figcaption>
+              <figcaption id="caption-for-image" class="text-center">
+                {essay.data.imageAlt}
+              </figcaption>
             </figure>
           )
         }

@@ -17,7 +17,7 @@ const { posts, prefix } = Astro.props;
   <div class="mx-auto mt-12 grid max-w-lg gap-7 lg:max-w-none lg:grid-cols-3">
     {
       posts.map((post) => (
-        <div class="transform rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-2xl dark:bg-dark-light dark:hover:shadow-stone-900">
+        <div class="dark:bg-dark-light transform rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-2xl dark:hover:shadow-stone-900">
           {prefix ? (
             <a
               href={`/${prefix}/${post.id}`}

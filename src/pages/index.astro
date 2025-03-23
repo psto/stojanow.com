@@ -27,17 +27,17 @@ const recentCTA = "All Essays";
   <TheHero />
 
   <div
-    class="mt-30 container mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 lg:pb-28 lg:pt-24"
+    class="container mx-auto mt-30 max-w-6xl px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28"
   >
     <div>
       <h2
-        class="text-xl font-bold leading-9 tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl sm:leading-10"
+        class="text-xl leading-9 font-bold tracking-tight text-zinc-900 sm:text-4xl sm:leading-10 dark:text-zinc-50"
       >
         Recent articles
       </h2>
     </div>
     <div
-      class="mt-12 grid gap-16 border-t-2 border-zinc-200 pt-12 dark:border-zinc-800 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16"
+      class="mt-12 grid gap-16 border-t-2 border-zinc-200 pt-12 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16 dark:border-zinc-800"
     >
       {
         sortedEssays.map(({ data: { date, title, description }, id }) => (
@@ -49,7 +49,7 @@ const recentCTA = "All Essays";
             </div>
 
             <a href={`/${id}`} class="group">
-              <h3 class="mt-4 text-xl font-semibold leading-7 text-brand-red filter hover:brightness-125 dark:text-brand-red-dark">
+              <h3 class="text-brand-red dark:text-brand-red-dark mt-4 text-xl leading-7 font-semibold filter hover:underline hover:brightness-125">
                 {title}
               </h3>
 

@@ -49,7 +49,7 @@ _Those fears are based on irrational judgements about the future_, usually becau
 
 Instead, _try acting as if you had already lost it_. ‘Set aside a certain number of days, during which you shall be content with the scantiest and cheapest fare, with coarse and rough dress,’ he suggests, ‘saying to yourself the while: “**is this the condition that I feared?**”.’
 
-#### Stoics on Control
+### Stoics on Control
 
 As Seneca frequently observes, we habitually act as if our control over the world were much greater than it really is. Even such personal matters as our health, our finances, and our reputations are ultimately beyond our control; we can try to influence them, of course, but frequently things won’t go our way. And the behaviour of other people is even further beyond our control.
 
@@ -61,7 +61,7 @@ It is essential to grasp a distinction here between acceptance and resignation: 
 
 **What matters is how I engage with the situation**. Now that I’m here, rather than anywhere else, here in this time and this place – what can I do?
 
-#### On Albert Ellis
+### On Albert Ellis
 
 To put it another way, it wasn’t just that he wanted to be less shy, and that he wanted to be able to talk to women. Rather, he had been operating under the absolutist conviction that he needed their approval. Later, he would coin a name for this habit of mind: ‘masturbation’. **We elevate those things we want, those things we would prefer to have, into things we believe we must have**; we feel we must perform well in certain circumstances, or that other people must treat us well. _Because we think these things must occur, it follows that it would be an absolute catastrophe if they did not. No wonder we get so anxious_: we’ve decided that if we failed to meet our goal it wouldn’t merely be bad, but completely bad – absolutely terrible.
 
@@ -85,7 +85,7 @@ _This is the first big step towards non-attachment_: **learning to view passing 
 
 The mind, in this analogy, is the sky, and the sky doesn’t cling to specific weather conditions, nor try to get rid of the ‘bad’ ones. The sky just is. In this the Buddhists go further than the Stoics, who can sometimes seem rather attached to certain mind-states, especially that of tranquillity. The perfect Stoic adapts his or her thinking so as to remain undisturbed by undesirable circumstances; the perfect Buddhist sees thinking itself as just another set of circumstances, to be non-judgmentally observed
 
-#### Non-attachment vs Procrastination
+### Non-attachment vs Procrastination
 
 _The problem is that feeling like acting and actually acting are two different things_. A person mired deep in procrastination might claim he is unable to work, but **what he really means is that he is unable to make himself feel like working**.
 
@@ -109,7 +109,7 @@ Goal-free living simply makes for happier humans
 
 ‘You can have a broad sense of direction without a specific goal or a precise vision of the future,’ Shapiro told me. ‘I think of it like jazz, like improvisation. _It’s all about meandering with purpose_.’
 
-#### Entrepreneurs and goals
+### Entrepreneurs and goals
 
 We tend to imagine that the special skill of an entrepreneur lies in having a powerfully original idea and then fighting to turn that vision into reality. But the outlook of Sarasvathy’s interviewees rarely bore this out. Their precise endpoint was often mysterious to them, and their means of proceeding reflected this. Overwhelmingly, they scoffed at the goals-first doctrine.
 
