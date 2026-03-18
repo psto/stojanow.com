@@ -1,5 +1,5 @@
 ---
-import TheLogo from "~/components/TheLogo.astro";
+import TheLogo from "~/assets/logo.svg";
 import ToggleTheme from "~/components/ToggleTheme.astro";
 import site from "~/config/site";
 
@@ -57,7 +57,9 @@ const navLinks = [
     <div class="flex items-center justify-between">
       <div>
         <a href="/" aria-label={`${siteDomain} logo`}>
-          <TheLogo />
+          <TheLogo
+            class="image-overflow hover:text-brand-red dark:hover:text-brand-red-dark w-28 transform items-center fill-current text-black transition duration-300 dark:text-white"
+          />
         </a>
       </div>
       <!-- Mobile menu button -->
