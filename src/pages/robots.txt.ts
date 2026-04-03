@@ -1,10 +1,10 @@
 import type { APIRoute } from "astro";
 
-const aiRobotsGithubURL =
+export const AI_ROBOTS_GITHUB_URL =
   "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/refs/heads/main/robots.txt";
 
 export const getRobotsTxtFromAI = async () => {
-  const response = await fetch(aiRobotsGithubURL);
+  const response = await fetch(AI_ROBOTS_GITHUB_URL);
   return response.text();
 };
 
