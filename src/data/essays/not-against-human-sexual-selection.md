@@ -71,11 +71,19 @@ The same paper also agrees that:
 > How regulated marriage affected sexual selection on human mate choice preferences depends on several factors. One factor is the extent to which parental (and other senior kin) choices overlapped or diverged with that of offspring mate choice. Another factor is the extent to which marital partners chosen by parents were the actual genitors of the descendants. Worldwide extra-pair paternity rates have been estimated at around 9% [26], although there is much variation between as well as within populations [27]. Regarding the first issue, parent-offspring conflict over mate choice in contemporary Western populations has been found to contain considerable conflict of interest, as well as some expected overlap, in preferred attributes [28]–[31]. However, environmental novelty may render these findings unrepresentative of ancestral situations and a systematic examination of parental and offspring mate choice preferences among hunter-gatherers and other small-scale societies is warranted.
 
 [^1]: [A dispersal of Homo sapiens from southern to eastern Africa immediately preceded the out-of-Africa migration](https://www.nature.com/articles/s41598-019-41176-3) by Teresa Rito, Daniel Vieira, Marina Silva, Eduardo Conde-Sousa, Luísa Pereira, Paul Mellars, Martin B. Richards & Pedro Soares, Scientific Reportsvolume 9, Article number: 4728 (2019)
+
 [^2]: Walker RS, Hill KR, Flinn MV, Ellsworth RM. [Evolutionary history of hunter-gatherer marriage practices](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3083418/). PLoS One. 2011;6(4):e19066. Published 2011 Apr 27. doi:10.1371/journal.pone.0019066
+
 [^3]: Apicella, C.L. (2014). Upper-body strength predicts hunting reputation and reproductive success in Hadza hunter–gatherers. Evolution and Human Behavior, 35, 508-518
+
 [^4]: Jonason, P. K., Li, N. P., & Madson, L. (2012). It is not all about the Benjamins: Understanding preferences for mates with resources. Personality and Individual Differences, 52, 306-310
+
 [^5]: Laura
+
 [^6]: Sarah Blaffer Hrdy, [The Optimal Number of Fathers: Evolution, Demography, and History in the Shaping of Female Mate Preferences](https://nyaspubs.onlinelibrary.wiley.com/doi/abs/10.1111/j.1749-6632.2000.tb06617.x), Volume 907, Issue 1, Evolutionary Perspectives On Human Reproductive Behavior, April 2000, pp. 75-96, p. 82
+
 [^7]: Ibid., p. 85
+
 [^8]: [Ancient genomes show social and reproductive behavior of early Upper Paleolithic foragers](https://science.sciencemag.org/content/358/6363/659), Sikora M, Seguin-Orlando A, Sousa VC, Albrechtsen A, Korneliussen T, Ko A, Rasmussen S, Dupanloup I, Nigst PR, Bosch MD, Renaud G, Allentoft ME, Margaryan A, Vasilyev SV, Veselovskaya EV, Borutskaya SB, Deviese T, Comeskey D, Higham T, Manica A, Foley R, Meltzer DJ, Nielsen R, Excoffier L, Mirazon Lahr M, Orlando L, Willerslev E, Science 03 Nov 2017 : 659-662
+
 [^9]: Ibid.

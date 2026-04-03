@@ -34,4 +34,3 @@ Next, we can configure the app according to our needs in the Sway config:
 ```sway
 for_window [class="Spotify"] move to scratchpad
 ```
-

@@ -7,15 +7,15 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://stojanow.com/",
-	integrations: [
+  integrations: [
     sitemap(),
-		(await import("@playform/compress")).default({
-			Image: false,
-			SVG: false,
-		}),
-	],
+    (await import("@playform/compress")).default({
+      Image: false,
+      SVG: false,
+    }),
+  ],
   vite: {
-    plugins: [Icons({ compiler: "astro", }), tailwindcss()],
+    plugins: [Icons({ compiler: "astro" }), tailwindcss()],
     ssr: {
       external: ["svgo"],
     },

@@ -13,49 +13,49 @@ There is no keyboard shortcut to do this. You can press `.` (period) for the dro
 Since I mainly use the keyboard to navigate in Gmail and want to save myself a few clicks, I created the following [userscript](https://greasyfork.org/en/scripts/496468-filter-gmail-shortcut) ([GitHub](https://github.com/psto/userscript-filter-gmail-shortcut)) to add a shortcut ("alt+g") for the above workflow.
 
 ```javascript
-(function() {
-  'use strict'
+(function () {
+  "use strict";
 
   function handleKeyPress(event) {
-    if (event.altKey && event.code === 'KeyG') {
-      const main = document.querySelector('div[role=main]');
-      const emailElements = main.querySelectorAll('tr')
+    if (event.altKey && event.code === "KeyG") {
+      const main = document.querySelector("div[role=main]");
+      const emailElements = main.querySelectorAll("tr");
 
       const selectedEmailRows = Array.from(emailElements).filter((row) => {
-        const tdElements = row.querySelectorAll('td');
+        const tdElements = row.querySelectorAll("td");
 
         const hasAriaChecked = Array.from(tdElements).some((td) => {
-          const isChecked = td.querySelector('div[aria-checked]')
+          const isChecked = td.querySelector("div[aria-checked]");
 
           if (isChecked) {
-            return isChecked.getAttribute('aria-checked') === 'true'
+            return isChecked.getAttribute("aria-checked") === "true";
           }
         });
 
-        const hasEmailSpan = row.querySelector('span[email]');
+        const hasEmailSpan = row.querySelector("span[email]");
 
         return hasAriaChecked && hasEmailSpan;
       });
 
       if (selectedEmailRows.length === 0) {
-        selectedEmailRows = [emailElements[1]]
+        selectedEmailRows = [emailElements[1]];
       }
 
-      let emails = []
+      let emails = [];
 
       selectedEmailRows.filter((emailRow) => {
-        const emailElement = emailRow.querySelector('td span[email]')
-        const emailAddress = emailElement.getAttribute('email');
-        emails.push(encodeURIComponent(emailAddress))
-      })
+        const emailElement = emailRow.querySelector("td span[email]");
+        const emailAddress = emailElement.getAttribute("email");
+        emails.push(encodeURIComponent(emailAddress));
+      });
 
-      const searchUrl = `https://mail.google.com/mail/u/0/#search/from:(${emails.join(' OR ')})`;
+      const searchUrl = `https://mail.google.com/mail/u/0/#search/from:(${emails.join(" OR ")})`;
 
       window.location.href = searchUrl;
     }
   }
 
-  document.addEventListener('keydown', handleKeyPress);
+  document.addEventListener("keydown", handleKeyPress);
 })();
 ```
 
@@ -67,4 +67,4 @@ If you prefer a bookmarklet just drag and drop the following button to your book
 
 Select the emails you want to filter and click the bookmarklet (or set a keyword for it and run it from the address bar).
 
-**UPDATE** *(13-06-2024)*: I've modified the script to allow filtering based on an opened email. Open any email and press "alt+g" to filter all messages from the same sender.
+**UPDATE** _(13-06-2024)_: I've modified the script to allow filtering based on an opened email. Open any email and press "alt+g" to filter all messages from the same sender.

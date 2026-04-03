@@ -25,7 +25,7 @@ export async function GET() {
         pubDate: new Date(post.data.date),
       }))
       .sort(
-        (postA, postB) => postB.pubDate.getTime() - postA.pubDate.getTime()
+        (postA, postB) => postB.pubDate.getTime() - postA.pubDate.getTime(),
       ),
   });
 }

@@ -8,7 +8,7 @@ image: "../../assets/fiction/eugene_berman-la-petite-fortune.jpg"
 imageAlt: "La Petite Fortune by Eugene Berman"
 ---
 
-Yet again, they cry wolf. 
+Yet again, they cry wolf.
 
 Their eyes filled with pity and contempt.
 
@@ -22,7 +22,7 @@ My plan worked. I freed myself from the shackles of belief.
 
 The sky turns black. The first arrow knocks me down.
 
-Yet again, they were right. 
+Yet again, they were right.
 
 I laugh the pain away.
 
