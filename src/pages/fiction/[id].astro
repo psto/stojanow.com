@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import PostHeader from "~/components/PostHeader.astro";
+import ReadingProgressBar from "~/components/ReadingProgressBar.astro";
 import { formatContent } from "~/utils";
 
 export async function getStaticPaths() {
@@ -29,6 +30,7 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
+  <ReadingProgressBar />
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
     <div class="mx-auto">
       <article

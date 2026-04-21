@@ -1,0 +1,20 @@
+<div class="sticky top-0 z-50 w-full">
+  <div
+    class="reading-progress-bar bg-brand-red dark:bg-brand-red-dark h-0.5 w-full origin-left"
+  >
+  </div>
+</div>
+<style>
+  @keyframes reading-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .reading-progress-bar {
+    animation: reading-progress linear;
+    animation-timeline: scroll();
+  }
+</style>
