@@ -26,6 +26,8 @@ const seoProps = {
   description: essay.data.description,
   title: essay.data.title,
   id,
+  ogType: "fiction" as const,
+  image: essay.data.image?.src,
 };
 ---
 

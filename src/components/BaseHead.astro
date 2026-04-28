@@ -6,24 +6,53 @@ import { VERTICAL_LINE_ENTITY } from "~/constants/entities";
 type Props = {
   description: string;
   title: string;
+  ogType?: "essay" | "fiction" | "til" | "note" | "default" | undefined; // Add undefined
+  image?: string | undefined;
 };
 
-const { siteTitle } = site;
+const { siteTitle, twitterUsername } = site;
 
-const { description, title } = Astro.props;
+const { description, title, ogType, image } = Astro.props;
 
-let pageTitle = title
+const pageTitle = title
   ? `${title} ${VERTICAL_LINE_ENTITY} ${siteTitle}`
   : siteTitle;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialURL = Astro.url;
+
+const twitterCard =
+  ogType === "essay" || ogType === "fiction"
+    ? "summary_large_image"
+    : "summary";
+
+const socialImage = image || "/placeholder-social.jpg";
+const socialImageURL = new URL(socialImage, Astro.url);
 ---
 
 <title>{pageTitle}</title>
+<meta name="title" content={pageTitle} />
 <meta name="description" content={description} />
 <meta
   name="robots"
   content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 />
 <link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content={socialURL} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImageURL} />
+
+<meta property="twitter:card" content={twitterCard} />
+<meta property="twitter:url" content={socialURL} />
+<meta property="twitter:title" content={pageTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={socialImageURL} />
+{
+  twitterUsername && (
+    <meta name="twitter:creator" content={`@${twitterUsername}`} />
+  )
+}
 <ColorMode />

@@ -25,6 +25,8 @@ const seoProps = {
   description: note.data.description,
   title: note.data.title,
   id,
+  ogType: "note" as const,
+  image: note.data.image?.src,
 };
 ---
 

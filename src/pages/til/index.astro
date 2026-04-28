@@ -10,38 +10,52 @@ const sortedTIL = formatContent<"til">(tilCollection);
 const seoProps = {
   description: "Things I've learned.",
   id: "til",
-  title: "TIL",
+  title: "Today I Learned",
+  ogType: "til" as const,
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
-    <div
+  <section
+    class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28"
+    aria-labelledby="til-heading"
+  >
+    <header
       class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
-      <AppTitle>{seoProps.title}</AppTitle>
+      <AppTitle id="til-heading">{seoProps.title}</AppTitle>
 
       <p>{seoProps.description}</p>
-      <hr />
-    </div>
+      <hr aria-hidden="true" />
+    </header>
 
-    <section class="dark:bg-dark relative mx-auto mt-12 max-w-3xl bg-white">
-      {
-        sortedTIL.map((til) => (
-          <div class="container mx-auto px-5 py-4">
-            <div class="py-4">
-              <div class="md:grow">
-                <h2 class="text-brand-red dark:text-brand-red-dark text-2xl font-semibold hover:text-gray-900 dark:hover:text-white">
-                  <a href={`/til/${til.id}`}>{til.data.title}</a>
-                </h2>
-                <p class="mt-3 text-base dark:text-gray-400">
-                  {til.data.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </section>
-  </div>
+    <div class="dark:bg-dark relative mx-auto mt-12 max-w-3xl bg-white">
+      <ul class="m-0 list-none p-0">
+        {
+          sortedTIL.map((til) => (
+            <li>
+              <article
+                class="container mx-auto px-5 py-4"
+                aria-labelledby={`til-title-${til.id}`}
+              >
+                <div class="py-4">
+                  <div class="md:grow">
+                    <h2
+                      id={`til-title-${til.id}`}
+                      class="text-brand-red dark:text-brand-red-dark text-2xl font-semibold hover:text-gray-900 dark:hover:text-white"
+                    >
+                      <a href={`/til/${til.id}`}>{til.data.title}</a>
+                    </h2>
+                    <p class="mt-3 text-base dark:text-gray-400">
+                      {til.data.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

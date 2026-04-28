@@ -18,6 +18,7 @@ const seoProps = {
   description: `${author}'s essays, blog, tweetstorms and book notes. A personal site.`,
   id: "",
   title: "",
+  ogType: "essay" as const,
 };
 
 const recentCTA = "All Essays";
@@ -26,46 +27,51 @@ const recentCTA = "All Essays";
 <BaseLayout {...seoProps}>
   <TheHero />
 
-  <div
+  <section
     class="container mx-auto mt-30 max-w-6xl px-4 pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28"
+    aria-labelledby="recent-articles-heading"
   >
-    <div>
-      <h2
-        class="text-xl leading-9 font-bold tracking-tight text-zinc-900 sm:text-4xl sm:leading-10 dark:text-zinc-50"
-      >
-        Recent articles
-      </h2>
-    </div>
-    <div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16">
+    <h2
+      id="recent-articles-heading"
+      class="text-xl leading-9 font-bold tracking-tight text-zinc-900 sm:text-4xl sm:leading-10 dark:text-zinc-50"
+    >
+      Recent articles
+    </h2>
+    <ul class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16">
       {
         sortedEssays.map(({ data: { date, title, description }, id }) => (
-          <div>
-            <div class="flex items-baseline">
-              <div class="mr-8 flex text-sm leading-5 text-zinc-700 dark:text-zinc-400">
-                <time datetime={date.toString()}>{formatDate(date)}</time>
+          <li>
+            <article>
+              <div class="flex items-baseline">
+                <div class="mr-8 flex text-sm leading-5 text-zinc-700 dark:text-zinc-400">
+                  <time datetime={date.toString()}>{formatDate(date)}</time>
+                </div>
               </div>
-            </div>
 
-            <a href={`/${id}`} class="group">
-              <h3 class="text-brand-red dark:text-brand-red-dark mt-4 text-xl leading-7 font-semibold filter hover:underline hover:brightness-125">
-                {title}
-              </h3>
+              <a
+                href={`/${id}`}
+                class="group focus:ring-brand-red dark:focus:ring-brand-red-dark block rounded focus:ring-2 focus:ring-offset-8 focus:outline-none"
+              >
+                <h3 class="text-brand-red dark:text-brand-red-dark mt-4 text-xl leading-7 font-semibold filter hover:underline hover:brightness-125">
+                  {title}
+                </h3>
 
-              <p class="mt-3 text-base leading-6 text-zinc-700 dark:text-zinc-200">
-                {description}
-              </p>
-            </a>
-          </div>
+                <p class="mt-3 text-base leading-6 text-zinc-700 dark:text-zinc-200">
+                  {description}
+                </p>
+              </a>
+            </article>
+          </li>
         ))
       }
 
       <div class="mx-auto flex items-center">
-        <a href="/essays" aria-label="Read More Essays">
-          <AppButton cta={recentCTA}>
+        <AppButton cta={recentCTA} href="/essays" ariaLabel="Browse my essays">
+          <span slot="ctaIcon" aria-hidden="true">
             <IcBaselineArrowRightAlt />
-          </AppButton>
-        </a>
+          </span>
+        </AppButton>
       </div>
-    </div>
-  </div>
+    </ul>
+  </section>
 </BaseLayout>

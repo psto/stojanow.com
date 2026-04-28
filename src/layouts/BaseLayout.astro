@@ -8,9 +8,11 @@ import site from "~/config/site";
 type Props = {
   description: string;
   title: string;
+  ogType?: "essay" | "fiction" | "til" | "note" | "default";
+  image?: string | undefined;
 };
 
-const { description, title } = Astro.props;
+const { description, title, ogType, image } = Astro.props;
 const { siteLanguage: lang } = site;
 ---
 
@@ -18,6 +20,7 @@ const { siteLanguage: lang } = site;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link
@@ -26,18 +29,26 @@ const { siteLanguage: lang } = site;
       type="image/png"
       sizes="16x16"
     />
-    <BaseHead {description} {title} />
+    <BaseHead {description} {title} {ogType} {image} />
   </head>
   <body
     class="base-layout dark:bg-dark grid grid-rows-[auto,1fr,auto] bg-white"
   >
+    <a
+      href="#main-content"
+      class="dark:focus:bg-dark focus:text-dark sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:shadow-md dark:focus:text-white"
+    >
+      Skip to content
+    </a>
+
     <TheNavigation />
-    <div class="flex flex-col">
-      <div class="pt-4 md:pt-8">
-        <slot />
-      </div>
-    </div>
+
+    <main id="main-content" class="flex flex-col pt-4 md:pt-8">
+      <slot />
+    </main>
+
     <TheFooter />
+
     <style>
       /* when dvh is not supported fallback to vh  */
       .base-layout {

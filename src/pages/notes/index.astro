@@ -14,18 +14,22 @@ const seoProps = {
   description: `${author}'s book notes. Detailed notes on books I've read. If a book is here, then it's recommended.`,
   id: "notes",
   title: "Notes",
+  ogType: "note" as const,
 };
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
-    <div
+  <section
+    class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28"
+    aria-labelledby="notes-title"
+  >
+    <header
       class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
-      <AppTitle>{seoProps.title}</AppTitle>
-      <hr />
-    </div>
+      <AppTitle id="notes-title">{seoProps.title}</AppTitle>
+      <hr aria-hidden="true" />
+    </header>
 
     <PostsIndex posts={sortedNotes} prefix="notes" />
-  </div>
+  </section>
 </BaseLayout>
