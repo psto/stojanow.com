@@ -7,15 +7,22 @@ type Props = {
 };
 
 const { ariaLabel, href, className, style } = Astro.props;
+
+const accessibilityLabel = ariaLabel
+  ? ariaLabel.includes("new tab")
+    ? ariaLabel
+    : `${ariaLabel} (opens in a new tab)`
+  : undefined;
 ---
 
 <a
-  aria-label={ariaLabel}
-  class={className}
   href={href}
-  rel="nofollow noopener noreferrer"
-  target="_blank"
+  class={className}
   style={style}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  aria-label={accessibilityLabel}
 >
   <slot />
+  {!accessibilityLabel && <span class="sr-only"> (opens in a new tab)</span>}
 </a>

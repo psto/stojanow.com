@@ -51,51 +51,50 @@ const footerItems = [
 ];
 ---
 
-<footer class="mx-auto mt-auto max-w-3xl px-4 pt-8 pb-8 md:pt-0">
-  <div class="mx-auto py-12">
-    <div
+<footer class="mx-auto mt-auto max-w-3xl px-4 py-12 pt-8 pb-8 md:pt-0">
+  <nav aria-label="Footer Navigation">
+    <ul
       class="text-brand-red dark:text-brand-red-dark flex flex-wrap items-baseline justify-center"
     >
       {
-        footerItems.map((item) => {
-          {
-            return item.externalLink ? (
+        footerItems.map((item) => (
+          <li class="sm:mr-2">
+            {item.externalLink ? (
               <ExternalLink
-                href={`${item.href}`}
-                className="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
+                href={item.href}
+                className="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125"
+                ariaLabel={`${item.label} (opens in a new tab)`}
               >
-                {<item.icon />}{" "}
+                <item.icon aria-hidden="true" focusable="false" />
                 <span class="hover:text-brand-red dark:hover:text-brand-red-dark text-zinc-700 dark:text-zinc-400">
                   {item.label}
-                  <span />
                 </span>
               </ExternalLink>
             ) : (
               <a
-                href={`${item.href}`}
-                class="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125 sm:mr-2"
+                href={item.href}
+                class="flex items-center gap-1 border-0 p-2 no-underline filter hover:brightness-125"
               >
-                {<item.icon />}{" "}
+                <item.icon aria-hidden="true" focusable="false" />
                 <span class="hover:text-brand-red dark:hover:text-brand-red-dark text-zinc-700 dark:text-zinc-400">
                   {item.label}
-                  <span />
                 </span>
               </a>
-            );
-          }
-        })
+            )}
+          </li>
+        ))
       }
-    </div>
+    </ul>
+  </nav>
 
-    <div
-      class="m-0 block p-2 text-center text-xs leading-normal text-zinc-600 dark:text-zinc-400"
-    >
-      <a
-        href="/copyright"
-        class="text-brand-red dark:text-brand-red-dark underline filter hover:text-black hover:brightness-125 dark:hover:text-white"
-        >CC BY-NC 4.0
-      </a>
-      {`${COPYRIGHT_ENTITY} ${author}`}
-    </div>
-  </div>
+  <section
+    class="m-0 block p-2 text-center text-xs leading-normal text-zinc-600 dark:text-zinc-400"
+  >
+    <a
+      href="/copyright"
+      class="text-brand-red dark:text-brand-red-dark underline filter hover:text-black hover:brightness-125 dark:hover:text-white"
+      >CC BY-NC 4.0
+    </a>
+    <span>{`${COPYRIGHT_ENTITY} ${author}`}</span>
+  </section>
 </footer>

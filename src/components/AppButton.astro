@@ -1,14 +1,38 @@
 ---
 type Props = {
   cta: string;
+  href?: string;
+  as?: "span";
+  ariaLabel?: string;
 };
 
-const { cta = "Read More" } = Astro.props;
+const { cta = "Read More", href, as, ariaLabel } = Astro.props;
+
+const classes = [
+  "border-brand-red text-brand-red hover:bg-brand-red",
+  "dark:border-brand-red-dark dark:bg-dark dark:text-brand-red-dark dark:hover:bg-brand-red-dark",
+  "inline-flex transform cursor-pointer items-center gap-2 rounded-md border bg-white",
+  "px-4 py-2 text-lg leading-6 font-medium no-underline transition duration-300",
+  "hover:text-white hover:brightness-125 md:px-8 md:py-4 md:text-xl dark:hover:text-black",
+  "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 dark:focus-visible:ring-brand-red-dark dark:focus-visible:ring-offset-black",
+].join(" ");
 ---
 
-<button
-  class="border-brand-red text-brand-red hover:bg-brand-red dark:border-brand-red-dark dark:bg-dark dark:text-brand-red-dark dark:hover:bg-brand-red-dark flex transform cursor-pointer items-center gap-1 rounded-md border bg-white px-4 py-2 text-lg leading-6 font-medium transition duration-300 hover:text-white hover:brightness-125 md:px-8 md:py-4 md:text-xl dark:hover:text-black"
->
-  <span>{cta}</span>
-  <slot name="ctaIcon" />
-</button>
+{
+  as === "span" ? (
+    <span class={classes}>
+      <span>{cta}</span>
+      <slot name="ctaIcon" />
+    </span>
+  ) : href ? (
+    <a href={href} class={classes} aria-label={ariaLabel}>
+      <span>{cta}</span>
+      <slot name="ctaIcon" />
+    </a>
+  ) : (
+    <button type="button" class={classes} aria-label={ariaLabel}>
+      <span>{cta}</span>
+      <slot name="ctaIcon" />
+    </button>
+  )
+}

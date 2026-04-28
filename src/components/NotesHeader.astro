@@ -12,10 +12,18 @@ const { note } = Astro.props;
 ---
 
 <header>
-  <div class="content flex py-2">
+  <div class="content flex flex-col items-center gap-6 py-2 md:flex-row">
+    <div class="item-body w-full md:flex-1">
+      <h1
+        class="p-name text-center text-3xl font-bold md:text-left md:text-4xl"
+      >
+        {note.data.title}
+      </h1>
+    </div>
+
     {
       note.data.image && (
-        <div class="flex-1">
+        <div class="mx-auto shrink-0 md:mx-0">
           <ExternalLink
             ariaLabel="Amazon smile book link"
             href={note.data.amazon}
@@ -23,22 +31,20 @@ const { note } = Astro.props;
             <Image
               src={note.data.image}
               alt={`${note.data.title} cover`}
-              class="mr-4 rounded-sm border-2 border-gray-200 object-fill dark:border-gray-600"
+              width={200}
+              height={300}
+              class="rounded-sm border-2 border-gray-200 object-contain shadow-md dark:border-gray-600"
               loading="eager"
             />
           </ExternalLink>
         </div>
       )
     }
-    <div class="item-body flex-1 px-2">
-      <h2 class="p-name mb-4 text-center md:text-4xl lg:mb-8">
-        {note.data.title}
-      </h2>
-    </div>
   </div>
-  <div>
+
+  <div class="mt-6">
     <small>
-      Date read:
+      <strong>Date read:</strong>
       <time datetime={note.data.dateRead.toString()} class="italic">
         {formatDate(note.data.dateRead)}
       </time>
@@ -46,8 +52,8 @@ const { note } = Astro.props;
       Check out <ExternalLink href={note.data.amazon}>Amazon</ExternalLink> for more
       details and reviews.
     </small>
-    <p>{note.data.description}</p>
+    <p class="mt-4 leading-relaxed">{note.data.description}</p>
   </div>
 
-  <hr />
+  <hr aria-hidden="true" />
 </header>

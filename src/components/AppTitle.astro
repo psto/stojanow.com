@@ -1,3 +1,12 @@
-<h1 class="mb-4 text-center lg:mb-8">
+---
+type Props = {
+  id?: string;
+  className?: string;
+};
+
+const { id, className = "" } = Astro.props;
+---
+
+<h1 id={id} class={`mb-4 text-center lg:mb-8 ${className}`}>
   <slot />
 </h1>

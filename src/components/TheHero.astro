@@ -11,38 +11,44 @@ const { author, twitterUsername } = site;
 const heroCTA = "Start Here";
 ---
 
-<section class="overflow-hidden py-12 md:py-20 lg:py-24">
+<section
+  class="overflow-hidden py-12 md:py-20 lg:py-24"
+  aria-label="Introduction"
+>
   <TheNodes />
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="relative">
-      <blockquote class="text-zinc-900 dark:text-zinc-50">
+      <div class="text-zinc-900 dark:text-zinc-50">
         <div class="mb-4 flex items-center justify-center">
           <Image
             src={avatar}
-            alt={`${author}'s avatar`}
+            alt=""
             height={avatar.height}
             width={avatar.width}
             class="mx-auto h-14 w-14 rounded-full md:h-20 md:w-20"
+            role="presentation"
           />
         </div>
         <div
           class="mx-auto grid max-w-3xl place-items-center text-center text-lg leading-9 font-medium md:text-2xl xl:text-3xl"
         >
           <p>
-            Hi, I’m
+            Hi, I'm
             <ExternalLink
               href={`https://twitter.com/${twitterUsername}`}
               className="text-brand-red dark:text-brand-red-dark filter hover:brightness-125"
+              ariaLabel={`${author} on twitter (opens in new tab)`}
             >
               {author}<span class="text-zinc-900 dark:text-zinc-50">.</span>
-            </ExternalLink> I write on the intersection of technology and history.
-            Want to learn more about me?
+            </ExternalLink>
+            I write on the intersection of technology and history. Want to learn more
+            about me?
           </p>
-          <a href="/essays" class="mt-4">
-            <AppButton cta={heroCTA} />
+          <a href="/essays" class="mt-4" aria-label="View all my essays">
+            <AppButton cta={heroCTA} as="span" />
           </a>
         </div>
-      </blockquote>
+      </div>
     </div>
   </div>
 </section>
