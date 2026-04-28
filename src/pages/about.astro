@@ -4,7 +4,7 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
 import site from "~/config/site";
 
-const { author } = site;
+const { author, twitterUsername } = site;
 const seoProps = {
   description: `About ${author}`,
   id: "About",
@@ -13,20 +13,28 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div
+  <article
     class="prose dark:prose-dark relative mx-auto max-w-2xl px-4 pt-16 lg:pt-24"
+    aria-labelledby="about-heading"
   >
-    <div class="lg:prose-lg mx-auto px-4 text-center md:pt-0">
-      <AppTitle>{seoProps.title}</AppTitle>
-      <hr />
-    </div>
+    <header class="lg:prose-lg mx-auto px-4 text-center md:pt-0">
+      <AppTitle id="about-heading">{seoProps.title}</AppTitle>
+      <hr aria-hidden="true" />
+    </header>
 
     <div class="relative mx-auto mt-8 max-w-2xl">
-      <blockquote>
-        "All you have to do is write one true sentence. Write the truest
-        sentence that you know. So finally I would write one true sentence, and
-        then go on from there." — Ernest Hemingway
-      </blockquote>
+      <figure>
+        <blockquote
+          class="text-xl leading-relaxed text-zinc-800 dark:text-zinc-200"
+        >
+          "All you have to do is write one true sentence. Write the truest
+          sentence that you know. So finally I would write one true sentence,
+          and then go on from there."
+        </blockquote>
+        <figcaption class="mt-2 text-right text-sm font-medium text-zinc-500">
+          — Ernest Hemingway, <cite>A Moveable Feast</cite>
+        </figcaption>
+      </figure>
 
       <p>
         All my attempts to distill what I know to one true sentence at a time. I
@@ -35,18 +43,16 @@ const seoProps = {
         > of things I know.
       </p>
 
-      <p>A taste of subjects I write about:</p>
-
-      <p class="text-center">
+      <footer class="text-center">
         <a href="/contact" class="filter hover:underline">Email me</a>
         or say hi on
         <ExternalLink
-          href="http://twitter.com/piotrstojanow"
+          href={`http://twitter.com/${twitterUsername}`}
           className="mr-4 p-0 filter hover:underline sm:mr-2"
         >
-          twitter 🐦
+          twitter <span aria-hidden="true">🐦</span>
         </ExternalLink>
-      </p>
+      </footer>
     </div>
-  </div>
+  </article>
 </BaseLayout>

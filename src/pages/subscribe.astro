@@ -15,33 +15,54 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div
+  <article
     class="prose dark:prose-dark relative mx-auto max-w-2xl px-4 pt-16 text-center lg:pt-24"
+    aria-labelledby="subscribe-heading"
   >
-    <div
+    <header
       class="prose dark:prose-dark lg:prose-lg mx-auto px-4 text-center md:pt-0"
     >
-      <AppTitle>{seoProps.title}</AppTitle>
-      <hr />
+      <AppTitle id="subscribe-heading">{seoProps.title}</AppTitle>
+      <hr aria-hidden="true" />
+    </header>
+
+    <div>
+      <section aria-label="Email subscription form">
+        <SubscriptionForm />
+
+        <p>
+          Newsletter link if can't see the form:
+          <ExternalLink
+            href={`${substackUrl}`}
+            ariaLabel="subscribe (opens in new tab)"
+          >
+            subscribe directly on Substack <span aria-hidden="true">🔔</span>
+          </ExternalLink>
+        </p>
+      </section>
+
+      <nav aria-label="Alternative subscription methods">
+        <p>
+          If you prefer "ancient" web technology like <b>RSS</b> 😉, then a
+          <ExternalLink
+            href="/feed.xml"
+            ariaLabel="RSS feed (opens in new tab)"
+          >
+            RSS feed is available <span aria-hidden="true">✅</span>
+          </ExternalLink>
+        </p>
+        <p>
+          Also, you can find me on
+          <ExternalLink
+            href={`http://twitter.com/${twitterUsername}`}
+            ariaLabel="twitter (opens in new tab)"
+          >
+            twitter <span aria-hidden="true">🐦</span>
+          </ExternalLink>
+          or get in touch through
+          <a href="/contact">Email <span aria-hidden="true">📧</span></a>
+        </p>
+      </nav>
     </div>
-
-    <SubscriptionForm />
-
-    <p>
-      Newsletter link if can't see the form:
-      <ExternalLink href={`${substackUrl}`}> subscribe 🔔 </ExternalLink>
-    </p>
-    <p>
-      If you prefer "ancient" web technology like <b>RSS</b> 😉, then a
-      <a href="/feed.xml" target="_blank">feed is available ✅</a>
-    </p>
-    <p>
-      Also, you can find me on
-      <ExternalLink href={`http://twitter.com/${twitterUsername}`}>
-        twitter 🐦
-      </ExternalLink>
-      or get in touch through
-      <a href="/contact">email 📧</a>
-    </p>
-  </div>
+  </article>
 </BaseLayout>

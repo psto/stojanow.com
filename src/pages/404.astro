@@ -3,28 +3,37 @@ import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import TheDonQuixote from "~/components/TheDonQuixote.astro";
 
-const title = "Page not found 😣";
+const title = "Page not found";
+const emoji = "😣";
 ---
 
 <BaseLayout
-  title={title}
-  description="Check out my other resources on the homepage."
+  title={`${title} ${emoji}`}
+  description="The page you are looking for doesn't exist. Check out my recent essays or contact me to report a broken link."
 >
   <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
-    <div
+    <header
       class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
-      <AppTitle>{title}</AppTitle>
-    </div>
-    <div class="prose dark:prose-dark mx-auto mt-12 max-w-2xl text-center">
+      <AppTitle id="error-title">
+        {title}
+        <span aria-hidden="true">{emoji}</span>
+      </AppTitle>
+    </header>
+    <section
+      class="prose dark:prose-dark mx-auto mt-12 max-w-2xl text-center"
+      aria-labelledby="error-title"
+    >
       <p>
         If this was my fault (like a bad link) I'd appreciate a
         <a href="/contact">heads up</a>.
       </p>
-      <p>You can also check out my recent <a href="/essays">essays</a>.</p>
-      <div class="flex justify-center">
+      <p>
+        You can also check out my recent <a href="/essays">essays</a>.
+      </p>
+      <div class="flex justify-center" aria-hidden="true">
         <TheDonQuixote />
       </div>
-    </div>
+    </section>
   </div>
 </BaseLayout>
