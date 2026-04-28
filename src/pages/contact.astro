@@ -4,8 +4,11 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import ExternalLink from "~/components/ExternalLink.astro";
 import site from "~/config/site";
 import TheDove from "~/components/TheDove.astro";
+import IcBaselineContentCopy from "~icons/ic/baseline-content-copy";
 
-const { author, substackUrl, twitterUsername } = site;
+const { author, substackUrl, twitterUsername, contactEmail } = site;
+
+const [emailUser, emailDomain] = contactEmail.split("@");
 
 const seoProps = {
   description: `Contact ${author} by email or twitter, subscribe to the newsletter or the RSS feed.`,
@@ -15,35 +18,126 @@ const seoProps = {
 ---
 
 <BaseLayout {...seoProps}>
-  <div class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
-    <div
+  <article
+    class="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28"
+    aria-labelledby="contact-heading"
+  >
+    <header
       class="prose dark:prose-dark lg:prose-lg mx-auto max-w-2xl px-4 text-center md:pt-0"
     >
-      <AppTitle>{seoProps.title}</AppTitle>
-      <hr />
-      <div class="flex justify-center">
+      <AppTitle id="contact-heading">{seoProps.title}</AppTitle>
+      <hr aria-hidden="true" />
+      <div class="flex justify-center" aria-hidden="true">
         <TheDove />
       </div>
-    </div>
-    <div class="prose dark:prose-dark mx-auto mt-12 max-w-2xl text-center">
-      <p>
-        <strong>piotr</strong><span class="text-zinc-600 dark:text-zinc-400"
-          >&</span
-        ><strong>stojanow@gmail.com</strong>
-        <span class="text-zinc-600 dark:text-zinc-400">(without the &)</span> 📧
-        <br />
-        Get in touch on
-        <ExternalLink
-          href={`https://twitter.com/${twitterUsername}`}
-          className="filter hover:underline"
-        >
-          twitter 🐦
-        </ExternalLink>
-        <br />
-        <ExternalLink href={`${substackUrl}`} className="hover:underline">
-          Subscribe 🔔
-        </ExternalLink>
-      </p>
-    </div>
-  </div>
+    </header>
+
+    <section
+      class="prose dark:prose-dark mx-auto mt-12 max-w-2xl text-center"
+      aria-labelledby="til-heading"
+    >
+      <address class="not-italic">
+        <ul class="m-0 list-none space-y-4 p-0">
+          <li class="flex items-center justify-center gap-2">
+            <a
+              href="javascript:void(0)"
+              id="email-link"
+              class="email-link font-bold hover:underline"
+              data-user={emailUser}
+              data-domain={emailDomain}
+              aria-label="Send an email (opens mail application)"
+            >
+              Email me <span aria-hidden="true">📧</span>
+            </a>
+
+            <button
+              id="copy-btn"
+              class="hover:text-brand-red hover:dark:text-brand-red-dark inline-flex items-center justify-center rounded-lg px-3 py-1 text-sm transition-all duration-75 active:translate-y-0.5 active:scale-95"
+              aria-label="Copy email address to clipboard"
+            >
+              <IcBaselineContentCopy class="mr-1" aria-hidden="true" />
+              <span id="copy-text">copy email</span>
+            </button>
+          </li>
+
+          <li>
+            <span>Get in touch on</span>
+            <ExternalLink
+              href={`https://twitter.com/${twitterUsername}`}
+              className="filter hover:underline"
+              ariaLabel="twitter (opens in new tab)"
+            >
+              twitter <span aria-hidden="true">🐦</span>
+            </ExternalLink>
+          </li>
+
+          <li>
+            <ExternalLink
+              href={`${substackUrl}`}
+              className="hover:underline"
+              ariaLabel="subscribe (opens in new tab)"
+            >
+              Subscribe <span aria-hidden="true">🔔</span>
+            </ExternalLink>
+          </li>
+        </ul>
+      </address>
+    </section>
+    <div id="copy-status" class="sr-only" aria-live="polite"></div>
+  </article>
 </BaseLayout>
+
+<script>
+  const emailLink = document.getElementById("email-link") as HTMLAnchorElement;
+
+  function getEmail() {
+    const user = emailLink?.dataset.user;
+    const domain = emailLink?.dataset.domain;
+    return user && domain ? `${user}@${domain}` : "";
+  }
+
+  const hydrate = () => {
+    const email = getEmail();
+    if (emailLink && email && emailLink.href.indexOf("mailto") === -1) {
+      emailLink.href = `mailto:${email}`;
+    }
+  };
+
+  emailLink?.addEventListener("mouseenter", hydrate);
+  emailLink?.addEventListener("focus", hydrate);
+  emailLink?.addEventListener("touchstart", hydrate, { passive: true });
+
+  emailLink?.addEventListener("click", (e: MouseEvent) => {
+    const email = getEmail();
+    if (email) {
+      e.preventDefault();
+      window.location.href = `mailto:${email}`;
+    } else {
+      e.preventDefault();
+    }
+  });
+
+  document.getElementById("copy-btn")?.addEventListener("click", async () => {
+    const email = getEmail();
+    if (!email) return;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      const copyText = document.getElementById("copy-text");
+      const copyStatus = document.getElementById("copy-status");
+
+      const originalText = copyText?.textContent || "copy email";
+
+      if (copyText) copyText.textContent = "copied!";
+      if (copyStatus)
+        copyStatus.textContent = "Email address copied to clipboard";
+
+      setTimeout(() => {
+        if (copyText) copyText.textContent = originalText;
+        if (copyStatus) copyStatus.textContent = "";
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
+  });
+</script>
