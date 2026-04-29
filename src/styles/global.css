@@ -8,3 +8,11 @@
   --color-dark: #0f0d0c;
   --color-dark-light: #19171d;
 }
+
+/* Dark mode code highlighting for Shiki */
+html.dark pre.astro-code,
+html.dark .astro-code,
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--color-dark) !important;
+}
