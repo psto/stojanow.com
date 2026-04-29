@@ -6,36 +6,12 @@ import site from "~/config/site";
 const { siteDomain } = site;
 
 const navLinks = [
-  {
-    url: "/about",
-    label: "about",
-    externalLink: false,
-  },
-  {
-    url: "/essays",
-    label: "essays",
-    externalLink: false,
-  },
-  {
-    url: "/fiction",
-    label: "fiction",
-    externalLink: false,
-  },
-  {
-    url: "/notes",
-    label: "notes",
-    externalLink: false,
-  },
-  {
-    url: "/til",
-    label: "til",
-    externalLink: false,
-  },
-  {
-    url: "https://wiki.stojanow.com",
-    label: "wiki",
-    externalLink: true,
-  },
+  { url: "/about", label: "about", externalLink: false },
+  { url: "/essays", label: "essays", externalLink: false },
+  { url: "/fiction", label: "fiction", externalLink: false },
+  { url: "/notes", label: "notes", externalLink: false },
+  { url: "/til", label: "til", externalLink: false },
+  { url: "https://wiki.stojanow.com", label: "wiki", externalLink: true },
 ];
 ---
 
@@ -44,21 +20,43 @@ const navLinks = [
   const mobileMenuButton = document.getElementById("mobile-menu-button");
 
   function toggleMobileMenu() {
-    mobileMenu?.classList.toggle("hidden");
+    const isExpanded =
+      mobileMenuButton?.getAttribute("aria-expanded") === "true";
+    mobileMenuButton?.setAttribute("aria-expanded", (!isExpanded).toString());
+    mobileMenuButton?.setAttribute(
+      "aria-label",
+      isExpanded ? "Open menu" : "Close menu",
+    );
+
+    mobileMenu?.classList.toggle("man-h-0");
+    mobileMenu?.classList.toggle("opacity-0");
+    mobileMenu?.classList.toggle("max-h-96");
+    mobileMenu?.classList.toggle("opacity-100");
   }
 
   mobileMenuButton?.addEventListener("click", toggleMobileMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      mobileMenuButton?.getAttribute("aria-expanded") === "true"
+    ) {
+      toggleMobileMenu();
+      mobileMenuButton?.focus();
+    }
+  });
 </script>
 
-<nav>
+<nav aria-label="Primary">
   <div
     class="container mx-auto max-w-6xl px-6 py-4 md:flex md:items-center md:justify-between"
   >
     <div class="flex items-center justify-between">
       <div>
-        <a href="/" aria-label={`${siteDomain} logo`}>
+        <a href="/" aria-label={`${siteDomain} — home`}>
           <TheLogo
             class="image-overflow hover:text-brand-red dark:hover:text-brand-red-dark w-28 transform items-center fill-current text-black transition duration-300 dark:text-white"
+            aria-hidden="true"
           />
         </a>
       </div>
@@ -67,11 +65,15 @@ const navLinks = [
         <button
           id="mobile-menu-button"
           class="hover:text-brand-red focus:text-brand-red dark:hover:text-brand-red-dark dark:focus:text-brand-red-dark cursor-pointer p-2 text-gray-500 focus:outline-hidden dark:text-zinc-200"
-          title="Toggles light & dark"
-          aria-label="auto"
-          aria-live="polite"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
-          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+          <svg
+            viewBox="0 0 24 24"
+            class="h-6 w-6 fill-current"
+            aria-hidden="true"
+          >
             <path
               fill-rule="evenodd"
               d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -81,25 +83,38 @@ const navLinks = [
       </div>
     </div>
 
-    <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-    <div id="mobile-menu" class="hidden items-center md:flex">
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="max-h-0 items-center overflow-hidden opacity-0 transition-all duration-500 ease-in-out md:visible md:flex md:max-h-screen md:opacity-100"
+    >
       <ul class="flex flex-col items-center justify-center md:mx-6 md:flex-row">
         {
-          navLinks.map((nav) => (
-            <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:text-black hover:brightness-125 md:ml-6 dark:hover:text-white">
-              {nav.externalLink ? (
+          navLinks.map((nav) => {
+            const isActive =
+              Astro.url.pathname === nav.url ||
+              Astro.url.pathname === `${nav.url}/`;
+            return (
+              <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:text-black hover:brightness-125 md:ml-6 dark:hover:text-white">
                 <a
                   href={nav.url}
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
+                  class={`${isActive ? "text-black underline dark:text-white" : ""}`}
+                  target={nav.externalLink ? "_blank" : undefined}
+                  aria-current={isActive ? "page" : undefined}
+                  rel={
+                    nav.externalLink
+                      ? "nofollow noopener noreferrer"
+                      : undefined
+                  }
                 >
                   {nav.label}
+                  {nav.externalLink && (
+                    <span class="sr-only"> (opens in new tab)</span>
+                  )}
                 </a>
-              ) : (
-                <a href={nav.url}>{nav.label}</a>
-              )}
-            </li>
-          ))
+              </li>
+            );
+          })
         }
         <li
           class="text-brand-red dark:text-brand-red-dark my-2 grid px-2 font-medium filter hover:brightness-125 md:ml-6"
