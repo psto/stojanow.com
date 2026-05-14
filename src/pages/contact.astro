@@ -88,56 +88,62 @@ const seoProps = {
 </BaseLayout>
 
 <script>
-  const emailLink = document.getElementById("email-link") as HTMLAnchorElement;
+  function initContactPage() {
+    const emailLink = document.getElementById(
+      "email-link",
+    ) as HTMLAnchorElement;
 
-  function getEmail() {
-    const user = emailLink?.dataset.user;
-    const domain = emailLink?.dataset.domain;
-    return user && domain ? `${user}@${domain}` : "";
+    function getEmail() {
+      const user = emailLink?.dataset.user;
+      const domain = emailLink?.dataset.domain;
+      return user && domain ? `${user}@${domain}` : "";
+    }
+
+    const hydrate = () => {
+      const email = getEmail();
+      if (emailLink && email && emailLink.href.indexOf("mailto") === -1) {
+        emailLink.href = `mailto:${email}`;
+      }
+    };
+
+    emailLink?.addEventListener("mouseenter", hydrate);
+    emailLink?.addEventListener("focus", hydrate);
+    emailLink?.addEventListener("touchstart", hydrate, { passive: true });
+
+    emailLink?.addEventListener("click", (e: MouseEvent) => {
+      const email = getEmail();
+      if (email) {
+        e.preventDefault();
+        window.location.href = `mailto:${email}`;
+      } else {
+        e.preventDefault();
+      }
+    });
+
+    document.getElementById("copy-btn")?.addEventListener("click", async () => {
+      const email = getEmail();
+      if (!email) return;
+
+      try {
+        await navigator.clipboard.writeText(email);
+        const copyText = document.getElementById("copy-text");
+        const copyStatus = document.getElementById("copy-status");
+
+        const originalText = copyText?.textContent || "copy email";
+
+        if (copyText) copyText.textContent = "copied!";
+        if (copyStatus)
+          copyStatus.textContent = "Email address copied to clipboard";
+
+        setTimeout(() => {
+          if (copyText) copyText.textContent = originalText;
+          if (copyStatus) copyStatus.textContent = "";
+        }, 2000);
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+    });
   }
 
-  const hydrate = () => {
-    const email = getEmail();
-    if (emailLink && email && emailLink.href.indexOf("mailto") === -1) {
-      emailLink.href = `mailto:${email}`;
-    }
-  };
-
-  emailLink?.addEventListener("mouseenter", hydrate);
-  emailLink?.addEventListener("focus", hydrate);
-  emailLink?.addEventListener("touchstart", hydrate, { passive: true });
-
-  emailLink?.addEventListener("click", (e: MouseEvent) => {
-    const email = getEmail();
-    if (email) {
-      e.preventDefault();
-      window.location.href = `mailto:${email}`;
-    } else {
-      e.preventDefault();
-    }
-  });
-
-  document.getElementById("copy-btn")?.addEventListener("click", async () => {
-    const email = getEmail();
-    if (!email) return;
-
-    try {
-      await navigator.clipboard.writeText(email);
-      const copyText = document.getElementById("copy-text");
-      const copyStatus = document.getElementById("copy-status");
-
-      const originalText = copyText?.textContent || "copy email";
-
-      if (copyText) copyText.textContent = "copied!";
-      if (copyStatus)
-        copyStatus.textContent = "Email address copied to clipboard";
-
-      setTimeout(() => {
-        if (copyText) copyText.textContent = originalText;
-        if (copyStatus) copyStatus.textContent = "";
-      }, 2000);
-    } catch (err) {
-      console.error("Copy failed", err);
-    }
-  });
+  document.addEventListener("astro:page-load", initContactPage);
 </script>

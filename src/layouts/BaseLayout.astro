@@ -1,5 +1,6 @@
 ---
 import "~/styles/global.css";
+import { ClientRouter } from "astro:transitions";
 import BaseHead from "~/components/BaseHead.astro";
 import TheNavigation from "~/components/TheNavigation.astro";
 import TheFooter from "~/components/TheFooter.astro";
@@ -30,6 +31,7 @@ const { siteLanguage: lang } = site;
       sizes="16x16"
     />
     <BaseHead {description} {title} {ogType} {image} />
+    <ClientRouter />
   </head>
   <body
     class="base-layout dark:bg-dark grid grid-rows-[auto,1fr,auto] bg-white"

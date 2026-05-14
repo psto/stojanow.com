@@ -28,7 +28,7 @@ const navLinks = [
       isExpanded ? "Open menu" : "Close menu",
     );
 
-    mobileMenu?.classList.toggle("man-h-0");
+    mobileMenu?.classList.toggle("max-h-0");
     mobileMenu?.classList.toggle("opacity-0");
     mobileMenu?.classList.toggle("max-h-96");
     mobileMenu?.classList.toggle("opacity-100");
@@ -45,9 +45,35 @@ const navLinks = [
       mobileMenuButton?.focus();
     }
   });
+
+  function updateActiveLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll<HTMLElement>("[data-nav-url]");
+
+    navLinks.forEach((link) => {
+      const navUrl = link.dataset.navUrl;
+      const isActive = currentPath === navUrl || currentPath === `${navUrl}/`;
+
+      if (isActive) {
+        link.classList.add("text-black", "border-current", "dark:text-white");
+        link.classList.remove("border-transparent");
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.classList.remove(
+          "text-black",
+          "border-current",
+          "dark:text-white",
+        );
+        link.classList.add("border-transparent");
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  document.addEventListener("astro:after-swap", updateActiveLink);
 </script>
 
-<nav aria-label="Primary">
+<nav transition:persist aria-label="Primary">
   <div
     class="container mx-auto max-w-6xl px-6 py-4 md:flex md:items-center md:justify-between"
   >
@@ -97,7 +123,8 @@ const navLinks = [
               <li class="text-brand-red dark:text-brand-red-dark my-2 font-medium filter hover:text-black hover:brightness-125 md:ml-6 dark:hover:text-white">
                 <a
                   href={nav.url}
-                  class={`${isActive ? "text-black underline dark:text-white" : ""}`}
+                  data-nav-url={nav.externalLink ? undefined : nav.url}
+                  class={`border-b-2 ${isActive ? "border-current text-black dark:text-white" : "border-transparent"}`}
                   target={nav.externalLink ? "_blank" : undefined}
                   aria-current={isActive ? "page" : undefined}
                   rel={

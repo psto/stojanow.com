@@ -42,20 +42,17 @@
   }
 </style>
 
-<script is:inline>
-  if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-</script>
-
 <script>
-  const handleToggleClick = () => {
+let themeToggleHandler: (() => void) | null = null;
+
+function initThemeToggle() {
+  const button = document.getElementById("themeToggle");
+
+  if (themeToggleHandler) {
+    button?.removeEventListener("click", themeToggleHandler);
+  }
+
+  themeToggleHandler = () => {
     const element = document.documentElement;
     element.classList.toggle("dark");
 
@@ -65,7 +62,8 @@
     button?.classList.toggle("rotate-360");
   };
 
-  const button = window?.document.getElementById("themeToggle");
+  button?.addEventListener("click", themeToggleHandler);
+}
 
-  button?.addEventListener("click", handleToggleClick);
+document.addEventListener("astro:page-load", initThemeToggle);
 </script>
