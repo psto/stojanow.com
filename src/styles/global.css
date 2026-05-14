@@ -2,6 +2,10 @@
 @plugin "@tailwindcss/typography";
 @config "../../tailwind.config.cjs";
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @theme {
   --color-brand-red: #cc3535;
   --color-brand-red-dark: #cb5f5d;
