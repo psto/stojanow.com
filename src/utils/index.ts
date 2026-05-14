@@ -1,6 +1,10 @@
 import type { CollectionEntry } from "astro:content";
 import { collections } from "~/content.config";
 
+export function toISODate(dateStr: string | Date): string {
+  return new Date(dateStr).toLocaleDateString("en-CA");
+}
+
 export function formatDate(dateStr: string | Date) {
   return new Date(dateStr).toLocaleDateString("en", {
     year: "numeric",

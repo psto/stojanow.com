@@ -2,7 +2,7 @@
 import AppTitle from "~/components/AppTitle.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { formatContent } from "~/utils";
+import { formatContent, toISODate } from "~/utils";
 
 const tilCollection = await getCollection("til");
 const sortedTIL = formatContent<"til">(tilCollection);
@@ -29,7 +29,9 @@ const seoProps = {
       <hr aria-hidden="true" />
     </header>
 
-    <div class="dark:bg-dark relative mx-auto mt-12 max-w-3xl bg-white">
+    <div
+      class="dark:bg-dark relative mx-auto mt-12 max-w-3xl bg-white text-black dark:text-gray-400"
+    >
       <ul class="m-0 list-none p-0">
         {
           sortedTIL.map((til) => (
@@ -40,15 +42,20 @@ const seoProps = {
               >
                 <div class="py-4">
                   <div class="md:grow">
-                    <h2
-                      id={`til-title-${til.id}`}
-                      class="text-brand-red dark:text-brand-red-dark text-2xl font-semibold hover:text-gray-900 dark:hover:text-white"
-                    >
-                      <a href={`/til/${til.id}`}>{til.data.title}</a>
-                    </h2>
-                    <p class="mt-3 text-base dark:text-gray-400">
-                      {til.data.description}
-                    </p>
+                    <div class="items-baseline justify-between md:flex">
+                      <h2
+                        id={`til-title-${til.id}`}
+                        class="text-brand-red dark:text-brand-red-dark mb-1 text-2xl font-semibold hover:text-gray-900 md:mb-0 dark:hover:text-white"
+                      >
+                        <a href={`/til/${til.id}`}>{til.data.title}</a>
+                      </h2>
+
+                      <time datetime={toISODate(til.data.date)} class="text-sm">
+                        {toISODate(til.data.date)}
+                      </time>
+                    </div>
+
+                    <p class="mt-3 text-base">{til.data.description}</p>
                   </div>
                 </div>
               </article>
